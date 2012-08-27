@@ -27,7 +27,7 @@ class Taxon(Base):
     trade_name = Column(String(20))
     vern_name = Column(String(20))
     hyb = Column(String(2))
-    literature_fk = Column('literature_id', Integer, ForeignKey('literature.pk'))
+    literature_fk = Column('literature_id', Integer, ForeignKey('literature.id'))
     publication = Column(TEXT)
     collation = Column(String(50))
     distribution = Column(TEXT)
@@ -40,10 +40,10 @@ class Taxon(Base):
 class Accession(Base):
     __tablename__ = 'accession'
     pk = Column('id', Integer, primary_key = True)
-    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.pk'))
+    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.id'))
     accid = Column('access_nr', String(20))
-    fk_country = Column('country_id', Integer, ForeignKey('country.pk'))
-    fk_division = Column('division_id', Integer, ForeignKey('division.pk'))
+    fk_country = Column('country_id', Integer, ForeignKey('country.id'))
+    fk_division = Column('division_id', Integer, ForeignKey('division.id'))
     locality = Column(TEXT)
     altitude = Column(String(10))
     altitudeMax = Column(String(10))
@@ -55,7 +55,7 @@ class Accession(Base):
     coll_nbr = Column(String(20))
     coll_date = Column(String(25))
     coll_add = Column(String(100))
-    fk_identification = Column('identification_id', Integer, ForeignKey('identification.pk'))
+    fk_identification = Column('identification_id', Integer, ForeignKey('identification.id'))
     phenology = Column(String(20))
     notes = Column(TEXT)
     label_header = Column(String(100))
@@ -68,13 +68,13 @@ class Country(Base):
     division1 = Column(String(20))
     sequence = Column(String(4))
 
-    divisions = relationship("Division", order_by="Division.pk", backref="country")
+    ## divisions = relationship("Division", order_by="Division.pk", backref="country")
 
 
 class Division(Base):
     __tablename__ = 'division'
     pk = Column('id', Integer, primary_key=True)
-    fk_country = Column('country_id', Integer, ForeignKey('country.pk'))
+    fk_country = Column('country_id', Integer, ForeignKey('country.id'))
     type = Column(String(20))
     abbr = Column(String(5))
     name = Column(String(40))
@@ -90,8 +90,8 @@ class Division(Base):
 class Identification(Base):
     __tablename__ = 'identification'
     pk = Column('id', Integer, primary_key=True)
-    fk_accession = Column('accession_id', Integer, ForeignKey('accession.pk'))
-    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.pk'))
+    fk_accession = Column('accession_id', Integer, ForeignKey('accession.id'))
+    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.id'))
     type = Column(String(5))
     name = Column(String(50))
     date = Column(String(50))
@@ -101,8 +101,8 @@ class Identification(Base):
 class Literature(Base):
     __tablename__ = 'literature'
     pk = Column('id', Integer, primary_key=True)
-    fk_accession = Column('accession_id', Integer, ForeignKey('accession.pk'))
-    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.pk'))
+    fk_accession = Column('accession_id', Integer, ForeignKey('accession.id'))
+    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.id'))
     type = Column(String(5))
     name = Column(String(50))
     date = Column(String(50))
@@ -112,7 +112,7 @@ class Literature(Base):
 class Location(Base):
     __tablename__ = 'location'
     pk = Column('id', Integer, primary_key=True)
-    fk_accession = Column('accession_id', Integer, ForeignKey('accession.pk'))
+    fk_accession = Column('accession_id', Integer, ForeignKey('accession.id'))
     garden_location = Column(String(50))
     sequence = Column(String(20))
     number_specimen = Column(String(50))
@@ -124,7 +124,7 @@ class Location(Base):
 class Objects(Base):
     __tablename__ = 'objects'
     pk = Column('id', Integer, primary_key=True)
-    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.pk'))
+    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.id'))
     type = Column(String(20))
     use = Column(String(10))
     owner = Column(String(20))
