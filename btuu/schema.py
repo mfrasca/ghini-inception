@@ -8,6 +8,7 @@ Base = declarative_base()
 
 from sqlalchemy.dialects.mysql import TEXT
 
+
 class Taxon(Base):
     __tablename__ = 'taxon'
     pk = Column('id', Integer, primary_key=True)
@@ -37,6 +38,7 @@ class Taxon(Base):
     autoIndex = Column(String(100))
     changed = Column('Changed', String(40))
 
+
 class Accession(Base):
     __tablename__ = 'accession'
     pk = Column('id', Integer, primary_key = True)
@@ -61,14 +63,13 @@ class Accession(Base):
     label_header = Column(String(100))
     changed = Column('Changed', String(40))
 
+
 class Country(Base):
     __tablename__ = 'country'
     pk = Column('id', Integer, primary_key=True)
     name = Column(String(30))
-    division1 = Column(String(20))
+    division_type = Column('division1', String(20))
     sequence = Column(String(4))
-
-    ## divisions = relationship("Division", order_by="Division.pk", backref="country")
 
 
 class Division(Base):
@@ -78,7 +79,7 @@ class Division(Base):
     type = Column(String(20))
     abbr = Column(String(5))
     name = Column(String(40))
-    alternative = Column(String(50))
+    ascii_name = Column('alternative', String(50))
     capital = Column(String(50))
     sequence = Column(Integer)
     WGS = Column(String(10))
@@ -98,6 +99,7 @@ class Identification(Base):
     qualifier = Column(String(10))
     notes = Column(TEXT)
 
+
 class Literature(Base):
     __tablename__ = 'literature'
     pk = Column('id', Integer, primary_key=True)
@@ -108,6 +110,7 @@ class Literature(Base):
     date = Column(String(50))
     qualifier = Column(String(10))
     notes = Column(TEXT)
+
 
 class Location(Base):
     __tablename__ = 'location'
@@ -120,6 +123,7 @@ class Location(Base):
     status = Column(String(20))
     remarks = Column(TEXT)
     changed = Column('Changed', String(40))
+
 
 class Objects(Base):
     __tablename__ = 'objects'
