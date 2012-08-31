@@ -28,7 +28,7 @@ class Taxon(Base):
     trade_name = Column(String(20))
     vern_name = Column(String(20))
     hyb = Column(String(2))
-    literature_fk = Column('literature_id', Integer, ForeignKey('literature.id'))
+    #literature_fk = Column('literature_id', Integer, ForeignKey('literature.id'))
     publication = Column(TEXT)
     collation = Column(String(50))
     distribution = Column(TEXT)
@@ -69,7 +69,9 @@ class Country(Base):
     pk = Column('id', Integer, primary_key=True)
     name = Column(String(30))
     division_type = Column('division1', String(20))
-    sequence = Column(String(4))
+
+    def __repr__(self):
+        return self.name
 
 
 class Division(Base):
@@ -91,8 +93,8 @@ class Division(Base):
 class Identification(Base):
     __tablename__ = 'identification'
     pk = Column('id', Integer, primary_key=True)
-    fk_accession = Column('accession_id', Integer, ForeignKey('accession.id'))
-    fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.id'))
+    #fk_accession = Column('accession_id', Integer, ForeignKey('accession.id'))
+    #fk_taxon = Column('taxon_id', Integer, ForeignKey('taxon.id'))
     type = Column(String(5))
     name = Column(String(50))
     date = Column(String(50))
