@@ -28,7 +28,7 @@ bt_database = [i for i in root.childNodes if i.nodeName == u'BTDatabase'][0]
 
 ranks = [i for i in bt_database.childNodes if i.nodeName == u'm_rank']
 for i in ranks:
-    items = dict(i.childNodes[0].attributes.items())
+    items = dict(i.attributes.items())
     print items
     session.add(Rank(pk=items['OID'], name=items['m_code']))
 session.commit()

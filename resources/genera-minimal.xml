@@ -644,15 +644,15 @@
 <m_division id="662" country_id="4" abbr="" name="Toledo" capital=""/>
 <m_division id="663" country_id="4" abbr="" name="Corozal" capital=""/>
 
-    <m_rank><BTRank OID="RNK_C0" m_code="clases"/></m_rank>
-    <m_rank><BTRank OID="RNK_O0" m_code="ordo"/></m_rank>
-    <m_rank><BTRank OID="RNK_F0" m_code="familia"/></m_rank>
-    <m_rank><BTRank OID="RNK_G0" m_code="genus"/></m_rank>
-    <m_rank><BTRank OID="RNK_S0" m_code="species"/></m_rank>
-    <m_rank><BTRank OID="RNK_V0" m_code="varietas"/></m_rank>
-    <m_rank><BTRank OID="RNK_F1" m_code="forma"/></m_rank>
-    <m_rank><BTRank OID="RNK_CG" m_code="cultivar group"/></m_rank>
-    <m_rank><BTRank OID="RNK_CU" m_code="cultivar"/></m_rank>
+    <m_rank OID="RNK_C0" m_code="clases"/>
+    <m_rank OID="RNK_O0" m_code="ordo"/>
+    <m_rank OID="RNK_F0" m_code="familia"/>
+    <m_rank OID="RNK_G0" m_code="genus"/>
+    <m_rank OID="RNK_S0" m_code="species"/>
+    <m_rank OID="RNK_V0" m_code="varietas"/>
+    <m_rank OID="RNK_F1" m_code="forma"/>
+    <m_rank OID="RNK_CG" m_code="cultivar group"/>
+    <m_rank OID="RNK_CU" m_code="cultivar"/>
 
     <m_itf_hybrid>
       <BTITF_hybrid OID="HYB_0" m_code="X"/>
