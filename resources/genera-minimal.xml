@@ -159,266 +159,6 @@
     <dict_taxon_use code="22" description="temperate and tropical timber trees"/>
     <dict_taxon_use code="23" description="ornamental trees"/>
 
-<dict_iso_country code="AF" description="AFGHANISTAN"/>
-<dict_iso_country code="AX" description="ÅLAND ISLANDS"/>
-<dict_iso_country code="AL" description="ALBANIA"/>
-<dict_iso_country code="DZ" description="ALGERIA"/>
-<dict_iso_country code="AS" description="AMERICAN SAMOA"/>
-<dict_iso_country code="AD" description="ANDORRA"/>
-<dict_iso_country code="AO" description="ANGOLA"/>
-<dict_iso_country code="AI" description="ANGUILLA"/>
-<dict_iso_country code="AQ" description="ANTARCTICA"/>
-<dict_iso_country code="AG" description="ANTIGUA AND BARBUDA"/>
-<dict_iso_country code="AR" description="ARGENTINA"/>
-<dict_iso_country code="AM" description="ARMENIA"/>
-<dict_iso_country code="AW" description="ARUBA"/>
-<dict_iso_country code="AU" description="AUSTRALIA"/>
-<dict_iso_country code="AT" description="AUSTRIA"/>
-<dict_iso_country code="AZ" description="AZERBAIJAN"/>
-<dict_iso_country code="BS" description="BAHAMAS"/>
-<dict_iso_country code="BH" description="BAHRAIN"/>
-<dict_iso_country code="BD" description="BANGLADESH"/>
-<dict_iso_country code="BB" description="BARBADOS"/>
-<dict_iso_country code="BY" description="BELARUS"/>
-<dict_iso_country code="BE" description="BELGIUM"/>
-<dict_iso_country code="BZ" description="BELIZE"/>
-<dict_iso_country code="BJ" description="BENIN"/>
-<dict_iso_country code="BM" description="BERMUDA"/>
-<dict_iso_country code="BT" description="BHUTAN"/>
-<dict_iso_country code="BO" description="BOLIVIA, PLURINATIONAL STATE OF"/>
-<dict_iso_country code="BQ" description="BONAIRE, SINT EUSTATIUS AND SABA"/>
-<dict_iso_country code="BA" description="BOSNIA AND HERZEGOVINA"/>
-<dict_iso_country code="BW" description="BOTSWANA"/>
-<dict_iso_country code="BV" description="BOUVET ISLAND"/>
-<dict_iso_country code="BR" description="BRAZIL"/>
-<dict_iso_country code="IO" description="BRITISH INDIAN OCEAN TERRITORY"/>
-<dict_iso_country code="BN" description="BRUNEI DARUSSALAM"/>
-<dict_iso_country code="BG" description="BULGARIA"/>
-<dict_iso_country code="BF" description="BURKINA FASO"/>
-<dict_iso_country code="BI" description="BURUNDI"/>
-<dict_iso_country code="KH" description="CAMBODIA"/>
-<dict_iso_country code="CM" description="CAMEROON"/>
-<dict_iso_country code="CA" description="CANADA"/>
-<dict_iso_country code="CV" description="CAPE VERDE"/>
-<dict_iso_country code="KY" description="CAYMAN ISLANDS"/>
-<dict_iso_country code="CF" description="CENTRAL AFRICAN REPUBLIC"/>
-<dict_iso_country code="TD" description="CHAD"/>
-<dict_iso_country code="CL" description="CHILE"/>
-<dict_iso_country code="CN" description="CHINA"/>
-<dict_iso_country code="CX" description="CHRISTMAS ISLAND"/>
-<dict_iso_country code="CC" description="COCOS (KEELING) ISLANDS"/>
-<dict_iso_country code="CO" description="COLOMBIA"/>
-<dict_iso_country code="KM" description="COMOROS"/>
-<dict_iso_country code="CG" description="CONGO"/>
-<dict_iso_country code="CD" description="CONGO, THE DEMOCRATIC REPUBLIC OF THE"/>
-<dict_iso_country code="CK" description="COOK ISLANDS"/>
-<dict_iso_country code="CR" description="COSTA RICA"/>
-<dict_iso_country code="CI" description="CÔTE D'IVOIRE"/>
-<dict_iso_country code="HR" description="CROATIA"/>
-<dict_iso_country code="CU" description="CUBA"/>
-<dict_iso_country code="CW" description="CURAÇAO"/>
-<dict_iso_country code="CY" description="CYPRUS"/>
-<dict_iso_country code="CZ" description="CZECH REPUBLIC"/>
-<dict_iso_country code="DK" description="DENMARK"/>
-<dict_iso_country code="DJ" description="DJIBOUTI"/>
-<dict_iso_country code="DM" description="DOMINICA"/>
-<dict_iso_country code="DO" description="DOMINICAN REPUBLIC"/>
-<dict_iso_country code="EC" description="ECUADOR"/>
-<dict_iso_country code="EG" description="EGYPT"/>
-<dict_iso_country code="SV" description="EL SALVADOR"/>
-<dict_iso_country code="GQ" description="EQUATORIAL GUINEA"/>
-<dict_iso_country code="ER" description="ERITREA"/>
-<dict_iso_country code="EE" description="ESTONIA"/>
-<dict_iso_country code="ET" description="ETHIOPIA"/>
-<dict_iso_country code="FK" description="FALKLAND ISLANDS (MALVINAS)"/>
-<dict_iso_country code="FO" description="FAROE ISLANDS"/>
-<dict_iso_country code="FJ" description="FIJI"/>
-<dict_iso_country code="FI" description="FINLAND"/>
-<dict_iso_country code="FR" description="FRANCE"/>
-<dict_iso_country code="GF" description="FRENCH GUIANA"/>
-<dict_iso_country code="PF" description="FRENCH POLYNESIA"/>
-<dict_iso_country code="TF" description="FRENCH SOUTHERN TERRITORIES"/>
-<dict_iso_country code="GA" description="GABON"/>
-<dict_iso_country code="GM" description="GAMBIA"/>
-<dict_iso_country code="GE" description="GEORGIA"/>
-<dict_iso_country code="DE" description="GERMANY"/>
-<dict_iso_country code="GH" description="GHANA"/>
-<dict_iso_country code="GI" description="GIBRALTAR"/>
-<dict_iso_country code="GR" description="GREECE"/>
-<dict_iso_country code="GL" description="GREENLAND"/>
-<dict_iso_country code="GD" description="GRENADA"/>
-<dict_iso_country code="GP" description="GUADELOUPE"/>
-<dict_iso_country code="GU" description="GUAM"/>
-<dict_iso_country code="GT" description="GUATEMALA"/>
-<dict_iso_country code="GG" description="GUERNSEY"/>
-<dict_iso_country code="GN" description="GUINEA"/>
-<dict_iso_country code="GW" description="GUINEA-BISSAU"/>
-<dict_iso_country code="GY" description="GUYANA"/>
-<dict_iso_country code="HT" description="HAITI"/>
-<dict_iso_country code="HM" description="HEARD ISLAND AND MCDONALD ISLANDS"/>
-<dict_iso_country code="VA" description="HOLY SEE (VATICAN CITY STATE)"/>
-<dict_iso_country code="HN" description="HONDURAS"/>
-<dict_iso_country code="HK" description="HONG KONG"/>
-<dict_iso_country code="HU" description="HUNGARY"/>
-<dict_iso_country code="IS" description="ICELAND"/>
-<dict_iso_country code="IN" description="INDIA"/>
-<dict_iso_country code="ID" description="INDONESIA"/>
-<dict_iso_country code="IR" description="IRAN, ISLAMIC REPUBLIC OF"/>
-<dict_iso_country code="IQ" description="IRAQ"/>
-<dict_iso_country code="IE" description="IRELAND"/>
-<dict_iso_country code="IM" description="ISLE OF MAN"/>
-<dict_iso_country code="IL" description="ISRAEL"/>
-<dict_iso_country code="IT" description="ITALY"/>
-<dict_iso_country code="JM" description="JAMAICA"/>
-<dict_iso_country code="JP" description="JAPAN"/>
-<dict_iso_country code="JE" description="JERSEY"/>
-<dict_iso_country code="JO" description="JORDAN"/>
-<dict_iso_country code="KZ" description="KAZAKHSTAN"/>
-<dict_iso_country code="KE" description="KENYA"/>
-<dict_iso_country code="KI" description="KIRIBATI"/>
-<dict_iso_country code="KP" description="KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF"/>
-<dict_iso_country code="KR" description="KOREA, REPUBLIC OF"/>
-<dict_iso_country code="KW" description="KUWAIT"/>
-<dict_iso_country code="KG" description="KYRGYZSTAN"/>
-<dict_iso_country code="LA" description="LAO PEOPLE'S DEMOCRATIC REPUBLIC"/>
-<dict_iso_country code="LV" description="LATVIA"/>
-<dict_iso_country code="LB" description="LEBANON"/>
-<dict_iso_country code="LS" description="LESOTHO"/>
-<dict_iso_country code="LR" description="LIBERIA"/>
-<dict_iso_country code="LY" description="LIBYA"/>
-<dict_iso_country code="LI" description="LIECHTENSTEIN"/>
-<dict_iso_country code="LT" description="LITHUANIA"/>
-<dict_iso_country code="LU" description="LUXEMBOURG"/>
-<dict_iso_country code="MO" description="MACAO"/>
-<dict_iso_country code="MK" description="MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF"/>
-<dict_iso_country code="MG" description="MADAGASCAR"/>
-<dict_iso_country code="MW" description="MALAWI"/>
-<dict_iso_country code="MY" description="MALAYSIA"/>
-<dict_iso_country code="MV" description="MALDIVES"/>
-<dict_iso_country code="ML" description="MALI"/>
-<dict_iso_country code="MT" description="MALTA"/>
-<dict_iso_country code="MH" description="MARSHALL ISLANDS"/>
-<dict_iso_country code="MQ" description="MARTINIQUE"/>
-<dict_iso_country code="MR" description="MAURITANIA"/>
-<dict_iso_country code="MU" description="MAURITIUS"/>
-<dict_iso_country code="YT" description="MAYOTTE"/>
-<dict_iso_country code="MX" description="MEXICO"/>
-<dict_iso_country code="FM" description="MICRONESIA, FEDERATED STATES OF"/>
-<dict_iso_country code="MD" description="MOLDOVA, REPUBLIC OF"/>
-<dict_iso_country code="MC" description="MONACO"/>
-<dict_iso_country code="MN" description="MONGOLIA"/>
-<dict_iso_country code="ME" description="MONTENEGRO"/>
-<dict_iso_country code="MS" description="MONTSERRAT"/>
-<dict_iso_country code="MA" description="MOROCCO"/>
-<dict_iso_country code="MZ" description="MOZAMBIQUE"/>
-<dict_iso_country code="MM" description="MYANMAR"/>
-<dict_iso_country code="NA" description="NAMIBIA"/>
-<dict_iso_country code="NR" description="NAURU"/>
-<dict_iso_country code="NP" description="NEPAL"/>
-<dict_iso_country code="NL" description="NETHERLANDS"/>
-<dict_iso_country code="NC" description="NEW CALEDONIA"/>
-<dict_iso_country code="NZ" description="NEW ZEALAND"/>
-<dict_iso_country code="NI" description="NICARAGUA"/>
-<dict_iso_country code="NE" description="NIGER"/>
-<dict_iso_country code="NG" description="NIGERIA"/>
-<dict_iso_country code="NU" description="NIUE"/>
-<dict_iso_country code="NF" description="NORFOLK ISLAND"/>
-<dict_iso_country code="MP" description="NORTHERN MARIANA ISLANDS"/>
-<dict_iso_country code="NO" description="NORWAY"/>
-<dict_iso_country code="OM" description="OMAN"/>
-<dict_iso_country code="PK" description="PAKISTAN"/>
-<dict_iso_country code="PW" description="PALAU"/>
-<dict_iso_country code="PS" description="PALESTINIAN TERRITORY, OCCUPIED"/>
-<dict_iso_country code="PA" description="PANAMA"/>
-<dict_iso_country code="PG" description="PAPUA NEW GUINEA"/>
-<dict_iso_country code="PY" description="PARAGUAY"/>
-<dict_iso_country code="PE" description="PERU"/>
-<dict_iso_country code="PH" description="PHILIPPINES"/>
-<dict_iso_country code="PN" description="PITCAIRN"/>
-<dict_iso_country code="PL" description="POLAND"/>
-<dict_iso_country code="PT" description="PORTUGAL"/>
-<dict_iso_country code="PR" description="PUERTO RICO"/>
-<dict_iso_country code="QA" description="QATAR"/>
-<dict_iso_country code="RE" description="RÉUNION"/>
-<dict_iso_country code="RO" description="ROMANIA"/>
-<dict_iso_country code="RU" description="RUSSIAN FEDERATION"/>
-<dict_iso_country code="RW" description="RWANDA"/>
-<dict_iso_country code="BL" description="SAINT BARTHÉLEMY"/>
-<dict_iso_country code="SH" description="SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA"/>
-<dict_iso_country code="KN" description="SAINT KITTS AND NEVIS"/>
-<dict_iso_country code="LC" description="SAINT LUCIA"/>
-<dict_iso_country code="MF" description="SAINT MARTIN (FRENCH PART)"/>
-<dict_iso_country code="PM" description="SAINT PIERRE AND MIQUELON"/>
-<dict_iso_country code="VC" description="SAINT VINCENT AND THE GRENADINES"/>
-<dict_iso_country code="WS" description="SAMOA"/>
-<dict_iso_country code="SM" description="SAN MARINO"/>
-<dict_iso_country code="ST" description="SAO TOME AND PRINCIPE"/>
-<dict_iso_country code="SA" description="SAUDI ARABIA"/>
-<dict_iso_country code="SN" description="SENEGAL"/>
-<dict_iso_country code="RS" description="SERBIA"/>
-<dict_iso_country code="SC" description="SEYCHELLES"/>
-<dict_iso_country code="SL" description="SIERRA LEONE"/>
-<dict_iso_country code="SG" description="SINGAPORE"/>
-<dict_iso_country code="SX" description="SINT MAARTEN (DUTCH PART)"/>
-<dict_iso_country code="SK" description="SLOVAKIA"/>
-<dict_iso_country code="SI" description="SLOVENIA"/>
-<dict_iso_country code="SB" description="SOLOMON ISLANDS"/>
-<dict_iso_country code="SO" description="SOMALIA"/>
-<dict_iso_country code="ZA" description="SOUTH AFRICA"/>
-<dict_iso_country code="GS" description="SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS"/>
-<dict_iso_country code="SS" description="SOUTH SUDAN"/>
-<dict_iso_country code="ES" description="SPAIN"/>
-<dict_iso_country code="LK" description="SRI LANKA"/>
-<dict_iso_country code="SD" description="SUDAN"/>
-<dict_iso_country code="SR" description="SURINAME"/>
-<dict_iso_country code="SJ" description="SVALBARD AND JAN MAYEN"/>
-<dict_iso_country code="SZ" description="SWAZILAND"/>
-<dict_iso_country code="SE" description="SWEDEN"/>
-<dict_iso_country code="CH" description="SWITZERLAND"/>
-<dict_iso_country code="SY" description="SYRIAN ARAB REPUBLIC"/>
-<dict_iso_country code="TW" description="TAIWAN, PROVINCE OF CHINA"/>
-<dict_iso_country code="TJ" description="TAJIKISTAN"/>
-<dict_iso_country code="TZ" description="TANZANIA, UNITED REPUBLIC OF"/>
-<dict_iso_country code="TH" description="THAILAND"/>
-<dict_iso_country code="TL" description="TIMOR-LESTE"/>
-<dict_iso_country code="TG" description="TOGO"/>
-<dict_iso_country code="TK" description="TOKELAU"/>
-<dict_iso_country code="TO" description="TONGA"/>
-<dict_iso_country code="TT" description="TRINIDAD AND TOBAGO"/>
-<dict_iso_country code="TN" description="TUNISIA"/>
-<dict_iso_country code="TR" description="TURKEY"/>
-<dict_iso_country code="TM" description="TURKMENISTAN"/>
-<dict_iso_country code="TC" description="TURKS AND CAICOS ISLANDS"/>
-<dict_iso_country code="TV" description="TUVALU"/>
-<dict_iso_country code="UG" description="UGANDA"/>
-<dict_iso_country code="UA" description="UKRAINE"/>
-<dict_iso_country code="AE" description="UNITED ARAB EMIRATES"/>
-<dict_iso_country code="GB" description="UNITED KINGDOM"/>
-<dict_iso_country code="US" description="UNITED STATES"/>
-<dict_iso_country code="UM" description="UNITED STATES MINOR OUTLYING ISLANDS"/>
-<dict_iso_country code="UY" description="URUGUAY"/>
-<dict_iso_country code="UZ" description="UZBEKISTAN"/>
-<dict_iso_country code="VU" description="VANUATU"/>
-<dict_iso_country code="VE" description="VENEZUELA, BOLIVARIAN REPUBLIC OF"/>
-<dict_iso_country code="VN" description="VIET NAM"/>
-<dict_iso_country code="VG" description="VIRGIN ISLANDS, BRITISH"/>
-<dict_iso_country code="VI" description="VIRGIN ISLANDS, U.S."/>
-<dict_iso_country code="WF" description="WALLIS AND FUTUNA"/>
-<dict_iso_country code="EH" description="WESTERN SAHARA"/>
-<dict_iso_country code="YE" description="YEMEN"/>
-<dict_iso_country code="ZM" description="ZAMBIA"/>
-<dict_iso_country code="ZW" description="ZIMBABWE"/>
-
-    <m_rank OID="RNK_C0" m_code="clases"/>
-    <m_rank OID="RNK_O0" m_code="ordo"/>
-    <m_rank OID="RNK_F0" m_code="familia"/>
-    <m_rank OID="RNK_G0" m_code="genus"/>
-    <m_rank OID="RNK_S0" m_code="species"/>
-    <m_rank OID="RNK_V0" m_code="varietas"/>
-    <m_rank OID="RNK_F1" m_code="forma"/>
-    <m_rank OID="RNK_CG" m_code="cultivar group"/>
-    <m_rank OID="RNK_CU" m_code="cultivar"/>
-
     <m_itf_hybrid>
       <BTITF_hybrid OID="HYB_0" m_code="X"/>
       <BTITF_hybrid OID="HYB_1" m_code="+"/>
@@ -433,16 +173,44 @@
       <BTTaxonAuthorCombination OID="AUT3_2004" m_combination="Dayton"/>
     </m_taxonauthorcombination>
 
+    <m_rank OID="RNK_C0" m_code="clases"/>
+    <m_rank OID="RNK_O0" m_code="ordo"/>
+    <m_rank OID="RNK_D0" m_code="divisio"/>
+    <m_rank OID="RNK_F0" m_code="familia"/>
+    <m_rank OID="RNK_G0" m_code="genus"/>
+    <m_rank OID="RNK_S0" m_code="species"/>
+    <m_rank OID="RNK_V0" m_code="varietas"/>
+    <m_rank OID="RNK_F1" m_code="forma"/>
+    <m_rank OID="RNK_CG" m_code="cultivar group"/>
+    <m_rank OID="RNK_CU" m_code="cultivar"/>
+
+    <m_taxon>
+      <BTTaxon OID="DIV_0" m_epithet="Angiospermae">
+        <m_rank OID="RNK_D0"/>
+      </BTTaxon>
+      <BTTaxon OID="DIV_1" m_epithet="Gymnospermae">
+        <m_rank OID="RNK_D0"/>
+      </BTTaxon>
+      <BTTaxon OID="DIV_2" m_epithet="Pteridophyta">
+        <m_rank OID="RNK_D0"/>
+      </BTTaxon>
+      <BTTaxon OID="DIV_3" m_epithet="Bryophyta">
+        <m_rank OID="RNK_D0"/>
+      </BTTaxon>
+    </m_taxon>
 
     <m_taxon>
       <BTTaxon OID="FAM_0" m_epithet="Orchidaceae">
         <m_rank OID="RNK_F0"/>
+	<m_parent OID="DIV_0"/>
       </BTTaxon>
       <BTTaxon OID="FAM_1" m_epithet="Euphorbiaceae">
         <m_rank OID="RNK_F0"/>
+	<m_parent OID="DIV_0"/>
       </BTTaxon>
       <BTTaxon OID="FAM_2" m_epithet="Asteraceae">
         <m_rank OID="RNK_F0"/>
+	<m_parent OID="DIV_0"/>
       </BTTaxon>
     </m_taxon>
 

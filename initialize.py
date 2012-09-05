@@ -8,6 +8,8 @@ if True:
     session.execute("drop table rank cascade")
     session.execute("drop table taxon cascade")
     session.execute("drop table accession cascade")
+    session.execute("drop table country cascade")
+    session.execute("drop table division cascade")
     session.commit()
 
 from btuu.schema import *
@@ -18,6 +20,21 @@ session.execute("delete from country")
 session.execute("delete from accession")
 session.execute("delete from taxon")
 session.execute("delete from rank")
+session.commit()
+
+countries = [i.split("\t") for i in file("resources/countries.txt").read().split("\n") if i]
+for item in countries:
+    session.add(Country(pk_iso=item[0], 
+                        name=item[1]))
+session.commit()
+
+divisions = [i.split("\t") for i in file("resources/regions.txt").read().split("\n") if i]
+for item in divisions:
+    country_id, abbreviation = item[0].split("-")
+    session.add(Division(pk_iso=item[0], 
+                         fk_country=country_id,
+                         name=item[1], 
+                         abbr=abbreviation))
 session.commit()
 
 from xml.dom.minidom import parse, parseString
@@ -31,29 +48,6 @@ for i in ranks:
     items = dict(i.attributes.items())
     print items
     session.add(Rank(pk=items['OID'], name=items['m_code']))
-session.commit()
-
-countries = [i for i in bt_database.childNodes if i.nodeName == u'm_country']
-for i in countries:
-    items = dict(i.attributes.items())
-    print items
-    ## <m_country oid="44" name="Guinea (Afr.)" division_type=""/>
-
-    session.add(Country(pk=items['oid'], 
-                        name=items['name'], 
-                        division_type=items['division_type']))
-session.commit()
-
-divisions = [i for i in bt_database.childNodes if i.nodeName == u'm_division']
-for i in divisions:
-    items = dict(i.attributes.items())
-    print items
-    ## <m_division id="1" country_id="1" abbr="" name="Catamarca" capital="San Fdo. del Valle de Catamarca"/>
-    session.add(Division(pk=items['id'], 
-                         fk_country=items['country_id'], 
-                         name=items['name'], 
-                         abbr=items['abbr'], 
-                         capital=items['capital']))
 session.commit()
 
 taxa_groups = [i for i in bt_database.childNodes if i.nodeName == u'm_taxon']

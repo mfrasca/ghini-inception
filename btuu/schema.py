@@ -37,9 +37,9 @@ class Taxon(Base):
     epithet = Column(String(36))
     fk_parent = Column(String(12), ForeignKey('taxon.pk'))
 
-    parent = relationship("Taxon", remote_side=[pk])
-    author = relationship("Author", backref=backref('taxon', order_by=pk))
-    rank = relationship("Rank", backref=backref('taxon', order_by=pk))
+    parent = relationship("Taxon", remote_side=[pk], backref=backref("children", order_by=pk))
+    author = relationship("Author", backref=backref('taxa', order_by=pk))
+    rank = relationship("Rank", backref=backref('taxa', order_by=pk))
 
     def __repr__(self):
         return "<%s:%s>" % (self.rank.name, self.epithet)
@@ -62,8 +62,8 @@ class Accession(Base):
     pk = Column('id', Integer, primary_key=True)
     fk_taxon = Column('taxon_id', String(12), ForeignKey('taxon.pk'))
     accid = Column('access_nr', String(20))
-    fk_country = Column('country_id', Integer, ForeignKey('country.id'))
-    fk_division = Column('division_id', Integer, ForeignKey('division.id'))
+    fk_country = Column('country_id', String(2), ForeignKey('country.iso'))
+    fk_division = Column('division_id', String(7), ForeignKey('division.iso'))
     locality = Column(TEXT)
     altitude = Column(String(10))
     altitudeMax = Column(String(10))
@@ -84,9 +84,8 @@ class Accession(Base):
 
 class Country(Base):
     __tablename__ = 'country'
-    pk = Column('id', Integer, primary_key=True)
-    name = Column(String(30))
-    division_type = Column('division1', String(20))
+    pk_iso = Column('iso', String(2), primary_key=True)
+    name = Column(String(48))
 
     def __repr__(self):
         return self.name
@@ -94,14 +93,15 @@ class Country(Base):
 
 class Division(Base):
     __tablename__ = 'division'
-    pk = Column('id', Integer, primary_key=True)
-    fk_country = Column('country_id', Integer, ForeignKey('country.id'))
-    name = Column(String(40))
-    abbr = Column(String(5))
-    capital = Column(String(50))
-    WGS = Column(String(10))
+    pk_iso = Column('iso', String(7), primary_key=True)
+    fk_country = Column('country_id', String(2), ForeignKey('country.iso'))
+    abbr = Column(String(4))
+    name = Column(String(64))
 
-    country = relationship("Country", backref=backref('divisions', order_by=pk))
+    country = relationship("Country", backref=backref('divisions', order_by=pk_iso))
+
+    def __repr__(self):
+        return self.name
 
 
 class Literature(Base):

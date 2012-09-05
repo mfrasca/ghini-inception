@@ -1,635 +1,249 @@
-INSERT INTO country (id, name, division1) VALUES
-(1, 'Argentina', 'Prov.'),
-(3, 'Barbados', 'Par.'),
-(4, 'Belize', 'Distr.'),
-(5, 'Bolivia', 'Prov.'),
-(6, 'Brazil', 'Prov.'),
-(7, 'Chile', 'Prov.'),
-(8, 'Colombia', 'Prov.'),
-(9, 'Costa Rica', 'Prov.'),
-(10, 'Cuba', 'Prov.'),
-(13, 'Dominican Republic', 'Prov.'),
-(14, 'Ecuador', 'Prov.'),
-(15, 'El Salvador', 'Dept.'),
-(16, 'French Guiana', 'Dept.'),
-(18, 'Guatemala', 'Dept.'),
-(19, 'Guyana', 'Dept.'),
-(20, 'Haiti', 'Dept.'),
-(21, 'Hispaniola', ''),
-(22, 'Honduras', 'Dept.'),
-(23, 'Jamaica', 'Par.'),
-(25, 'Mexico', 'Dept.'),
-(26, 'Nicaragua', 'Dept.'),
-(27, 'Panama', 'Dept.'),
-(28, 'Paraguay', 'Dept.'),
-(29, 'Peru', 'Dept.'),
-(30, 'Puerto Rico', 'Dept.'),
-(31, 'Suriname', 'Dept.'),
-(32, 'Trinidad & Tobago', 'Par.'),
-(34, 'Uruguay', 'Dept.'),
-(35, 'USA', 'State'),
-(36, 'Venezuela', 'State'),
-(38, 'Bahamas', ''),
-(39, 'Windward Islands', ''),
-(40, 'Leeward Islands', ''),
-(41, 'Virgin Islands', ''),
-(42, 'Cayman Islands', ''),
-(44, 'Guinea (Afr.)', '');
-
--- --------------------------------------------------------
-
-INSERT INTO division (id, country_id, abbr, name, capital) VALUES
-(1, 1, '', 'Catamarca', 'San Fdo. del Valle de Catamarca'),
-(2, 1, '', 'Chaco', 'Resistencia'),
-(3, 1, '', 'Chubut', 'Rawson'),
-(4, 1, '', 'Córdoba', 'Córdoba'),
-(5, 1, '', 'Corrientes', 'Corrientes'),
-(6, 1, '', 'Entre Ríos', 'Paraná'),
-(7, 1, '', 'Formosa', 'Formosa'),
-(8, 1, '', 'Jujuy', 'San Salvador de Jujuy'),
-(9, 1, '', 'La Pampa', 'Santa Rosa'),
-(10, 1, '', 'La Rioja', 'La Rioja'),
-(11, 1, '', 'Misiones', 'Posadas'),
-(12, 1, '', 'Neuquén', 'Neuquén'),
-(13, 1, '', 'Buenos Aires', 'La Plata'),
-(14, 1, '', 'Río Negro', 'Viedma'),
-(15, 1, '', 'Salta', 'Salta'),
-(16, 1, '', 'San Juan', 'San Juan'),
-(17, 1, '', 'San Luis', 'San Luis'),
-(18, 1, '', 'Santa Cruz', 'Río Gallegos'),
-(19, 1, '', 'Santa Fe', 'Santa Fe'),
-(20, 1, '', 'Santiago del Estero', 'Santiago del Estero'),
-(21, 1, '', 'Tierra del Fuego', 'Ushuaia'),
-(22, 1, '', 'Tucumán', 'San Miguel de Tucumán'),
-(23, 3, '', 'Christ Church', ''),
-(24, 3, '', 'Saint Andrew', ''),
-(25, 3, '', 'Saint George', ''),
-(26, 3, '', 'Saint James', ''),
-(27, 3, '', 'Saint John', ''),
-(28, 3, '', 'Saint Joseph', ''),
-(29, 3, '', 'Saint Lucy', ''),
-(30, 3, '', 'Saint Michael', ''),
-(31, 3, '', 'Saint Peter', ''),
-(32, 3, '', 'Saint Philip', ''),
-(33, 3, '', 'Saint Thomas', ''),
-(34, 4, '', 'Belize', ''),
-(35, 4, '', 'Cayo', ''),
-(36, 4, '', 'Orange Walk', ''),
-(37, 4, '', 'Stann Creek', ''),
-(38, 5, 'BE', 'Beni', 'Trinidad'),
-(39, 5, 'CH', 'Chuquisaca', 'Sucre'),
-(40, 5, 'CO', 'Cochabamba', 'Cochabamba'),
-(41, 5, 'LP', 'La Paz', 'La Paz'),
-(42, 5, 'OR', 'Oruro', 'Oruro'),
-(43, 5, 'PA', 'Pando', 'Cobija'),
-(44, 5, 'PO', 'Potosí', 'Potosí'),
-(45, 5, 'SC', 'Santa Cruz', 'Santa Cruz de la Sierra'),
-(46, 5, 'TA', 'Tarija', 'Tarija'),
-(47, 6, '', 'Acre', 'Rio Branco'),
-(48, 6, '', 'Alagoas', 'Maceió'),
-(49, 6, '', 'Amapá', 'Macapá'),
-(50, 6, '', 'Amazonas', 'Manaus'),
-(51, 6, '', 'Bahia', 'Salvador'),
-(52, 6, '', 'Ceará', 'Fortaleza'),
-(53, 6, '', 'Distrito Federal', 'Brasília'),
-(54, 6, '', 'Espírito Santo', 'Vitória'),
-(55, 6, '', 'Goiás', 'Goiânia'),
-(56, 6, '', 'Maranhao', 'Sao Luís'),
-(57, 6, '', 'Mato Grosso do Sul', 'Campo Grande'),
-(58, 6, '', 'Mato Grosso', 'Cuiabá'),
-(59, 6, '', 'Minas Gerais', 'Belo Horizonte'),
-(60, 6, '', 'Pará', 'Belém'),
-(61, 6, '', 'Paraíba', 'Joao Pessoa'),
-(62, 6, '', 'Paraná', 'Curitiba'),
-(63, 6, '', 'Pernambuco', 'Recife'),
-(64, 6, '', 'Piauí', 'Teresina'),
-(65, 6, '', 'Rio de Janeiro', 'Rio de Janeiro'),
-(66, 6, '', 'Rio Grande do Norte', 'Natal'),
-(67, 6, '', 'Rio Grande do Sul', 'Porto Alegre'),
-(68, 6, '', 'Rondônia', 'Porto Velho'),
-(69, 6, '', 'Roraima', 'Boa Vista'),
-(70, 6, '', 'Santa Catarina', 'Florianópolis'),
-(71, 6, '', 'Sao Paulo', 'Sao Paulo'),
-(72, 6, '', 'Sergipe', 'Aracaju'),
-(73, 6, '', 'Tocantins', 'Palmas'),
-(74, 7, '', 'Aisén', 'Coihaique'),
-(75, 7, '', 'Antofagasta', 'Antofagasta'),
-(76, 7, '', 'Araucanía', 'Temuco'),
-(77, 7, '', 'Arica and Parinacota', 'Arica'),
-(78, 7, '', 'Atacama', 'Copiapó'),
-(79, 7, '', 'Biobío', 'Concepción'),
-(80, 7, '', 'Coquimbo', 'La Serena'),
-(81, 7, '', 'Los Lagos', 'Puerto Montt'),
-(82, 7, '', 'Los Ríos', 'Valdivia'),
-(83, 7, '', 'Magallanes', 'Punta Arenas'),
-(84, 7, '', 'Maule', 'Talca'),
-(85, 7, '', 'O''Higgins', 'Rancagua'),
-(86, 7, '', 'Santiago', 'Santiago'),
-(87, 7, '', 'Tarapacá', 'Iquique'),
-(88, 7, '', 'Valparaíso', 'Valparaiso'),
-(89, 8, '', 'Amazonas', 'Leticia'),
-(90, 8, '', 'Antioquia', 'Medellín'),
-(91, 8, '', 'Arauca', 'Arauca'),
-(92, 8, '', 'Atlántico', 'Barranquilla'),
-(93, 8, '', 'Bolívar', 'Cartagena'),
-(94, 8, '', 'Boyacá', 'Tunja'),
-(95, 8, '', 'Caldas', 'Manizales'),
-(96, 8, '', 'Districto Capital', 'Bogotá'),
-(97, 8, '', 'Caquetá', 'Florencia'),
-(98, 8, '', 'Casanare', 'Yopal'),
-(99, 8, '', 'Cauca', 'Popayán'),
-(100, 8, '', 'Cesar', 'Valledupar'),
-(101, 8, '', 'Chocó', 'Quibdó'),
-(102, 8, '', 'Córdoba', 'Montería'),
-(103, 8, '', 'Cundinamarca', 'Bogotá'),
-(104, 8, '', 'Guainía', 'Inírida'),
-(105, 8, '', 'Guaviare', 'San José del Guaviare'),
-(106, 8, '', 'Huila', 'Neiva'),
-(107, 8, '', 'La Guajira', 'Riohacha'),
-(108, 8, '', 'Magdalena', 'Santa Marta'),
-(109, 8, '', 'Meta', 'Villavicencio'),
-(110, 8, '', 'Nariño', 'Pasto'),
-(111, 8, '', 'Norte de Santander', 'Cúcuta'),
-(112, 8, '', 'Putumayo', 'Mocoa'),
-(113, 8, '', 'Quindío', 'Armenia'),
-(114, 8, '', 'Risaralda', 'Pereira'),
-(115, 8, '', 'San Andrés', 'San Andrés'),
-(116, 8, '', 'Santander', 'Bucaramanga'),
-(117, 8, '', 'Sucre', 'Sincelejo'),
-(118, 8, '', 'Tolima', 'Ibagué'),
-(119, 8, '', 'Valle del Cauca', 'Cali'),
-(120, 8, '', 'Vaupés', 'Mitú'),
-(121, 8, '', 'Vichada', 'Puerto Carreño'),
-(122, 9, '', 'Alajuela', ''),
-(123, 9, '', 'Cartago', ''),
-(124, 9, '', 'Guanacaste', ''),
-(125, 9, '', 'Heredia', ''),
-(126, 9, '', 'Limón', ''),
-(127, 9, '', 'Puntarenas', ''),
-(128, 9, '', 'San José', ''),
-(129, 10, '', 'Camagüey', ''),
-(130, 10, '', 'Ciego de Avila', ''),
-(131, 10, '', 'Cienfuegos', ''),
-(132, 10, '', 'Ciudad de la Habana', 'Havana City'),
-(133, 10, '', 'Granma', ''),
-(134, 10, '', 'Guantánamo', ''),
-(135, 10, '', 'Holguín', ''),
-(136, 10, '', 'Isla de la Juventud', 'Isle of Youth'),
-(137, 10, '', 'La Habana', 'Havana'),
-(138, 10, '', 'Las Tunas', ''),
-(139, 10, '', 'Matanzas', ''),
-(140, 10, '', 'Pinar del Río', ''),
-(141, 10, '', 'Sancti Spíritus', ''),
-(142, 10, '', 'Santiago de Cuba', ''),
-(143, 10, '', 'Villa Clara', ''),
-(154, 13, '', 'Azua', 'Azua de Compostela'),
-(155, 13, '', 'Baoruco', 'Neiba'),
-(156, 13, '', 'Barahona', 'Santa Cruz de Barahona'),
-(157, 13, '', 'Dajabón', 'Dajabón'),
-(158, 13, '', 'Distrito Nacional', 'Santo Domingo de Guzmán'),
-(159, 13, '', 'Duarte', 'San Francisco de Macorís'),
-(160, 13, '', 'El Seibo', 'Santa Cruz de El Seibo'),
-(161, 13, '', 'Elías Piña', 'Comendador'),
-(162, 13, '', 'Espaillat', 'Moca'),
-(163, 13, '', 'Hato Mayor', 'Hato Mayor del Rey'),
-(164, 13, '', 'Hermanas Mirabal', 'Salcedo'),
-(165, 13, '', 'Independencia', 'Jimaní'),
-(166, 13, '', 'La Altagracia', 'Salvaleón de Higüey'),
-(167, 13, '', 'La Romana', 'La Romana'),
-(168, 13, '', 'La Vega', 'Concepción de la Vega'),
-(169, 13, '', 'María Trinidad Sánchez', 'Nagua'),
-(170, 13, '', 'Matías Ramón Mella', 'Herrera'),
-(171, 13, '', 'Monseñor Nouel', 'Bonao'),
-(172, 13, '', 'Monte Cristi', 'San Fernando de Monte Cristi'),
-(173, 13, '', 'Monte Plata', 'San Rafael de Monte Plata'),
-(174, 13, '', 'Pedernales', 'Pedernales'),
-(175, 13, '', 'Peravia', 'Baní'),
-(176, 13, '', 'Puerto Plata', 'San Felipe de Puerto Plata'),
-(177, 13, '', 'Samaná', 'Santa Bárbara de Samaná'),
-(178, 13, '', 'San Cristóbal', 'San Cristóbal'),
-(179, 13, '', 'San José de Ocoa', 'San José de Ocoa'),
-(180, 13, '', 'San Juan', 'San Juan de la Maguana'),
-(181, 13, '', 'San Pedro de Macorís', 'San Pedro de Macorís'),
-(182, 13, '', 'Sánchez Ramírez', 'Cotuí'),
-(183, 13, '', 'Santiago Rodríguez', 'San Ignacio de Sabaneta'),
-(184, 13, '', 'Santiago', 'Santiago de los Caballeros'),
-(185, 13, '', 'Santo Domingo', 'Santo Domingo Este'),
-(186, 13, '', 'Valverde', 'Santa Cruz de Mao'),
-(187, 14, 'AZU', 'Azuay', 'Cuenca'),
-(188, 14, 'BOL', 'Bolívar', 'Guaranda'),
-(189, 14, 'CAÑ', 'Cañar', 'Azogues'),
-(190, 14, 'CAR', 'Carchi', 'Tulcán'),
-(191, 14, 'CHI', 'Chimborazo', 'Riobamba'),
-(192, 14, 'COT', 'Cotopaxi', 'Latacunga'),
-(193, 14, 'ORO', 'El Oro', 'Machala'),
-(194, 14, 'ESM', 'Esmeraldas', 'Esmeraldas'),
-(195, 14, 'GAL', 'Galápagos', 'Puerto Baquerizo Moreno'),
-(196, 14, 'GUA', 'Guayas', 'Guayaquil'),
-(197, 14, '', 'Imbabura', 'Ibarra'),
-(198, 14, 'LOJ', 'Loja', 'Loja'),
-(199, 14, 'RIO', 'Los Ríos', 'Babahoyo'),
-(200, 14, 'MAN', 'Manabí', 'Portoviejo'),
-(201, 14, 'MOR', 'Morona-Santiago', 'Macas'),
-(202, 14, 'NAP', 'Napo', 'Tena'),
-(203, 14, 'ORE', 'Orellana', 'Puerto Francisco de Orellana'),
-(204, 14, 'PAS', 'Pastaza', 'Puyo'),
-(205, 14, 'PIC', 'Pichincha', 'Quito'),
-(207, 14, '', 'Santa Elena', 'Santa Elena'),
-(208, 14, '', 'Santo Domingo de los Tsáchilas', 'Santo Domingo'),
-(209, 14, 'SUC', 'Sucumbíos', 'Nueva Loja'),
-(210, 14, 'TUN', 'Tungurahua', 'Ambato'),
-(211, 14, 'ZAM', 'Zamora-Chinchipe', 'Zamora'),
-(212, 15, '', 'Ahuachapán', ''),
-(213, 15, '', 'Cabañas', ''),
-(214, 15, '', 'Chalatenango', ''),
-(215, 15, '', 'Cuscatlán', ''),
-(216, 15, '', 'La Libertad', ''),
-(217, 15, '', 'La Paz', ''),
-(218, 15, '', 'La Unión', ''),
-(219, 15, '', 'Morazán', ''),
-(220, 15, '', 'San Miguel', ''),
-(221, 15, '', 'San Salvador', ''),
-(222, 15, '', 'San Vicente', ''),
-(223, 15, '', 'Santa Ana', ''),
-(224, 15, '', 'Sonsonate', ''),
-(225, 15, '', 'Usulután', ''),
-(226, 16, '', 'Apatou', ''),
-(227, 16, '', 'Cayenne', ''),
-(228, 16, '', 'Iracoubo', ''),
-(229, 16, '', 'Kourou', ''),
-(230, 16, '', 'Macouria', ''),
-(231, 16, '', 'Mana', ''),
-(232, 16, '', 'Maripasoula', ''),
-(233, 16, '', 'Matoury', ''),
-(234, 16, '', 'Montsinéry-Tonnegrande', ''),
-(235, 16, '', 'Rémiré-Montjoly', ''),
-(236, 16, '', 'Roura', ''),
-(237, 16, '', 'Saint-Georges-de-l''Oyapock', ''),
-(238, 16, '', 'Saint-Laurent-du-Maroni', ''),
-(239, 16, '', 'Sinnamary', ''),
-(242, 18, '', 'Alta Verapaz', ''),
-(243, 18, '', 'Baja Verapaz', ''),
-(244, 18, '', 'Chimaltenango', ''),
-(245, 18, '', 'Chiquimula', ''),
-(246, 18, '', 'El Progreso', ''),
-(247, 18, '', 'El Quiché', ''),
-(248, 18, '', 'Escuintla', ''),
-(249, 18, '', 'Guatemala', ''),
-(250, 18, '', 'Huehuetenango', ''),
-(251, 18, '', 'Izabal', ''),
-(252, 18, '', 'Jalapa', ''),
-(253, 18, '', 'Jutiapa', ''),
-(254, 18, '', 'Petén', ''),
-(255, 18, '', 'Quetzaltenango', ''),
-(256, 18, '', 'Retalhuleu', ''),
-(257, 18, '', 'Sacatepéquez', ''),
-(258, 18, '', 'San Marcos', ''),
-(259, 18, '', 'Santa Rosa', ''),
-(260, 18, '', 'Sololá', ''),
-(261, 18, '', 'Suchitepéquez', ''),
-(262, 18, '', 'Totonicapán', ''),
-(263, 18, '', 'Zacapa', ''),
-(264, 19, '', 'Barima-Waini', ''),
-(265, 19, '', 'Cuyuni-Mazaruni', ''),
-(266, 19, '', 'Demerara-Mahaica', ''),
-(267, 19, '', 'East Berbice-Corentyne', ''),
-(268, 19, '', 'Essequibo Islands-West Demerar', ''),
-(269, 19, '', 'Mahaica-Berbice', ''),
-(270, 19, '', 'Pomeroon-Supenaam', ''),
-(271, 19, '', 'Potaro-Siparuni', ''),
-(272, 19, '', 'Upper Demerara-Berbice', ''),
-(273, 19, '', 'Upper Takutu-Upper Essequibo', ''),
-(274, 20, '', 'Artibonite', 'Gonaïves'),
-(275, 20, '', 'Centre', 'Hinche'),
-(276, 20, '', 'Grand''Anse', 'Jérémie'),
-(277, 20, '', 'Nippes', 'Miragoâne'),
-(278, 20, '', 'Nord', 'Cap-Haïtien'),
-(279, 20, '', 'Nord-Est', 'Fort-Liberté'),
-(280, 20, '', 'Nord-Ouest', 'Port-de-Paix'),
-(281, 20, '', 'Ouest', 'Port-au-Prince'),
-(282, 20, '', 'Sud', 'Les Cayes'),
-(283, 20, '', 'Sud-Est', 'Jacmel'),
-(284, 22, '', 'Atlántida', ''),
-(285, 22, '', 'Choluteca', ''),
-(286, 22, '', 'Colón', ''),
-(287, 22, '', 'Comayagua', ''),
-(288, 22, '', 'Copán', ''),
-(289, 22, '', 'Cortés', ''),
-(290, 22, '', 'El Paraíso', ''),
-(291, 22, '', 'Francisco Morazán', 'Tegucigalpa'),
-(670, 44, '', 'Kindia', ''),
-(293, 22, '', 'Gracias a Dios', ''),
-(294, 22, '', 'Intibucá', ''),
-(295, 22, '', 'Islas de la Bahía', ''),
-(296, 22, '', 'La Paz', ''),
-(297, 22, '', 'Lempira', ''),
-(298, 22, '', 'Ocotepeque', ''),
-(299, 22, '', 'Olancho', ''),
-(300, 22, '', 'Santa Bárbara', ''),
-(301, 22, '', 'Valle', ''),
-(302, 22, '', 'Yoro', ''),
-(303, 23, '', 'Clarendon', ''),
-(304, 23, '', 'Hanover', ''),
-(305, 23, '', 'Kingston', ''),
-(306, 23, '', 'Manchester', ''),
-(307, 23, '', 'Portland', ''),
-(308, 23, '', 'Saint Andrew', ''),
-(309, 23, '', 'Saint Ann', ''),
-(310, 23, '', 'Saint Catherine', ''),
-(311, 23, '', 'Saint Elizabeth', ''),
-(312, 23, '', 'Saint James', ''),
-(313, 23, '', 'Saint Mary', ''),
-(314, 23, '', 'Saint Thomas', ''),
-(315, 23, '', 'Trelawny', ''),
-(316, 23, '', 'Westmoreland', ''),
-(321, 25, '', 'Aguascalientes', 'Aguascalientes'),
-(323, 25, 'B.C.S', 'Baja California', 'Tijuana'),
-(324, 25, 'CHIH', 'Chihuahua', 'Chihuahua'),
-(668, 25, '', 'Baja California Sur', 'La Paz'),
-(326, 25, 'COAH', 'Coahuila', 'Torreón'),
-(327, 25, 'D.F.', 'Federal District', 'Mexico City'),
-(328, 25, 'GTO', 'Guanajuato', 'León'),
-(329, 25, 'GRO', 'Guerrero', 'Acapulco'),
-(330, 25, 'JAL', 'Jalisco', 'Guadalajara'),
-(331, 25, 'MEX', 'Mexico State', 'Toluca'),
-(332, 25, 'MICH', 'Michoacán', 'Morelia'),
-(333, 25, 'MOR', 'Morelos', 'Cuernavaca'),
-(334, 25, 'N.L.', 'Nuevo León', 'Monterrey'),
-(335, 25, 'PUE', 'Puebla', 'Puebla'),
-(336, 25, 'QRO', 'Querétaro', 'Querétaro'),
-(337, 25, 'S.L.P', 'San Luis Potosí', 'San Luis Potosí'),
-(338, 25, 'SIN', 'Sinaloa', 'Culiacán'),
-(339, 25, 'TAMPS', 'Tamaulipas', 'Tampico'),
-(340, 25, 'YUC', 'Yucatán', 'Mérida'),
-(341, 26, '', 'Boaco', 'Boaco'),
-(342, 26, '', 'Carazo', 'Jinotepe'),
-(343, 26, '', 'Chinandega', 'Chinandega'),
-(344, 26, '', 'Chontales', 'Juigalpa'),
-(345, 26, '', 'Estelí', 'Estelí'),
-(346, 26, '', 'Granada', 'Granada'),
-(347, 26, '', 'Jinotega', 'Jinotega'),
-(348, 26, '', 'León', 'León'),
-(349, 26, '', 'Madriz', 'Somoto'),
-(350, 26, '', 'Managua', 'Managua'),
-(351, 26, '', 'Masaya', 'Masaya'),
-(352, 26, '', 'Matagalpa', 'Matagalpa'),
-(353, 26, '', 'Nueva Segovia', 'Ocotal'),
-(354, 26, '', 'Atlántico Norte', 'Bilwi'),
-(355, 26, '', 'Atlántico Sur', 'Bluefields'),
-(356, 26, '', 'Río San Juan', 'San Carlos'),
-(357, 26, '', 'Rivas', 'Rivas'),
-(358, 27, '', 'Bocas del Toro', 'Bocas del Toro'),
-(359, 27, '', 'Chiriquí', 'David'),
-(360, 27, '', 'Coclé', 'enonomé'),
-(361, 27, '', 'Colón', 'Colón'),
-(362, 27, '', 'Darién', 'La Palma'),
-(363, 27, '', 'Emberá', 'Union Choco'),
-(364, 27, '', 'Herrera', 'Chitré'),
-(365, 27, '', 'Kuna de Madugandí', 'Panamá'),
-(366, 27, '', 'Kuna de Wargandí', 'Darién'),
-(367, 27, '', 'Kuna Yala', 'El Porvenir'),
-(368, 27, '', 'Los Santos', 'Las Tablas'),
-(369, 27, '', 'Ngöbe-Buglé', 'Chichica'),
-(370, 27, '', 'Panamá', 'Panamá'),
-(371, 27, '', 'Veraguas', 'Santiago de Veraguas'),
-(372, 28, '', 'Alto Paraguay', 'Fuerte Olimpo'),
-(373, 28, '', 'Alto Paraná', 'Ciudad del Este'),
-(374, 28, '', 'Amambay', 'Pedro Juan Caballero'),
-(375, 28, '', 'Boquerón', 'Filadelfia'),
-(376, 28, '', 'Caaguazú', 'Coronel Oviedo'),
-(377, 28, '', 'Caazapá', 'Caazapá'),
-(378, 28, '', 'Canindeyú', 'Salto del Guairá'),
-(379, 28, '', 'Central', 'Areguá'),
-(380, 28, '', 'Concepción', 'Concepción'),
-(381, 28, '', 'Cordillera', 'Caacupé'),
-(382, 28, '', 'Distrito Capital', 'Asunción'),
-(383, 28, '', 'Guairá', 'Villarrica'),
-(384, 28, '', 'Itapúa', 'Encarnación'),
-(385, 28, '', 'Misiones', 'San Juan Bautista'),
-(386, 28, '', 'Ñeembucú', 'Pilar'),
-(387, 28, '', 'Paraguarí', 'Paraguarí'),
-(388, 28, '', 'Presidente Hayes', 'Villa Hayes'),
-(389, 28, '', 'San Pedro', 'San Pedro'),
-(390, 29, '', 'Amazonas', ''),
-(391, 29, '', 'Ancash', ''),
-(392, 29, '', 'Apurímac', ''),
-(393, 29, '', 'Arequipa', ''),
-(394, 29, '', 'Ayacucho', ''),
-(395, 29, '', 'Cajamarca', ''),
-(396, 29, '', 'Callao', ''),
-(397, 29, '', 'Cusco', ''),
-(398, 29, '', 'Huancavelica', ''),
-(399, 29, '', 'Huánuco', ''),
-(400, 29, '', 'Ica', ''),
-(401, 29, '', 'Junín', ''),
-(402, 29, '', 'La Libertad', ''),
-(403, 29, '', 'Lambayeque', ''),
-(404, 29, '', 'Lima', ''),
-(405, 29, '', 'Loreto', ''),
-(406, 29, '', 'Madre de Dios', ''),
-(407, 29, '', 'Moquegua', ''),
-(408, 29, '', 'Pasco', ''),
-(409, 29, '', 'Piura', ''),
-(410, 29, '', 'Puno', ''),
-(411, 29, '', 'San Martín', ''),
-(412, 29, '', 'Tacna', ''),
-(413, 29, '', 'Tumbes', ''),
-(414, 29, '', 'Ucayali', ''),
-(417, 30, '', 'Aguadilla', ''),
-(421, 30, '', 'Arecibo', ''),
-(425, 30, '', 'Bayamón', ''),
-(427, 30, '', 'Caguas', ''),
-(430, 30, '', 'Carolina', ''),
-(432, 30, '', 'Cayey', ''),
-(682, 40, '', 'La Désirade', ''),
-(439, 30, '', 'Culebra (Islas Culebra + Viegues)', ''),
-(441, 30, '', 'Fajardo', ''),
-(671, 38, '', 'Nassau', ''),
-(444, 30, '', 'Guayama', ''),
-(450, 30, '', 'Humacao', ''),
-(684, 40, '', 'les Saintes archipelago', ''),
-(453, 30, '', 'Juana Díaz', ''),
-(461, 30, '', 'Manatí', ''),
-(674, 38, '', 'Great Inagua', ''),
-(675, 38, '', 'Andros', ''),
-(464, 30, '', 'Mayagüez (+ Isla Mona)', ''),
-(677, 1, '', 'Mendosa', ''),
-(678, 41, '', 'Tortola', ''),
-(679, 41, '', 'Virgin Gorda', ''),
-(680, 41, '', 'Anegada', ''),
-(681, 41, '', 'Jost Van Dyke', ''),
-(472, 30, '', 'Ponce', ''),
-(672, 38, '', 'Grand Bahama', ''),
-(673, 38, '', 'Abaco', ''),
-(478, 30, '', 'San Germán', ''),
-(479, 30, '', 'San Juan (capital', ''),
-(481, 30, '', 'San Sebastián', ''),
-(484, 30, '', 'Toa Baja', ''),
-(486, 30, '', 'Utuado', ''),
-(683, 40, '', 'Marie-Galante', ''),
-(488, 30, '', 'Vega Baja', ''),
-(492, 30, '', 'Yauco', ''),
-(493, 31, '', 'Brokopondo', ''),
-(494, 31, '', 'Commewijne', ''),
-(495, 31, '', 'Coronie', ''),
-(496, 31, '', 'Marowijne', ''),
-(497, 31, '', 'Nickerie', ''),
-(498, 31, '', 'Para', ''),
-(499, 31, '', 'Paramaribo', ''),
-(500, 31, '', 'Saramacca', ''),
-(501, 31, '', 'Sipaliwini', ''),
-(502, 31, '', 'Wanica', ''),
-(503, 32, '', 'Couva-Tabaquite-Talparo (Chaguanas)', ''),
-(504, 32, '', 'Diego Martin', ''),
-(505, 32, '', 'Penal - Debe', ''),
-(506, 32, '', 'Princes Town (San Fernando)', ''),
-(676, 32, '', 'Trinidad (without locality)', ''),
-(509, 32, '', 'Rio Claro - Mayaro', ''),
-(510, 34, '', 'Artigas', 'Artigas'),
-(511, 34, '', 'Canelones', 'Canelones'),
-(512, 34, '', 'Cerro Largo', 'Melo'),
-(513, 34, '', 'Colonia', 'Colonia del Sacramento'),
-(514, 34, '', 'Durazno', 'Durazno'),
-(515, 34, '', 'Flores', 'Trinidad'),
-(516, 34, '', 'Florida', 'Florida'),
-(517, 34, '', 'Lavalleja', 'Minas'),
-(518, 34, '', 'Maldonado', 'Maldonado'),
-(519, 34, '', 'Montevideo', 'Montevideo'),
-(520, 34, '', 'Paysandú', 'Paysandú'),
-(521, 34, '', 'Río Negro', 'Fray Bentos'),
-(522, 34, '', 'Rivera', 'Rivera'),
-(523, 34, '', 'Rocha', 'Rocha'),
-(524, 34, '', 'Salto', 'Salto'),
-(525, 34, '', 'San José', 'San José de Mayo'),
-(526, 34, '', 'Soriano', 'Mercedes'),
-(527, 34, '', 'Tacuarembó', 'Tacuarembó'),
-(528, 34, '', 'Treinta y Tres', 'Treinta y Tres'),
-(529, 35, '', 'Alabama', 'Montgomery'),
-(530, 35, '', 'Alaska', 'Juneau'),
-(531, 35, '', 'Arizona', 'Phoenix'),
-(532, 35, '', 'Arkansas', 'Little Rock'),
-(533, 35, '', 'California', 'Sacramento'),
-(534, 35, '', 'Colorado', 'Denver'),
-(535, 35, '', 'Connecticut', 'Hartford'),
-(536, 35, '', 'Delaware', 'Dover'),
-(537, 35, '', 'Florida', 'Tallahassee'),
-(538, 35, '', 'Georgia', 'Atlanta'),
-(539, 35, '', 'Hawaii', 'Honolulu'),
-(540, 35, '', 'Idaho', 'Boise'),
-(541, 35, '', 'Illinois', 'Springfield'),
-(542, 35, '', 'Indiana', 'Indianapolis'),
-(543, 35, '', 'Iowa', 'Des Moines'),
-(544, 35, '', 'Kansas', 'Topeka'),
-(545, 35, '', 'Kentucky', 'Frankfort'),
-(546, 35, '', 'Louisiana', 'Baton Rouge'),
-(547, 35, '', 'Maine', 'Augusta'),
-(548, 35, '', 'Maryland', 'Annapolis'),
-(549, 35, '', 'Massachusetts', 'Boston'),
-(550, 35, '', 'Michigan', 'Lansing'),
-(551, 35, '', 'Minnesota', 'Saint Paul'),
-(552, 35, '', 'Mississippi', 'Jackson'),
-(553, 35, '', 'Missouri', 'Jefferson City'),
-(554, 35, '', 'Montana', 'Helena'),
-(555, 35, '', 'Nebraska', 'Lincoln'),
-(556, 35, '', 'Nevada', 'Carson City'),
-(557, 35, '', 'New Hampshire', 'Concord'),
-(558, 35, '', 'New Jersey', 'Trenton'),
-(559, 35, '', 'New Mexico', 'Santa Fe'),
-(560, 35, '', 'New York', 'Albany'),
-(561, 35, '', 'North Carolina', 'Raleigh'),
-(562, 35, '', 'North Dakota', 'Bismarck'),
-(563, 35, '', 'Ohio', 'Columbus'),
-(564, 35, '', 'Oklahoma', 'Oklahoma City'),
-(565, 35, '', 'Oregon', 'Salem'),
-(566, 35, '', 'Pennsylvania', 'Harrisburg'),
-(567, 35, '', 'Rhode Island', 'Providence'),
-(568, 35, '', 'South Carolina', 'Columbia'),
-(569, 35, '', 'South Dakota', 'Pierre'),
-(570, 35, '', 'Tennessee', 'Nashville'),
-(571, 35, '', 'Texas', 'Austin'),
-(572, 35, '', 'Utah', 'Salt Lake City'),
-(573, 35, '', 'Vermont', 'Montpelier'),
-(574, 35, '', 'Virginia', 'Richmond'),
-(575, 35, '', 'Washington', 'Olympia'),
-(576, 35, '', 'West Virginia', 'Charleston'),
-(577, 35, '', 'Wisconsin', 'Madison'),
-(578, 35, '', 'Wyoming', 'Cheyenne'),
-(579, 36, '', 'Amazonas', ''),
-(580, 36, '', 'Zulia', ''),
-(581, 36, '', 'Anzoátegui', ''),
-(582, 36, '', 'Apure', ''),
-(583, 36, '', 'Aragua', ''),
-(584, 36, '', 'Barinas', ''),
-(585, 36, '', 'Bolívar', ''),
-(586, 36, '', 'Carabobo', ''),
-(587, 36, '', 'Cojedes', ''),
-(588, 36, '', 'Delta Amacuro', ''),
-(589, 36, '', 'Falcón', ''),
-(590, 36, '', 'Guárico', ''),
-(591, 36, '', 'Lara', ''),
-(592, 36, '', 'Mérida', ''),
-(593, 36, '', 'Miranda', ''),
-(594, 36, '', 'Monagas', ''),
-(595, 36, '', 'Nueva Esparta', ''),
-(596, 36, '', 'Portuguesa', ''),
-(597, 36, '', 'Sucre', ''),
-(598, 36, '', 'Táchira', ''),
-(599, 36, '', 'Trujillo', ''),
-(600, 36, '', 'Vargas', ''),
-(601, 36, '', 'Yaracuy', ''),
-(602, 25, 'CAMP', 'Campeche', ''),
-(603, 25, 'CHIS', 'Chiapas', ''),
-(604, 25, 'COL', 'Colima', ''),
-(605, 25, 'DGO', 'Durango', ''),
-(606, 25, 'HGO', 'Hidalgo', ''),
-(607, 25, 'NAY', 'Nayarit', ''),
-(608, 25, 'OAX', 'Oaxaca', ''),
-(609, 25, 'Q.ROO', 'Quintana Roo', ''),
-(610, 25, 'SON', 'Sonora', ''),
-(611, 25, 'TAB', 'Tabasco', ''),
-(612, 25, 'TLAX', 'Tlaxcala', ''),
-(613, 25, 'VER', 'Veracruz', ''),
-(614, 25, 'ZAC', 'Zacatecas', ''),
-(615, 36, '', 'Distrito Federal', ''),
-(616, 39, '', 'Grenada', ''),
-(617, 39, '', 'Bonaire', ''),
-(618, 40, '', 'Anguilla', ''),
-(619, 40, '', 'St. Martin', ''),
-(620, 40, '', 'Saint-Barthélemy', ''),
-(621, 40, '', 'Saba', ''),
-(622, 40, '', 'St. Eustatius', ''),
-(623, 40, '', 'St. Kitts', ''),
-(624, 40, '', 'Nevis', ''),
-(625, 40, '', 'Barbuda', ''),
-(626, 40, '', 'Antigua', ''),
-(627, 40, '', 'Redonda', ''),
-(628, 40, '', 'Montserrat', ''),
-(629, 40, '', 'Guadeloupe', ''),
-(641, 39, '', 'Curaçao', ''),
-(631, 41, '', 'St. Thomas', ''),
-(632, 41, '', 'St. John', ''),
-(633, 41, '', 'St. Croix', ''),
-(634, 41, '', 'Water Island', ''),
-(635, 40, '', 'Dominica', ''),
-(636, 39, '', 'Martinique', ''),
-(637, 39, '', 'St. Lucia', ''),
-(638, 39, '', 'St. Vincent', ''),
-(639, 39, '', 'Grenadines', ''),
-(640, 39, '', 'Barbados', ''),
-(642, 39, '', 'Aruba', ''),
-(643, 42, '', 'Grand Cayman', ''),
-(644, 16, '', 'Camopi', ''),
-(645, 16, '', 'Ouanary', ''),
-(646, 16, '', 'Régina', ''),
-(647, 16, '', 'Saint-Élie', ''),
-(648, 16, '', 'Awala-Yalimapo', ''),
-(649, 16, '', 'Grand-Santi', ''),
-(650, 16, '', 'Papaïchton', ''),
-(651, 16, '', 'Saül', ''),
-(657, 32, '', 'Tobago', ''),
-(658, 32, '', 'Sangre Grande', ''),
-(659, 32, '', 'San Juan - Laventille (Puerto España)', ''),
-(660, 32, '', 'Siparia (Point Fortin)', ''),
-(661, 32, '', 'Tunapuna - Piarco (Arima)', ''),
-(662, 4, '', 'Toledo', ''),
-(663, 4, '', 'Corozal', '');
+AF	AFGHANISTAN
+AX	ÅLAND ISLANDS
+AL	ALBANIA
+DZ	ALGERIA
+AS	AMERICAN SAMOA
+AD	ANDORRA
+AO	ANGOLA
+AI	ANGUILLA
+AQ	ANTARCTICA
+AG	ANTIGUA AND BARBUDA
+AR	ARGENTINA
+AM	ARMENIA
+AW	ARUBA
+AU	AUSTRALIA
+AT	AUSTRIA
+AZ	AZERBAIJAN
+BS	BAHAMAS
+BH	BAHRAIN
+BD	BANGLADESH
+BB	BARBADOS
+BY	BELARUS
+BE	BELGIUM
+BZ	BELIZE
+BJ	BENIN
+BM	BERMUDA
+BT	BHUTAN
+BO	BOLIVIA, PLURINATIONAL STATE OF
+BQ	BONAIRE, SINT EUSTATIUS AND SABA
+BA	BOSNIA AND HERZEGOVINA
+BW	BOTSWANA
+BV	BOUVET ISLAND
+BR	BRAZIL
+IO	BRITISH INDIAN OCEAN TERRITORY
+BN	BRUNEI DARUSSALAM
+BG	BULGARIA
+BF	BURKINA FASO
+BI	BURUNDI
+KH	CAMBODIA
+CM	CAMEROON
+CA	CANADA
+CV	CAPE VERDE
+KY	CAYMAN ISLANDS
+CF	CENTRAL AFRICAN REPUBLIC
+TD	CHAD
+CL	CHILE
+CN	CHINA
+CX	CHRISTMAS ISLAND
+CC	COCOS (KEELING) ISLANDS
+CO	COLOMBIA
+KM	COMOROS
+CG	CONGO
+CD	CONGO, THE DEMOCRATIC REPUBLIC OF THE
+CK	COOK ISLANDS
+CR	COSTA RICA
+CI	CÔTE D'IVOIRE
+HR	CROATIA
+CU	CUBA
+CW	CURAÇAO
+CY	CYPRUS
+CZ	CZECH REPUBLIC
+DK	DENMARK
+DJ	DJIBOUTI
+DM	DOMINICA
+DO	DOMINICAN REPUBLIC
+EC	ECUADOR
+EG	EGYPT
+SV	EL SALVADOR
+GQ	EQUATORIAL GUINEA
+ER	ERITREA
+EE	ESTONIA
+ET	ETHIOPIA
+FK	FALKLAND ISLANDS (MALVINAS)
+FO	FAROE ISLANDS
+FJ	FIJI
+FI	FINLAND
+FR	FRANCE
+GF	FRENCH GUIANA
+PF	FRENCH POLYNESIA
+TF	FRENCH SOUTHERN TERRITORIES
+GA	GABON
+GM	GAMBIA
+GE	GEORGIA
+DE	GERMANY
+GH	GHANA
+GI	GIBRALTAR
+GR	GREECE
+GL	GREENLAND
+GD	GRENADA
+GP	GUADELOUPE
+GU	GUAM
+GT	GUATEMALA
+GG	GUERNSEY
+GN	GUINEA
+GW	GUINEA-BISSAU
+GY	GUYANA
+HT	HAITI
+HM	HEARD ISLAND AND MCDONALD ISLANDS
+VA	HOLY SEE (VATICAN CITY STATE)
+HN	HONDURAS
+HK	HONG KONG
+HU	HUNGARY
+IS	ICELAND
+IN	INDIA
+ID	INDONESIA
+IR	IRAN, ISLAMIC REPUBLIC OF
+IQ	IRAQ
+IE	IRELAND
+IM	ISLE OF MAN
+IL	ISRAEL
+IT	ITALY
+JM	JAMAICA
+JP	JAPAN
+JE	JERSEY
+JO	JORDAN
+KZ	KAZAKHSTAN
+KE	KENYA
+KI	KIRIBATI
+KP	KOREA, DEMOCRATIC PEOPLE'S REPUBLIC OF
+KR	KOREA, REPUBLIC OF
+KW	KUWAIT
+KG	KYRGYZSTAN
+LA	LAO PEOPLE'S DEMOCRATIC REPUBLIC
+LV	LATVIA
+LB	LEBANON
+LS	LESOTHO
+LR	LIBERIA
+LY	LIBYA
+LI	LIECHTENSTEIN
+LT	LITHUANIA
+LU	LUXEMBOURG
+MO	MACAO
+MK	MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF
+MG	MADAGASCAR
+MW	MALAWI
+MY	MALAYSIA
+MV	MALDIVES
+ML	MALI
+MT	MALTA
+MH	MARSHALL ISLANDS
+MQ	MARTINIQUE
+MR	MAURITANIA
+MU	MAURITIUS
+YT	MAYOTTE
+MX	MEXICO
+FM	MICRONESIA, FEDERATED STATES OF
+MD	MOLDOVA, REPUBLIC OF
+MC	MONACO
+MN	MONGOLIA
+ME	MONTENEGRO
+MS	MONTSERRAT
+MA	MOROCCO
+MZ	MOZAMBIQUE
+MM	MYANMAR
+NA	NAMIBIA
+NR	NAURU
+NP	NEPAL
+NL	NETHERLANDS
+NC	NEW CALEDONIA
+NZ	NEW ZEALAND
+NI	NICARAGUA
+NE	NIGER
+NG	NIGERIA
+NU	NIUE
+NF	NORFOLK ISLAND
+MP	NORTHERN MARIANA ISLANDS
+NO	NORWAY
+OM	OMAN
+PK	PAKISTAN
+PW	PALAU
+PS	PALESTINIAN TERRITORY, OCCUPIED
+PA	PANAMA
+PG	PAPUA NEW GUINEA
+PY	PARAGUAY
+PE	PERU
+PH	PHILIPPINES
+PN	PITCAIRN
+PL	POLAND
+PT	PORTUGAL
+PR	PUERTO RICO
+QA	QATAR
+RE	RÉUNION
+RO	ROMANIA
+RU	RUSSIAN FEDERATION
+RW	RWANDA
+BL	SAINT BARTHÉLEMY
+SH	SAINT HELENA, ASCENSION AND TRISTAN DA CUNHA
+KN	SAINT KITTS AND NEVIS
+LC	SAINT LUCIA
+MF	SAINT MARTIN (FRENCH PART)
+PM	SAINT PIERRE AND MIQUELON
+VC	SAINT VINCENT AND THE GRENADINES
+WS	SAMOA
+SM	SAN MARINO
+ST	SAO TOME AND PRINCIPE
+SA	SAUDI ARABIA
+SN	SENEGAL
+RS	SERBIA
+SC	SEYCHELLES
+SL	SIERRA LEONE
+SG	SINGAPORE
+SX	SINT MAARTEN (DUTCH PART)
+SK	SLOVAKIA
+SI	SLOVENIA
+SB	SOLOMON ISLANDS
+SO	SOMALIA
+ZA	SOUTH AFRICA
+GS	SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS
+SS	SOUTH SUDAN
+ES	SPAIN
+LK	SRI LANKA
+SD	SUDAN
+SR	SURINAME
+SJ	SVALBARD AND JAN MAYEN
+SZ	SWAZILAND
+SE	SWEDEN
+CH	SWITZERLAND
+SY	SYRIAN ARAB REPUBLIC
+TW	TAIWAN, PROVINCE OF CHINA
+TJ	TAJIKISTAN
+TZ	TANZANIA, UNITED REPUBLIC OF
+TH	THAILAND
+TL	TIMOR-LESTE
+TG	TOGO
+TK	TOKELAU
+TO	TONGA
+TT	TRINIDAD AND TOBAGO
+TN	TUNISIA
+TR	TURKEY
+TM	TURKMENISTAN
+TC	TURKS AND CAICOS ISLANDS
+TV	TUVALU
+UG	UGANDA
+UA	UKRAINE
+AE	UNITED ARAB EMIRATES
+GB	UNITED KINGDOM
+US	UNITED STATES
+UM	UNITED STATES MINOR OUTLYING ISLANDS
+UY	URUGUAY
+UZ	UZBEKISTAN
+VU	VANUATU
+VE	VENEZUELA, BOLIVARIAN REPUBLIC OF
+VN	VIET NAM
+VG	VIRGIN ISLANDS, BRITISH
+VI	VIRGIN ISLANDS, U.S.
+WF	WALLIS AND FUTUNA
+EH	WESTERN SAHARA
+YE	YEMEN
+ZM	ZAMBIA
+ZW	ZIMBABWE
