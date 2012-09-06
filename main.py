@@ -52,7 +52,7 @@ def logout():
 
 @app.route('/mapping', methods=['GET', 'POST'])
 def the_map():
-    return ''
+    return render_template('mapping.html')
 
 
 @app.route('/accueil', methods=['GET', 'POST'])
@@ -62,7 +62,7 @@ def the_garden():
 
 @app.route('/search', methods=['GET', 'POST'])
 def plant_search():
-    return ''    
+    return render_template('search.html')
 
 
 @app.route('/countries', methods=['GET', 'POST'])
