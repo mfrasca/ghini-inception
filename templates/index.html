@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block body %}
+<ul class=index>
+  <li><a href="{{ url_for('the_garden') }}">introduction</a></li>
+  <li><a href="{{ url_for('the_map') }}">virtual visit</a></li>
+  
+  <li>
+    <form action="{{ url_for('plant_search') }}" method=post class=add-entry>
+      <dl>
+        <dt>plant name:
+          <dd><input type=text size=30 name=name></dd>
+          <dd><input type=submit value=search>
+          {% if session.logged_in %}
+          <input type=submit value=insert>
+          {% endif %}
+          </dd> 
+      </dl>
+    </form>
+  </li>
+  
+  <li>
+    <form action="{{ url_for('country_search') }}" method=post class=add-entry>
+      <dl>
+        <dt>country or region name:
+          <dd><input type=text size=30 name=name></dd>
+          <dd><input type=submit value=search></dd> 
+      </dl>
+    </form>
+  </li>
+  
+</ul>
+{% endblock %}

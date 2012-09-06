@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block body %}
+<ul class=entries>
+  {% for entry in entries %}
+  <li><h2>{{ entry.name }}</h2></li>
+  {% for region in entry.divisions %}
+  <li>{{ region.abbr }}: {{ region.name }}</li>
+  {% endfor %}
+  {% else %}
+  <li><em>sorry, can't find this country!</em></li>
+  {% endfor %}
+  </ul>
+{% endblock %}
