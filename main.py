@@ -67,10 +67,11 @@ def plant_search():
 
 @app.route('/countries', methods=['GET', 'POST'])
 def country_search():
-    entries = g.session.query(Country)
-    entries = entries.filter(Country.name.like("%" + request.form['name'].upper() + "%"))
-    entries = entries.all()
-    return render_template('countries.html', entries=entries)
+    countries = g.session.query(Country)
+    countries = countries.filter(Country.name.ilike("%" + request.form['name'] + "%"))
+    regions = g.session.query(Division)
+    regions = regions.filter(Division.name.ilike("%" + request.form['name'] + "%"))
+    return render_template('countries.html', countries=countries, regions=regions)
 
 
 def create_session():
