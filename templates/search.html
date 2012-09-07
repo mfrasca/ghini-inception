@@ -10,8 +10,12 @@ not implemented yet.
 </ul>
 
 <ul class=entries>
+  {% set last = "" %}
   {% for entry in objects %}
+  {% if last != entry.family %}
   <li><h2>{{ entry.family }}</h2></li>
+  {% set last = entry.family %}
+  {% endif %}
   <h3>{{ entry.binomial }}</h3>
   <p>{% for child in entry.children %}{{ child.epithet }}, {% endfor %}</p>
   {% for accession in entry.accesions %}

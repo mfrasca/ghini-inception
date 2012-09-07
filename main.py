@@ -77,7 +77,9 @@ def plant_search():
         taxa = g.session.query(Taxon)
         taxa = taxa.filter(and_(Taxon.fk_parent.in_(parent_pk),
                                 and_(Taxon.fk_rank=="RNK_S0",
-                                     Taxon.epithet.ilike(species))))
+                                     Taxon.epithet.ilike(species)))
+                           )
+    taxa = taxa.order_by(Taxon.fk_parent)
 
     return render_template('search.html', objects=taxa)
 
