@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 engine = create_engine('postgresql://mario:mario@localhost/cuchubo')
 from sqlalchemy.orm import sessionmaker
 session = sessionmaker(bind=engine)()
-if True:
+if False:
     session.execute("drop table rank cascade")
     session.execute("drop table taxon cascade")
     session.execute("drop table accession cascade")
@@ -13,7 +13,7 @@ if True:
     session.commit()
 
 from btuu.schema import *
-Base.metadata.create_all(engine) 
+Base.metadata.create_all(engine)
 
 session.execute("delete from division")
 session.execute("delete from country")

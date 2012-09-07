@@ -10,6 +10,16 @@ Base = declarative_base()
 from sqlalchemy.dialects.mysql import TEXT
 
 
+class User(Base):
+    __tablename__ = 'user'
+    id = Column('id', Integer, primary_key=True)
+    name = Column(String(30), unique=True)
+    passwd = Column(String(30))
+
+    def __repr__(self):
+        return self.name
+
+
 class Rank(Base):
     __tablename__ = 'rank'
     id = Column('id', Integer, primary_key=True)

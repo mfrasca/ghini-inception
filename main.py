@@ -33,14 +33,19 @@ def show_accueil():
 def login():
     error = None
     if request.method == 'POST':
-        if request.form['username'] != app.config['USERNAME']:
+        user = g.session.query(User)
+        user = user.filter(User.name == request.form['username'])
+        try:
+            user = user.first()
+            if user.passwd != request.form['password']:
+                error = 'Invalid password'
+            else:
+                session['logged_in'] = user.name
+                flash('You were logged in')
+                return redirect(url_for('show_accueil'))
+        except:
             error = 'Invalid username'
-        elif request.form['password'] != app.config['PASSWORD']:
-            error = 'Invalid password'
-        else:
-            session['logged_in'] = True
-            flash('You were logged in')
-            return redirect(url_for('show_accueil'))
+    ## control flows here if method==GET or any error occurred
     return render_template('login.html', error=error)
 
 
@@ -107,6 +112,7 @@ class AdminIndexView(BaseView):
 
 admin = Admin(app, name='ghini')
 db = create_session()
+admin.add_view(ModelView(User, db))
 admin.add_view(ModelView(Rank, db))
 admin.add_view(ModelView(Taxon, db))
 admin.add_view(ModelView(Accession, db))
