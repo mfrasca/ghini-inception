@@ -6,3 +6,4 @@ DEBUG = True
 SECRET_KEY = 'development key'
 USERNAME = 'mario'
 PASSWORD = 'mario'
+ADMIN = True

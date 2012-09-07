@@ -7,7 +7,7 @@
   {% if not session.logged_in %}
     <a href="{{ url_for('login') }}">log in</a>
   {% else %}
-    <a href="{{ url_for('logout') }}">log out {{ session.logged_in }}</a>
+    <a href="{{ url_for('logout') }}">log out {{ session.logged_in.name }}</a>
   {% endif %}
   </div>
   {% for message in get_flashed_messages() %}

@@ -33,7 +33,7 @@ def login():
             if user.passwd != request.form['password']:
                 error = 'Invalid password'
             else:
-                session['logged_in'] = user.name
+                session['logged_in'] = user
                 flash('You were logged in')
                 return redirect(url_for('show_accueil'))
         except:
@@ -102,25 +102,26 @@ def teardown_request(exception):
     pass
 
 
+if settings.ADMIN:
 ## the administrative views!
 
-from flask.ext.admin import Admin, BaseView, expose
-from flask.ext.admin.contrib.sqlamodel import ModelView
+    from flask.ext.admin import Admin, BaseView, expose
+    from flask.ext.admin.contrib.sqlamodel import ModelView
 
-class AdminIndexView(BaseView):
-    @expose('/')
-    def index(self):
-        return self.render('index.html')
+    class AdminIndexView(BaseView):
+        @expose('/')
+        def index(self):
+            return self.render('index.html')
 
-admin = Admin(app, name='ghini')
-db = create_session()
-admin.add_view(ModelView(User, db))
-admin.add_view(ModelView(Rank, db))
-admin.add_view(ModelView(Taxon, db))
-admin.add_view(ModelView(Accession, db))
-admin.add_view(ModelView(Country, db))
-admin.add_view(ModelView(Division, db))
-db.close()
+    admin = Admin(app, name='ghini')
+    db = create_session()
+    admin.add_view(ModelView(User, db))
+    admin.add_view(ModelView(Rank, db))
+    admin.add_view(ModelView(Taxon, db))
+    admin.add_view(ModelView(Accession, db))
+    admin.add_view(ModelView(Country, db))
+    admin.add_view(ModelView(Division, db))
+    db.close()
 
 
 

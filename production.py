@@ -6,3 +6,4 @@ DEBUG = True
 SECRET_KEY = 'development key'
 USERNAME = 'kruiskruid_web'
 PASSWORD = 'silly'
+ADMIN = False

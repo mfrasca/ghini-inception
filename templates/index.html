@@ -4,7 +4,9 @@
   <li><a href="{{ url_for('the_garden') }}">introduction</a></li>
   <li><a href="{{ url_for('the_map') }}">virtual visit</a></li>
   {% if session.logged_in %}
+  {% if session.logged_in.profile == "admin" %}
   <li><a href="/admin">technical stuff</a></li>
+  {% endif %}
   {% endif %}
   <li>
     <form action="{{ url_for('plant_search') }}" method=post class=add-entry>
