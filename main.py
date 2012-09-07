@@ -3,19 +3,12 @@
 
 from flask import Flask, g, render_template, request, session, flash, redirect, url_for
 from btuu.schema import *
-
-
-# configuration
-DATABASE = 'cuchubo'
-DEBUG = True
-## import os; os.urandom(24)
-SECRET_KEY = 'development key'
-USERNAME = 'mario'
-PASSWORD = 'mario'
+import settings
+settings_dict = dict((i, getattr(settings, i)) for i in dir(settings) if i[0]!='_')
 
 
 app = Flask(__name__)
-app.config.from_object(__name__)
+app.config.from_object(settings)
 
 
 from sqlalchemy import create_engine
@@ -94,7 +87,7 @@ def country_search():
 
 
 def create_session():
-    engine = create_engine('postgresql://%s:%s@localhost/%s' % (USERNAME, PASSWORD, DATABASE))
+    engine = create_engine('postgresql://%(USERNAME)s:%(PASSWORD)s@%(DBHOST)s/%(DATABASE)s' % settings_dict)
     return sessionmaker(bind=engine)()
 
 

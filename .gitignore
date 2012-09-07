@@ -3,6 +3,9 @@
 */*~
 */*/*~
 
+## symbolic links
+settings.py
+
 # Packages
 *.egg
 *.egg-info
