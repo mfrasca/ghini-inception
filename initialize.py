@@ -38,8 +38,8 @@ for item in divisions:
 session.commit()
 
 from xml.dom.minidom import parse, parseString
-dom = parse("resources/genera-minimal.xml")
-#dom = parse("resources/genera.xml")
+#dom = parse("resources/genera-minimal.xml")
+dom = parse("resources/genera.xml")
 root = dom.childNodes[0]
 bt_database = [i for i in root.childNodes if i.nodeName == u'BTDatabase'][0]
 

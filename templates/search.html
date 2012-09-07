@@ -8,4 +8,17 @@ not implemented yet.
 <li>accessions (can expand to detailed list of accessions)</li>
 <li>in the detailed accession list, each accession has an expandable section for its locations.</li>
 </ul>
+
+<ul class=entries>
+  {% for entry in objects %}
+  <li><h2>{{ entry.full_name }}</h2></li>
+  <p>{% for child in entry.children %}
+  {{ child.epithet }}, 
+  {% endfor %}</p>
+  {% for accession in entry.accesions %}
+  <li>{{ accession.accid }}</li>
+  {% endfor %}
+  {% endfor %}
+</ul>
+
 {% endblock %}

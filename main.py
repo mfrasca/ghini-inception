@@ -20,6 +20,7 @@ app.config.from_object(__name__)
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from sqlalchemy import or_
 
 
 ## accueil - reception - index page
@@ -62,7 +63,11 @@ def the_garden():
 
 @app.route('/search', methods=['GET', 'POST'])
 def plant_search():
-    return render_template('search.html')
+    like = "%" + request.form['name'] + "%"
+    taxa = g.session.query(Taxon)
+    taxa = taxa.filter(or_(Taxon.vern_name.ilike(like),
+                           Taxon.epithet.ilike(like)))
+    return render_template('search.html', objects=taxa)
 
 
 @app.route('/countries', methods=['GET', 'POST'])
@@ -92,8 +97,14 @@ def teardown_request(exception):
 
 ## the administrative views!
 
-from flask.ext.admin import Admin
+from flask.ext.admin import Admin, BaseView, expose
 from flask.ext.admin.contrib.sqlamodel import ModelView
+
+class AdminIndexView(BaseView):
+    @expose('/')
+    def index(self):
+        return self.render('index.html')
+
 admin = Admin(app, name='ghini')
 db = create_session()
 admin.add_view(ModelView(Rank, db))

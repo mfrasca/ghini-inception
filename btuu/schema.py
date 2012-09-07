@@ -41,6 +41,7 @@ class Taxon(Base):
     parent = relationship("Taxon", remote_side=[pk], backref=backref("children", order_by=pk))
     author = relationship("Author", backref=backref('taxa', order_by=pk))
     rank = relationship("Rank", backref=backref('taxa', order_by=pk))
+    accessions = relationship("Accession", backref="taxon")
 
     def __repr__(self):
         return "<%s:%s>" % (self.rank.name, self.epithet)
@@ -57,6 +58,16 @@ class Taxon(Base):
     type = Column(TEXT)
     changed = Column('Changed', String(40))
 
+    @property
+    def full_name(self):
+        if self.parent is not None:
+            prefix = self.parent.full_name + "; "
+        else:
+            prefix = ''
+        scientific = prefix + self.rank.name + ": " + self.epithet
+        if self.vern_name is not None:
+            return scientific + " (" + self.vern_name + ")"
+        return scientific
 
 class Accession(Base):
     __tablename__ = 'accession'
