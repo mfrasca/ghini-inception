@@ -14,7 +14,7 @@
         <dt>plant name:
           <dd><input type=text size=30 name=name></dd>
           <dd><input type=submit value=search>
-          {% if session.logged_in %}
+          {% if session.logged_in.profile != "guest" %}
           <input type=submit value=insert>
           {% endif %}
           </dd> 

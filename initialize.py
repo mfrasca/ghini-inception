@@ -1,11 +1,14 @@
 #!/usr/bin/env python
 from sqlalchemy import create_engine
 
-engine = create_engine('postgresql://mario:mario@localhost/cuchubo')
+import settings
+settings_dict = dict((i, getattr(settings, i)) for i in dir(settings) if i[0]!='_')
+
+engine = create_engine('postgresql://%(USERNAME)s:%(PASSWORD)s@%(DBHOST)s/%(DATABASE)s' % settings_dict)
 from sqlalchemy.orm import sessionmaker
 session = sessionmaker(bind=engine)()
-
 from btuu.schema import *
+
 if False:
     Base.metadata.create_all(engine)
     session.commit()
