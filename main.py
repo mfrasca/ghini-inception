@@ -9,7 +9,6 @@ settings_dict = dict((i, getattr(settings, i)) for i in dir(settings) if i[0]!='
 
 app = Flask(__name__)
 app.config.from_object(settings)
-session['logged_in'] = None
 
 
 from sqlalchemy import create_engine
@@ -45,7 +44,7 @@ def login():
 
 @app.route('/logout')
 def logout():
-    session['logged_in'] = None
+    session.pop('logged_in', None)
     flash('You were logged out')
     return redirect(url_for('show_accueil'))
 
