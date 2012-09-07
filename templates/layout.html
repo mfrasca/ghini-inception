@@ -1,9 +1,10 @@
 <!doctype html>
 <title>Ghini</title>
-<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-<div class=page>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<div class="page">
   <h1><a href="{{ url_for('show_accueil') }}">Ghini</a></h1>
-  <div class=metanav>
+  <div class="metanav">
   {% if not session.logged_in %}
     <a href="{{ url_for('login') }}">log in</a>
   {% else %}
@@ -11,7 +12,7 @@
   {% endif %}
   </div>
   {% for message in get_flashed_messages() %}
-    <div class=flash>{{ message }}</div>
+    <div class="flash">{{ message }}</div>
   {% endfor %}
   {% block body %}{% endblock %}
 </div>
