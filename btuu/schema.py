@@ -15,6 +15,7 @@ class User(Base):
     id = Column('id', Integer, primary_key=True)
     name = Column(String(30), unique=True)
     passwd = Column(String(30))
+    profile = Column(String(8))
 
     def __repr__(self):
         return self.name
@@ -78,6 +79,32 @@ class Taxon(Base):
         if self.vern_name is not None:
             return scientific + " (" + self.vern_name + ")"
         return scientific
+
+    @property
+    def family(self):
+        family = self.lookup("family")
+        return family.full_name
+
+    @property
+    def binomial(self):
+        species = self.lookup("species")
+        genus = self.lookup("genus")
+        if species:
+            return genus.epithet + " " + species.epithet
+        if genus:
+            return genus.epithet
+        return "<?>"
+
+    def lookup(self, what, base=None):
+        """look up a taxon at a specific rank from base
+        """
+        lookup = base or self
+        while lookup.rank.name != what:
+            lookup = lookup.parent
+            if lookup is None:
+                break
+        return lookup
+        
 
 class Accession(Base):
     __tablename__ = 'accession'

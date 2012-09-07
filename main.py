@@ -20,7 +20,7 @@ app.config.from_object(__name__)
 
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from sqlalchemy import or_
+from sqlalchemy import or_, and_
 
 
 ## accueil - reception - index page
@@ -68,10 +68,17 @@ def the_garden():
 
 @app.route('/search', methods=['GET', 'POST'])
 def plant_search():
-    like = "%" + request.form['name'] + "%"
+    genus, species = ([i for i in request.form['name'].split(" ") if i] + [''])[:2]
     taxa = g.session.query(Taxon)
-    taxa = taxa.filter(or_(Taxon.vern_name.ilike(like),
-                           Taxon.epithet.ilike(like)))
+    taxa = taxa.filter(and_(Taxon.fk_rank=="RNK_G0",
+                            Taxon.epithet.ilike(genus)))
+    if species:
+        parent_pk = [i.pk for i in taxa]
+        taxa = g.session.query(Taxon)
+        taxa = taxa.filter(and_(Taxon.fk_parent.in_(parent_pk),
+                                and_(Taxon.fk_rank=="RNK_S0",
+                                     Taxon.epithet.ilike(species))))
+
     return render_template('search.html', objects=taxa)
 
 

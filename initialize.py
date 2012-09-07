@@ -4,38 +4,41 @@ from sqlalchemy import create_engine
 engine = create_engine('postgresql://mario:mario@localhost/cuchubo')
 from sqlalchemy.orm import sessionmaker
 session = sessionmaker(bind=engine)()
-if False:
-    session.execute("drop table rank cascade")
-    session.execute("drop table taxon cascade")
-    session.execute("drop table accession cascade")
-    session.execute("drop table country cascade")
-    session.execute("drop table division cascade")
-    session.commit()
 
 from btuu.schema import *
+if False:
+    Base.metadata.create_all(engine)
+    session.commit()
+    1/0
+
+session.execute("drop table rank cascade")
+session.execute("drop table taxon cascade")
+session.execute("drop table accession cascade")
+#session.execute("drop table country cascade")
+#session.execute("drop table division cascade")
+session.commit()
+
 Base.metadata.create_all(engine)
-
-session.execute("delete from division")
-session.execute("delete from country")
-session.execute("delete from accession")
-session.execute("delete from taxon")
-session.execute("delete from rank")
 session.commit()
 
-countries = [i.split("\t") for i in file("resources/countries.txt").read().split("\n") if i]
-for item in countries:
-    session.add(Country(pk_iso=item[0], 
-                        name=item[1]))
-session.commit()
+if False:
+    session.execute("delete from country")
+    session.execute("delete from division")
+    session.commit()
 
-divisions = [i.split("\t") for i in file("resources/regions.txt").read().split("\n") if i]
-for item in divisions:
-    country_id, abbreviation = item[0].split("-")
-    session.add(Division(pk_iso=item[0], 
-                         fk_country=country_id,
-                         name=item[1], 
-                         abbr=abbreviation))
-session.commit()
+    countries = [i.split("\t") for i in file("resources/countries.txt").read().split("\n") if i]
+    for item in countries:
+        session.add(Country(pk_iso=item[0], 
+                            name=item[1]))
+
+    divisions = [i.split("\t") for i in file("resources/regions.txt").read().split("\n") if i]
+    for item in divisions:
+        country_id, abbreviation = item[0].split("-")
+        session.add(Division(pk_iso=item[0], 
+                             fk_country=country_id,
+                             name=item[1], 
+                             abbr=abbreviation))
+    session.commit()
 
 from xml.dom.minidom import parse, parseString
 #dom = parse("resources/genera-minimal.xml")
