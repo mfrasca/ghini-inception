@@ -3,7 +3,7 @@
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
 <div class="page">
-  <h1><a href="{{ url_for('show_accueil') }}">Ghini</a></h1>
+  <h1><a href="{{ url_for('show_root') }}">Ghini</a></h1>
   <div class="metanav">
   {% if not session.logged_in %}
     <a href="{{ url_for('login') }}">log in</a>
