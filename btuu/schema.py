@@ -82,13 +82,13 @@ class Taxon(Base):
 
     @property
     def family(self):
-        family = self.lookup("family")
+        family = self.lookup("RNK_F0")
         return family.full_name
 
     @property
     def binomial(self):
-        species = self.lookup("species")
-        genus = self.lookup("genus")
+        species = self.lookup("RNK_S0")
+        genus = self.lookup("RNK_G0")
         if species:
             return genus.epithet + " " + species.epithet
         if genus:
@@ -99,7 +99,7 @@ class Taxon(Base):
         """look up a taxon at a specific rank from base
         """
         lookup = base or self
-        while lookup.rank.name != what:
+        while lookup.rank.pk != what:
             lookup = lookup.parent
             if lookup is None:
                 break

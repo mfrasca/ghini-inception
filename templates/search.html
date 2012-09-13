@@ -17,7 +17,7 @@ not implemented yet.
   {% set last = entry.family %}
   {% endif %}
   <h3>{{ entry.binomial }}</h3>
-  <p>{% for child in entry.children %}{{ child.epithet }}, {% endfor %}</p>
+  <p>{% for child in entry.children %}{{ child.rank.name }}: {{ child.epithet }}, {% endfor %}</p>
   {% for accession in entry.accesions %}
   <li>{{ accession.accid }}</li>
   {% endfor %}
