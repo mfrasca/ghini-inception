@@ -345,7 +345,7 @@ function init() {
                 var body_div = $('<div/>', { class: 'modal-body', });
                 div.append(header_div).append(body_div);
 
-                header_div.append($('<a/>', { class: 'close', 'data-dismiss': 'modal'}).text('\&#x2715;'));
+                header_div.append($('<a/>', { class: 'close', 'data-dismiss': 'modal'}).text("×"));
                 header_div.append($('<h3/>').text(header[2]));
 
                 // add the reference to the dialog box to the help menu.
