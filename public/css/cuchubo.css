@@ -67,3 +67,6 @@ label > input {
     top: -3px;
     *overflow: hidden;
 }  
+.leaflet-bottom {
+    bottom: 38px;
+}
