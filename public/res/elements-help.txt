@@ -1,0 +1,18 @@
+about,about the map,Welcome to the Cuchubo Virtual Tour!,info-sign
+        <h4>how to use the map</h4>
+        <p>zoom in, clicking on the bullets will open some information about the
+          accessions/plants, with links to the corresponding wikipedia page,
+          context menu on bullet will open a "locate similar plants" dialog
+          box, zooming further in will display more plants.</p>
+        <h4>disclaimer</h4>
+        <p>this site is an experimental product, <br/>me (Mario Frasca), I am
+          <ul><li>learning leaflet, bootstrap, jQuery, javascript, </li>
+            <li>thinking of expanding bauble in the direction shown by this site, </li>
+            <li>helping my friend Saskia describing a garden, </li>
+            <li>probably contributing to the conservation of the garden described here</li></ul>.
+        </p>
+
+contact,contact me,Contact Me!,envelope
+        <p><strong>email:</strong> mario(at)anche(dot)no</p>
+        <p><strong>gTalk:</strong> mariotomo </p>
+        <p><strong>skype:</strong> mariotomo</p>

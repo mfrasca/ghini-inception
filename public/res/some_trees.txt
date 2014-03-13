@@ -1,0 +1,371 @@
+2014.0001,21,9.23508951684,-74.4227429107,Rubiaceae,Ixora,coccinea,Coral amarillo
+2014.0002,21,9.23508157452,-74.4227543101,Fabaceae,Leucaena,leucocephala,Coralito
+2014.0003,21,9.23507098475,-74.4227687269,Rutaceae,Citrus,aurantium,Naranja agria
+2014.0004,22,9.2350759487,-74.422750622,Rubiaceae,Ixora,coccinea,Coral rojo
+2014.0005,21,9.23506866823,-74.4227536395,Oxalidaceae,Averrhoa,carambola,Carambolo
+2014.0006,21,9.23505874032,-74.4227559865,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0007,22,9.23505145985,-74.4227449223,Euphorbiaceae,Jatropha,gossypifolia,tua-tua
+2014.0008,20,9.23504484125,-74.4227600098,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0009,22,9.23507826521,-74.4227301702,Fabaceae,Crotalaria,verrucosa,cascabel de brujos; mal de ojos
+2014.0010,22,9.23507892707,-74.4227415696,Piperaceae,Pothomorphe,peltata,Santa Maria
+2014.0011,21,9.23505774753,-74.4227911904,Malvaceae,Thespesia,populnea,Clemón
+2014.0012,21,9.23504285566,-74.4228136539,Caricaceae,Carica,papaya,Papaya
+2014.0013,22,9.23504120101,-74.4228069484,Iridaceae,Iris,florentina,Lirio blanco
+2014.0014,20,9.23503491334,-74.422795549,Sapotaceae,Manilkara,sapotilla,Nispero
+2014.0015,22,9.23502994938,-74.4227804616,Fabaceae,Desmodium,molliculum,Pata de perro
+2014.0018,22,9.23502829473,-74.4228364527,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0019,21,9.23498825215,-74.4228341058,Araceae,Anthurium,andranum,Anturio
+2014.0020,21,9.23501836682,-74.4228522107,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0021,22,9.23497435307,-74.4228696451,Fabaceae,Leucaena,leucocephala,Coralito
+2014.0022,22,9.23495251166,-74.4228495285,Fabaceae,Platymiscium,pinnatum,Trébol
+2014.0023,22,9.23499222331,-74.4228954613,Capparaceae,Capparis,baducca,Azota de caballo
+2014.0024,22,9.23498097168,-74.4228807092,Malvaceae,Malvaviscus,aff. arboreus,Quesito
+2014.0025,22,9.23494721677,-74.4228441641,Apocynaceae,Thevetia,peruviana,Cava longa
+2014.0026,22,9.23493761979,-74.4228411466,-,-,trebol26,Trebol
+2014.0028,22,9.23492603722,-74.4228750095,Fabaceae,Copaifera,officinalis,Canime; Aceite
+2014.0029,20,9.23493265583,-74.4228790328,Sapindaceae,Melicoccus,bijugatus,Mamoncillo o Mamon
+2014.0030,22,9.23494854049,-74.422891438,Fabaceae,Tamarindus,indica,Tamarindo acido
+2014.0031,22,9.23498527377,-74.4229065254,-,-,pitaya,cardón; pitaya
+2014.0032,22,9.23491180721,-74.4228589162,Verbenaceae,Vitex,cymosa,Aceituna
+2014.0035,20,9.23492537536,-74.4229219481,Sapotaceae,Pouteria,stipitata,Níspero de monte
+2014.0036,22,9.23498064075,-74.4228887558,Fabaceae,Leucaena,leucocephala,Coralito
+2014.0040,22,9.23490485767,-74.4228615984,Malvaceae,Malvaviscus,aff. arboreus,Quesito
+2014.0041,22,9.23492206606,-74.4228605926,Malvaceae,Malvaviscus,aff. arboreus,Quesito
+2014.0042,22,9.23492636815,-74.4228639454,Malvaceae,Malvaviscus,aff. arboreus,Quesito
+2014.0043,22,9.23494159095,-74.4228954613,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0044,22,9.23480888781,-74.4229253009,-,-,mirto,Mirto
+2014.0045,21,9.23481285898,-74.4229316711,Arecaceae,Sabal,mauritiiformis,Palma amarga
+2014.0046,22,9.23481616828,-74.4229367003,Capparaceae,Capparis,baducca,Azota de caballo
+2014.0047,22,9.23481252805,-74.4229430705,Sapindaceae,Melicoccus,bijugatus,Mamoncillo o Mamon
+2014.0048,22,9.23505046706,-74.4227006659,Rubiaceae,Hamelia,patens,Patica de paloma o Vensenunco, Red scaler
+2014.0049,21,9.23505476916,-74.4226912782,Lythraceae,Lagerstroemia,indica,Astromelia morada
+2014.0050,21,9.23506138776,-74.4226986542,Lythraceae,Lagerstroemia,indica,Astromelia morada
+2014.0052,22,9.23509712824,-74.422692284,Agavaceae,Cordyline,cf. fruticosa,Linda palmera
+2014.0053,21,9.23511996243,-74.4226926193,Fabaceae,Acacia,guacamayo,Guacamayo
+2014.0054,21,9.23512625011,-74.4226798788,Annonaceae,Annona,squamosa,Anón de verruga
+2014.0055,21,9.23513187592,-74.4226718321,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0056,21,9.2351239336,-74.4226480275,Arecaceae,Livistona,chinensis,palma de abanico
+2014.0057,22,9.23510970359,-74.4226684794,Amaryllidaceae,Amaryllis,Josephinae,Lirio tulipán
+2014.0058,21,9.23510407778,-74.4226574153,Rubiaceae,Hamelia,patens,Patica de paloma o Vensenunco, Red scaler
+2014.0059,21,9.23506899916,-74.4226661325,Annonaceae,Annona,squamosa,Anón de verruga
+2014.0060,22,9.23514742965,-74.4226517156,Euphorbiaceae,Sandwithia,guayanensis,Maiz tostado
+2014.0061,22,9.23515140081,-74.4226460159,Euphorbiaceae,Sandwithia,guayanensis,Maiz tostado
+2014.0062,22,9.23515504104,-74.4226419926,Euphorbiaceae,Sandwithia,guayanensis,Maiz tostado
+2014.0063,20,9.23516066686,-74.4226342812,Erythroxylaceae,Erythroxylum,coca,Coca
+2014.0064,20,9.23514114197,-74.4226272404,Rutaceae,Citrus,sp.,limón de argentina
+2014.0065,22,9.23512194802,-74.422631599,Verbenaceae,Nyctanthes,arbor tristis,Jasmín de Guatemala; silencio de noche
+2014.0066,22,9.23512492639,-74.4226269051,Verbenaceae,Nyctanthes,arbor tristis,Jasmín de Guatemala; silencio de noche
+2014.0067,22,9.23512790476,-74.4226225466,Verbenaceae,Nyctanthes,arbor tristis,Jasmín de Guatemala; silencio de noche
+2014.0068,22,9.23512095522,-74.4226178527,Anacardiaceae,Mangifera,indica,Mango
+2014.0069,22,9.23511168918,-74.4226128235,Anacardiaceae,Mangifera,indica,Mango
+2014.0070,22,9.23509845196,-74.4226144999,Lauraceae,Persea,americana,Aguacate
+2014.0071,22,9.23511268197,-74.4226587564,Aristolochiaceae,Aristolochia,anguicida,Curarina
+2014.0072,22,9.23510143034,-74.4226641208,Piperaceae,Pothomorphe,peltata,Santa Maria
+2014.0073,21,9.23510341592,-74.4226423278,Rutaceae,Murraya,paniculata,-
+2014.0074,22,9.23509613545,-74.4226339459,Euphorbiaceae,Sandwithia,guayanensis,Maiz tostado
+2014.0075,21,9.23512260988,-74.4226054475,Arecaceae,Chrysalidocarpus,lutescens,Palma areca
+2014.0076,21,9.23510672522,-74.4225953892,Arecaceae,Livistona,chinensis,palma de abanico
+2014.0077,22,9.23510639429,-74.422637634,Polypodiaceae,Polypodium,sp.,Helecho trinche
+2014.0078,22,9.23509878289,-74.4226396456,Araceae,Philodendron,scadens,Miami
+2014.0079,20,9.23506966102,-74.422576949,Moringaceae,Moringa,oleifera,Aceite, arbol de ramano, Moringa
+2014.0080,21,9.23508753126,-74.4225836545,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0081,22,9.23507429405,-74.4226138294,-,-,laurel verde,laurel verde
+2014.0082,21,9.23507892707,-74.4226446748,Oxalidaceae,Averrhoa,carambola,Carambolo
+2014.0083,22,9.23508256731,-74.4226611033,Erythroxylaceae,Erythroxylum,coca,Coca
+2014.0084,22,9.23510970359,-74.422708042,-,-,mirto blanco,mirto blanco
+2014.0085,22,9.23510407778,-74.4227184355,Commelinaceae,Commelina,elegans H.B.K,Suelda con suelda
+2014.0086,22,9.23508587661,-74.4227140769,Boraginaceae,Heliotropium,indicum,rabo de alacrán
+2014.0087,22,9.23506568986,-74.4226751849,Piperaceae,Pothomorphe,peltata,Santa Maria
+2014.0088,22,9.23506403521,-74.4226855785,Verbenaceae,Lippia,Nodiflora,Quemadera
+2014.0089,22,9.23505973311,-74.4227073714,Verbenaceae,Lantana,camara,venturosa
+2014.0092,22,9.23513915639,-74.4226849079,Lythraceae,Lawsonia,inermis,Reseda, Henna tree
+2014.0093,20,9.23495019515,-74.4226523861,Oxalidaceae,Averrhoa,carambola,Carambolo
+2014.0094,20,9.23489261324,-74.4227207825,-,-,palma 94,palma
+2014.0095,22,9.23498262633,-74.4227120653,Asteraceae,Senecio,formosus,Arnica
+2014.0096,22,9.23498461191,-74.4227543101,Fabaceae,Desmodium,molliculum,Pata de perro
+2014.0097,22,9.23493000839,-74.4227502868,Amaryllidaceae,Hippeastrum,vittatum,Lirio rojo
+2014.0098,22,9.23492835374,-74.4227734208,Crassulaceae,Kalanchoe,pinnata,Kalanchoe, Maravilla, Tree of life
+2014.0099,20,9.23492603722,-74.4227650389,-,-,palma 99,palma trinilax
+2014.0100,22,9.23493298676,-74.4227764383,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0101,21,9.23490386488,-74.4227546453,Arecaceae,Chrysalidocarpus,lutescens,Palma areca
+2014.0102,21,9.2349204114,-74.4227067009,Musaceae,Musa,guineo 102,guineo
+2014.0104,22,9.23489128952,-74.4227351993,Rubiaceae,Ixora,coccinea,Coral rojo
+2014.0105,22,9.2348737502,-74.4227087125,Rubiaceae,Ixora,coccinea,Coral rojo
+2014.0106,22,9.23488731835,-74.4227010012,Rubiaceae,Ixora,coccinea,Coral rojo
+2014.0107,22,9.2348585274,-74.4226936251,Rubiaceae,Ixora,coccinea,coral rojo hoja pequeña
+2014.0108,22,9.23485356344,-74.4226999953,Dracaenaceae,Sansevieria,zeylandica,curarina
+2014.0109,21,9.23488897301,-74.4226875901,Oxalidaceae,Averrhoa,carambola,Carambolo
+2014.0110,21,9.23488069974,-74.422682561,Sapindaceae,Melicoccus,bijugatus,Mamoncillo o Mamon
+2014.0111,22,9.23492537536,-74.4227693975,Solanaceae,Solanum,torvum,Huevo de gato
+2014.0112,22,9.23486150577,-74.4226661325,-,-,limon de la india ,Limón de la India
+2014.0113,22,9.23484330459,-74.4226798788,Arecaceae,Chrysalidocarpus,lutescens,Palma areca
+2014.0114,22,9.2348499232,-74.422670491,Arecaceae,Chrysalidocarpus,lutescens,Palma areca
+2014.0115,22,9.23488963487,-74.4226758555,Meliaceae,Swietenia,macrophylla,Caobo colombiano
+2014.0116,20,9.2348704409,-74.4226735085,-,-,limon de espana,Limón de España
+2014.0117,22,9.23482775085,-74.4226828963,-,-,Tomosuco,Tomosuco
+2014.0118,22,9.23488500184,-74.4226520509,-,-,juan de la verdad,Juan de la verdad
+2014.0119,22,9.23485621088,-74.4226584211,Anacardiaceae,Astronium,graveolens,Arbol Santa Cruz
+2014.0120,22,9.23486779345,-74.42265708,Arecaceae,Chrysalidocarpus,lutescens,Palma areca
+2014.0121,22,9.23487408113,-74.4226560742,Arecaceae,Chrysalidocarpus,lutescens,Palma areca
+2014.0122,22,9.23489459882,-74.4226604328,Rutaceae,Citrus,aurantium,Naranja agria
+2014.0123,20,9.23489724627,-74.4226507097,-,-,palma 123,palma
+2014.0124,22,9.23489526069,-74.4226808846,-,-,124,-
+2014.0126,22,9.23490121743,-74.4226725027,-,-,jasmin del paraiso,Jasmín del paraíso
+2014.0127,22,9.23491346186,-74.4226735085,-,-,citrus 127,-
+2014.0128,22,9.23490585046,-74.422663115,Dioscoreaceae,Dioscorea,alata,Ñame
+2014.0129,20,9.23491743303,-74.4226443395,-,-,palma grande sol,palma grande sol
+2014.0130,22,9.23493265583,-74.422705695,Fabaceae,Leucaena,leucocephala,Coralito
+2014.0131,22,9.23493695793,-74.4226812199,-,-,yucca 131,-
+2014.0132,22,9.23494655491,-74.4226839021,Anacardiaceae,Mangifera,indica,Mango
+2014.0133,20,9.2349094907,-74.4226513803,Asteraceae,Complaya,trilobata,-
+2014.0134,22,9.2350835601,-74.4226235524,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0135,22,9.23492603722,-74.4226973131,Amaryllidaceae,Hippeastrum,vittatum,Lirio rojo
+2014.0150,22,9.23500380588,-74.4228773564,Sapindaceae,Sapindus,saponaria,Mamón de mico
+2014.0151,22,9.23497435307,-74.4229249656,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0154,20,9.23483668598,-74.4229554757,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0155,20,9.23485918926,-74.4229722396,Bignoniaceae,Crescentia,cujete,Totumo
+2014.0156,20,9.23488599463,-74.4229920208,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0157,20,9.23491379279,-74.423010461,Anacardiaceae,Mangifera,indica,Mango
+2014.0158,20,9.23493629607,-74.42298498,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0159,22,9.23485257065,-74.4229222834,Rubiaceae,Morinda,citrifolia,Noni
+2014.0191,22,9.2349399363,-74.4226403162,Nymphaeaceae,Nymphaea,lotus,Loto
+2014.0192,22,9.23504748869,-74.4227231294,Commelinaceae,Commelina,elegans H.B.K,Suelda con suelda
+2014.0193,22,9.23502862566,-74.4226989895,Annonaceae,Annona,squamosa,Anón de verruga
+2014.0194,22,9.23502895659,-74.4226832315,Euphorbiaceae,Jatropha,gossypifolia,tua-tua
+2014.0195,22,9.23500148936,-74.4226996601,Euphorbiaceae,Jatropha,gossypifolia,tua-tua
+2014.0197,22,9.23502266891,-74.422708042,Crassulaceae,Kalanchoe,pinnata,Kalanchoe, Maravilla, Tree of life
+2014.0198,22,9.23502002147,-74.4227160886,-,-,colchon japones,colchón japonés; césped de japón
+2014.0199,22,9.23501439565,-74.422692284,-,-,helecho 199,-
+2014.0200,20,9.23493166304,-74.4227968901,Anacardiaceae,Astronium,graveolens,Arbol Santa Cruz
+2014.0201,22,9.23493596514,-74.4227972254,Araceae,Philodendron,scadens,Miami
+2014.0202,22,9.234936627,-74.4227928668,-,-,yucca 202,Yucca
+2014.0203,22,9.23493133211,-74.4227875024,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0204,20,9.23492405164,-74.4227885082,Fabaceae,Caesalpinia,ebano,Ebano
+2014.0205,21,9.23490022464,-74.4227828085,-,-,palma tritrinas,palma tritrinas
+2014.0208,21,9.23488268533,-74.422807619,Fabaceae,Pithecellobium,lanceolatus,Espino o Chichero
+2014.0209,21,9.23488367812,-74.422817342,Fabaceae,Copaifera,officinalis,Canime; Aceite
+2014.0211,21,9.23482841271,-74.4227023423,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0212,21,9.23487010997,-74.4227975607,Malvaceae,Thespesia,populnea,Clemón
+2014.0213,22,9.2348347004,-74.4227764383,Bromeliaceae,PrBromelia,sp.,piña
+2014.0214,22,9.23483834063,-74.4227854908,Arecaceae,Sabal,mauritiiformis,Palma amarga
+2014.0215,21,9.23482841271,-74.4228163362,Capparaceae,Capparis,baducca,Azota de caballo
+2014.0216,21,9.23481716108,-74.4228421524,-,-,species 216,-
+2014.0218,22,9.23482642713,-74.4227201119,Rubiaceae,Ixora,coccinea,Coral rojo
+2014.0219,21,9.23480260013,-74.4228786975,Sapindaceae,Melicoccus,bijugatus,Mamoncillo o Mamon
+2014.0220,22,9.23480524757,-74.4228837267,Zygophyllaceae,Bulnesia,arborea,Guayacan bola
+2014.0221,22,9.23480756409,-74.4228880852,Zygophyllaceae,Bulnesia,arborea,Guayacan bola
+2014.0222,22,9.23484793762,-74.4228944555,Zygophyllaceae,Bulnesia,arborea,Guayacan bola
+2014.0223,21,9.23480359292,-74.4228961319,Fabaceae,Copaifera,officinalis,Canime; Aceite
+2014.0224,21,9.23482278689,-74.4229192659,Fabaceae,Caesalpinia,pulcherrima,Clavellina amarilla
+2014.0225,20,9.23486018205,-74.42287568,Sapindaceae,Melicoccus,bijugatus,Mamoncillo o Mamon
+2014.0226,21,9.23485257065,-74.4228699803,Capparaceae,Capparis,baducca,Azota de caballo
+2014.0227,20,9.23485190879,-74.4228636101,Sapindaceae,Melicoccus,bijugatus,Mamoncillo o Mamon
+2014.0228,22,9.23484760669,-74.4228595868,-,-,azucena,Azucena
+2014.0229,22,9.2348456211,-74.4228542224,-,-,azucena,Azucena
+2014.0230,20,9.23487010997,-74.4228109717,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0231,22,9.2348899658,-74.4228290766,-,-,species 231,-
+2014.0232,22,9.23490022464,-74.4228180125,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0233,22,9.23493133211,-74.4228025898,Euphorbiaceae,Codiaeum,sp.,Croto
+2014.0236,20,9.23483569319,-74.4227419049,-,-,limon de la india ,Limón de la India
+2014.0237,20,9.23484859948,-74.4227489457,-,-,palma 99,palma trinilax
+2014.0238,21,9.23484065715,-74.4227563217,-,-,palma 99,palma trinilax
+2014.0239,21,9.23485323251,-74.4227593392,-,-,239,-
+2014.0240,22,9.23481749201,-74.4227348641,-,-,240,-
+2014.0241,22,9.23483304574,-74.4227050245,Euphorbiaceae,Codiaeum,sp.,Croto
+2014.0242,21,9.23483767877,-74.4227030128,Apocynaceae,Thevetia,peruviana,Cava longa
+2014.0243,22,9.23484396645,-74.4227033481,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0244,22,9.23484694483,-74.4226993248,-,-,Jasmin 244,Jasmin
+2014.0245,22,9.23482212503,-74.4227345288,-,-,245,-
+2014.0247,22,9.23494059816,-74.4225494564,-,-,247,-
+2014.0248,22,9.23494324561,-74.4225444272,Rubiaceae,Ixora,coccinea,coral rojo hoja pequeña
+2014.0249,22,9.23493431048,-74.4225739315,-,-,palma 99,palma trinilax
+2014.0250,20,9.23499586355,-74.4225581735,Strelitziaceae,Ravenala,madagascarensis,Palma del viajero; palo del viajero
+2014.0251,22,9.23493364862,-74.4225628674,-,-,yucca 251,-
+2014.0252,22,9.23494887142,-74.4225722551,-,-,yucca 252,-
+2014.0253,22,9.23498428098,-74.422580637,Rutaceae,Citrus,aurantium,Naranja agria
+2014.0254,22,9.23501638123,-74.422596395,Caricaceae,Carica,papaya,Papaya
+2014.0255,22,9.23502597821,-74.4225984067,Rubiaceae,Hamelia,patens,Patica de paloma o Vensenunco, Red scaler
+2014.0256,22,9.23500777704,-74.4225813076,Euphorbiaceae,Codiaeum,sp.,Croto
+2014.0257,22,9.23502002147,-74.4225836545,Erythroxylaceae,Erythroxylum,coca,Coca
+2014.0258,22,9.23503061124,-74.4225876778,Euphorbiaceae,Jatropha,gossypifolia,tua-tua
+2014.0259,22,9.23504120101,-74.4225692376,Euphorbiaceae,Jatropha,gossypifolia,tua-tua
+2014.0260,22,9.23503094217,-74.4225645438,Lythraceae,Punica,granatum,Granada
+2014.0261,22,9.23503789171,-74.42254778,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0262,22,9.235012741,-74.4225293398,Piperaceae,Pothomorphe,peltata,Santa Maria
+2014.0263,22,9.23502630914,-74.4225390628,-,-,juan de la verdad,Juan de la verdad
+2014.0264,22,9.23494854049,-74.4225564972,Myrtaceae,Eugenia,jambolana,pera roja
+2014.0265,22,9.23497700051,-74.4225263223,Oxalidaceae,Averrhoa,carambola,Carambolo
+2014.0266,22,9.23497402214,-74.4225326926,Sterculiaceae,Theobroma,cacao,Cacao
+2014.0267,22,9.23496310143,-74.4225400686,Oxalidaceae,Averrhoa,carambola,Carambolo
+2014.0268,22,9.23495449724,-74.4225216284,-,-,jasmin 268,-
+2014.0269,22,9.23500248216,-74.4225212932,Verbenaceae,Vitex,cymosa,Aceituna
+2014.0270,22,9.23499784913,-74.4225176051,Fabaceae,Gliricidia,septum,Matarratón
+2014.0271,22,9.234974684,-74.4225025177,-,-,sp. 271,-
+2014.0272,22,9.23498163354,-74.422506541,Ericaceae,Cavendishia,pubescens,uvito
+2014.0273,22,9.23498858308,-74.4225112349,Bignoniaceae,Tabebuia,rosea,roble; ocobo
+2014.0274,22,9.2349932161,-74.4225149229,Capparaceae,Capparis,baducca,Azota de caballo
+2014.0276,22,9.23494854049,-74.4225474447,Verbenaceae,Lantana,venturosa,Venturosa, Sage
+2014.0277,22,9.23494357654,-74.4225165993,Rubiaceae,Morinda,citrifolia,Noni
+2014.0279,22,9.23492107326,-74.4225018471,Bignoniaceae,Pyrostegia,venusta,Lluvia de oro
+2014.0280,22,9.23491743303,-74.4224827364,-,-,palma tritrinas,palma tritrinas
+2014.0281,22,9.23493331769,-74.4225165993,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0283,22,9.2349280228,-74.4225145876,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0284,22,9.23495383538,-74.4225098938,Fabaceae,Bauhinia,variegata,Pata de vaca
+2014.0285,22,9.23494820956,-74.4225008413,-,-,yucca 285,Yucca
+2014.0286,22,9.23494589305,-74.422522299,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0287,22,9.23491908768,-74.4224964827,Myrtaceae,Psidium,guajava,Guayaba dulce
+2014.0288,22,9.23493431048,-74.422487095,Fabaceae,Bauhinia,variegata,Pata de vaca
+2014.0289,22,9.23490353395,-74.4224770367,Rutaceae,Citrus,aurantium,Naranja agria
+2014.0290,22,9.23489559162,-74.4224679843,Agavaceae,Cordyline,cf. fruticosa,Linda palmera
+2014.0291,22,9.23489029673,-74.4224582613,Rubiaceae,Ixora,coccinea,Coral rojo
+2014.0292,22,9.23513617802,-74.422682561,-,-,292,-
+2014.0293,22,9.23487209555,-74.4224783778,Iridaceae,Iris,florentina,Lirio blanco
+2014.0294,22,9.23490485767,-74.4225045294,-,-,helecho 294,Garra de león
+2014.0295,22,9.23491015256,-74.4225068763,-,-,helecho 295 in pot,-
+2014.0296,22,9.23488036881,-74.4224559143,-,-,296,-
+2014.0403,22,9.23477470819,-74.4225471094,Lecythidaceae,Couroupita,guianensis,Bala de cañón
+2014.0404,22,9.23484032622,-74.4225943834,Malvaceae,Thespesia,populnea,Clemón
+2014.0405,22,9.23483834063,-74.4225876778,Bignoniaceae,Crescentia,cujete,Totumo
+2014.0407,22,9.23476114004,-74.4225524738,Bignoniaceae,Crescentia,alata,Totuma jicaro
+2014.0410,22,9.23476388125,-74.4225256518,Anacardiaceae,Astronium,graveolens,Arbol Santa Cruz
+2014.0411,22,9.23479489496,-74.4225383922,Sapotaceae,Manilkara,sapotilla,Nispero
+2014.0412,22,9.23480052078,-74.4225430861,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0413,22,9.23475849259,-74.4226077944,-,-,palma tritrinas,palma tritrinas
+2014.0414,20,9.2347201984,-74.4226406515,Verbenaceae,Tectona,grandis,Teca
+2014.0415,22,9.23477007516,-74.4225906953,-,-,singamacho 415,Singamacho;sangregao
+2014.0416,20,9.23483172202,-74.4226486981,Sapindaceae,Melicoccus,bijugatus,Mamoncillo o Mamon
+2014.0417,22,9.23469131366,-74.4227144122,Boraginaceae,Cordia,alliodora,Solera
+2014.0421,20,9.23480590943,-74.4227026775,Sapindaceae,Melicoccus,bijugatus,Mamoncillo o Mamon
+2014.0429,22,9.23477910406,-74.4227362052,Arecaceae,Sabal,mauritiiformis,Palma amarga
+2014.0430,22,9.23477778033,-74.4227298349,Bignoniaceae,Tabebuia,sabanero,Polvillo sabanero
+2014.0432,22,9.23478506081,-74.4227351993,Sapotaceae,Manilkara,huberi,Sapotilla
+2014.0435,22,9.23480822595,-74.4226932898,-,-,pijino,Pijino
+2014.0436,22,9.2347979671,-74.422698319,Orchidaceae,Vanilla,planifolia,-
+2014.0439,22,9.23476619776,-74.4227227941,Arecaceae,Caryota,mitis o urens,Palma mariposa
+2014.0440,22,9.23478969384,-74.4227345288,Anacardiaceae,Mangifera,indica,Mango
+2014.0444,22,9.23477910406,-74.4227241352,Capparaceae,Capparis,baducca,Azota de caballo
+2014.0445,22,9.23478373708,-74.422717765,-,-,mirto,Mirto
+2014.0446,22,9.23480193827,-74.4227204472,Arecaceae,Sabal,mauritiiformis,Palma amarga
+2014.0447,22,9.23478142057,-74.4227093831,Fabaceae,Leucaena,leucocephala,Coralito
+2014.0448,22,9.23480491664,-74.4226969779,Arecaceae,Sabal,mauritiiformis,Palma amarga
+2014.0450,22,9.23474237075,-74.422740899,-,-,mirto,Mirto
+2014.0453,22,9.23470421996,-74.4227294996,Sapindaceae,Sapindus,saponaria,Mamón de mico
+2014.0454,22,9.23470686741,-74.4227167591,Oxalidaceae,Averrhoa,carambola,Carambolo
+2014.0455,20,9.23481021153,-74.4226567447,Sapotaceae,Manilkara,sapotilla,Nispero
+2014.0456,22,9.23490509483,-74.4226014242,Bombacaceae,Ochroma,lugopus,Balso
+2014.0457,22,9.23479290938,-74.4225481153,Euphorbiaceae,Croton,malambo,Malombo
+2014.0463,22,9.23468833529,-74.4226942956,-,-,mirto,Mirto
+2014.0464,22,9.23469462297,-74.4226714969,-,-,bejuco terresita 464,Bejuco Terresita
+2014.0465,22,9.2346691413,-74.4226882607,Arecaceae,Cryosophila,kalbreyeri,Palma barbasco
+2014.0466,22,9.23468800436,-74.4226654619,-,-,bejuco cepilla 466,Bejuco cepilla
+2014.0468,22,9.23491303717,-74.4225967303,Cactaceae,Epiphyllum,phyllanthus,Calaguala
+2014.0474,22,9.23482311783,-74.422702007,-,-,Croto 474,Croto
+2014.0476,20,9.23482311783,-74.4227807969,Anacardiaceae,Astronium,graveolens,Arbol Santa Cruz
+2014.0477,22,9.23481649921,-74.42277845,Sapotaceae,Manilkara,sapotilla,Nispero
+2014.0478,22,9.23479598152,-74.4228619337,Smilacaceae,Smilax,floribunda,Zarzaparilla
+2014.0480,22,9.2348055785,-74.4227620214,Arecaceae,Sabal,mauritiiformis,Palma amarga
+2014.0481,22,9.23481120432,-74.4227797911,Arecaceae,Sabal,mauritiiformis,Palma amarga
+2014.0482,22,9.23480888781,-74.4228263944,Fabaceae,Caesalpinia,ebano,Ebano
+2014.0483,22,9.23480193827,-74.4228461757,Anacardiaceae,Astronium,graveolens,Arbol Santa Cruz
+2014.0487,22,9.23481120432,-74.4227040187,Rubiaceae,Ixora,coccinea,Coral rojo
+2014.0494,22,9.23481550642,-74.4227677211,Capparaceae,Capparis,odoratissima,Olivo
+2014.0495,22,9.23480690223,-74.4227707386,Bignoniaceae,Tabebuia,sabanero,Polvillo sabanero
+2014.0496,22,9.23479995268,-74.4227620214,Asclepiadaceae,Sarcostemma,glauca,Bouquet de novia
+2014.0600,22,9.23484462831,-74.4224763662,-,-,600,-
+2014.0601,22,9.23483403853,-74.4224629551,Myrtaceae,Psidium,araca,Guayaba ágria
+2014.0602,22,9.23481815387,-74.4224200398,Arecaceae,Phoenix,602c,Palma cubara
+2014.0603,22,9.23477347823,-74.4224052876,Arecaceae,Scheelea,butiracea,Palma de vino
+2014.0604,22,9.23480359292,-74.4225041941,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0605,22,9.23479399593,-74.4224629551,Anacardiaceae,Mangifera,indica,Mango
+2014.0606,22,9.23478671546,-74.422496818,Verbenaceae,Gmelina,cf arborea,gemelina
+2014.0607,22,9.23474568006,-74.4224753603,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0608,22,9.2348423118,-74.42248106,Annonaceae,Rollinia,sp.,Anón liso
+2014.0609,22,9.23482874365,-74.4224901125,Moraceae,Castilla,elastica,Caucho negro
+2014.0610,22,9.23479134849,-74.4225048646,Sterculiaceae,Theobroma,cacao,Cacao
+2014.0611,22,9.23478208243,-74.4225068763,Agavaceae,Cordyline,cf. fruticosa,Linda palmera
+2014.0612,22,9.2347774494,-74.4225105643,Fabaceae,Leucaena,leucocephala,Coralito
+2014.0613,22,9.23476917614,-74.4224642962,Poaceae,Sanguinaria,sp.,-
+2014.0615,22,9.23474799658,-74.4224428385,Arecaceae,Licuala,grandis,Palma centenario
+2014.0616,22,9.23474336355,-74.4224354625,Arecaceae,Licuala,grandis,Palma centenario
+2014.0619,22,9.23482013945,-74.4224136695,Bixaceae,Bixa,orellana,Achiote amarillo
+2014.0620,22,9.23482576527,-74.4224250689,-,-,620,Croto
+2014.0621,22,9.23481980852,-74.4224260747,Zingiberaceae,Alpinia,occidentalis,Matandrea
+2014.0622,22,9.23484760669,-74.4224378094,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0623,22,9.23485190879,-74.4224290922,Malvaceae,Hibiscus,schizopetalus,Gonche canastilla
+2014.0624,22,9.23486382228,-74.4224441797,Arecaceae,Cryosophila,kalbreyeri,Palma barbasco
+2014.0625,22,9.23486746252,-74.4224753603,Rubiaceae,Hamelia,patens,Patica de paloma o Vensenunco, Red scaler
+2014.0626,22,9.23486547694,-74.4224710017,Iridaceae,Iris,florentina,Lirio blanco
+2014.0627,22,9.23486349135,-74.422483407,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0628,22,9.23485356344,-74.4225041941,-,-,orchidea amarilla,Orquidea amarilla
+2014.0630,22,9.23484893041,-74.4225119054,-,-,Garra de leon 630,Garra de leon 
+2014.0631,22,9.23480326199,-74.4224428385,Fabaceae,Cassia,grandis,Canandonga de tessago
+2014.0632,22,9.23479730524,-74.4224562496,Fabaceae,Bauhinia,splendens,bejuco de cadena
+2014.0633,22,9.23480028361,-74.4224488735,-,-,633,-
+2014.0634,22,9.23481385177,-74.4224599376,Euphorbiaceae,Sandwithia,guayanensis,Maiz tostado
+2014.0635,22,9.23481186619,-74.4224820659,Zingiberaceae,Costus,villosissimus,Canagria
+2014.0636,22,9.23477877312,-74.4224901125,Arecaceae,Licuala,grandis,Palma centenario
+2014.0637,22,9.23478142057,-74.422500506,Boraginaceae,Cordia,alliodora,Solera
+2014.0638,22,9.23477612568,-74.4225058705,Erythroxylaceae,Erythroxylum,coca,Coca
+2014.0639,22,9.2347612338,-74.4224401563,Arecaceae,Caryota,mitis o urens,Palma mariposa
+2014.0641,22,9.2348065713,-74.4223999232,Meliaceae,Swietenia,macrophylla,Caobo colombiano
+2014.0644,22,9.23478638453,-74.4223982468,Malvaceae,Hibiscus,schizopetalus,Gonche canastilla
+2014.0645,22,9.23478539174,-74.4224163517,-,-,645 Climbing plant,-
+2014.0646,22,9.23477049986,-74.4224096462,Bignoniaceae,Spathodea,campanulata,Tulipan de Gabon
+2014.0647,22,9.23476652869,-74.422451891,Bixaceae,Bixa,orellana,Achiote amarillo
+2014.0649,22,9.23478208243,-74.4224059582,Meliaceae,Swietenia,macrophylla,Caobo colombiano
+2014.0650,22,9.23475626984,-74.4224981591,Boraginaceae,Cordia,alliodora,Solera
+2014.0651,22,9.23477447103,-74.4225269929,-,-,wuitota pina,Wuitota pina
+2014.0652,22,9.23476851428,-74.4225226343,Bixaceae,Bixa,orellana,Achiote amarillo
+2014.0653,22,9.23480789502,-74.4224901125,Zingiberaceae,Curcuma,longa,Curcuma
+2014.0654,22,9.23483503133,-74.4224840775,-,-,palma tritrinas,palma tritrinas
+2014.0655,22,9.23482642713,-74.422451891,-,-,limon de espana,Limón de España
+2014.0656,22,9.23476752148,-74.4225330278,Zingiberaceae,Zingiber,officinalis,Jengibre
+2014.0657,22,9.2348098806,-74.4225075468,Araceae,Anthurium,andranum,Anturio
+2014.0658,22,9.23481021153,-74.4225031883,Araceae,Philodendron,scadens,Miami
+2014.0659,22,9.23481352084,-74.4225062057,-,-,Problematicus Yucca 659,-
+2014.0660,22,9.23481583735,-74.4225095585,Asparagaceae,Asparagus,plumosus,Esparrago
+2014.0661,22,9.23481947759,-74.4225159287,Cecropiaceae,Cecropia,peltata,Guarumo; Yarumo
+2014.0663,22,9.23482212503,-74.4225219637,-,-,Camaron 663,Camaron 
+2014.0664,22,9.23481616828,-74.4225269929,-,-,Clover 664,-
+2014.0665,22,9.23480392385,-74.4224780425,Fabaceae,Bauhinia,variegata,Pata de vaca
+2014.0027.1,22,9.23491743303,-74.4228582457,Rutaceae,Swinglea,glutinosa,mirto
+2014.0033.1,20,9.23488301626,-74.4228968024,Rutaceae,Swinglea,glutinosa,mirto
+2014.0034.1,22,9.23490816698,-74.4229269773,Lecythidaceae,Lecythis,tuyrana,olla de mono; coquillo
+2014.0038.1,22,9.23494225282,-74.4228518754,Fabaceae,Pseudosamanea,guachapele sp.,Igua amarillo
+2014.0039.1,22,9.23495648283,-74.4228609279,Fabaceae,Pseudosamanea,guachapele sp.,Igua amarillo
+2014.0090.1,22,9.2350617187,-74.4226912782,Verbenaceae,Stachytarpheta,jamaicensis,Soldado parado
+2014.0091.1,21,9.23516099779,-74.422651045,Zygophyllaceae,Guaiacum,officinale L.,Guayacán
+2014.0091.2,21,9.23511797685,-74.4227174297,Zygophyllaceae,Guaiacum,officinale L.,Guayacán
+2014.0091.3,22,9.23508984777,-74.4227613509,Zygophyllaceae,Guaiacum,officinale L.,Guayacán
+2014.0091.4,22,9.23506999195,-74.4227925315,Zygophyllaceae,Guaiacum,officinale L.,Guayacán
+2014.0206.1,21,9.23487110276,-74.4227730855,-,-,jasmin de embarcadero,Jasmín de embarcadero
+2014.0206.2,21,9.23486084391,-74.4227704033,-,-,jasmin de embarcadero,Jasmín de embarcadero
+2014.0207.1,22,9.23492868467,-74.4227911904,-,-,mirto,Mirto
+2014.0207.2,21,9.23484462831,-74.4227764383,-,-,mirto,Mirto
+2014.0207.3,22,9.23484198087,-74.4227818027,-,-,mirto,Mirto
+2014.0207.4,22,9.23480723316,-74.4228652865,-,-,mirto,Mirto
+2014.0210.1,21,9.23485521809,-74.4227801263,Sapotaceae,Pouteria,stipitata,Níspero de monte
+2014.0210.2,21,9.23484959227,-74.422788173,Sapotaceae,Pouteria,stipitata,Níspero de monte
+2014.0217.1,22,9.23481881573,-74.4228672981,Meliaceae,Swietenia,macrophylla,Caobo colombiano
+2014.0217.2,22,9.23481484456,-74.4228746742,Meliaceae,Swietenia,macrophylla,Caobo colombiano
+2014.0234.1,21,9.23481881573,-74.4227244705,-,-,mirto,Mirto
+2014.0234.2,21,9.23487077183,-74.4227579981,-,-,mirto,Mirto
+2014.0275.1,22,9.23498494284,-74.4225219637,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0275.2,22,9.23498825215,-74.4225290045,Piperaceae,Piper,bogotense,Cordoncillo; Rodilla de viejo
+2014.0278.1,22,9.23494026723,-74.4224961475,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0278.2,22,9.23492570629,-74.422487095,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0282.1,22,9.23493960537,-74.42253571,Adiantaceae,Adiantum,capillus-Veneres,Cilantrillo
+2014.0400.1,22,9.23478629076,-74.4225601852,Fabaceae,Platymiscium,pinnatum,Trébol
+2014.0400.2,22,9.23478000308,-74.4225591794,Fabaceae,Platymiscium,pinnatum,Trébol
+2014.0401.1,22,9.23478198866,-74.4225652143,Fabaceae,Pseudosamanea,guachapele sp.,Igua amarillo
+2014.0406.1,20,9.2348303983,-74.4225558266,Fabaceae,Tamarindus,indica,Tamarindo acido
+2014.0406.2,20,9.23491015256,-74.42259036,Fabaceae,Tamarindus,indica,Tamarindo acido
+2014.0449.1,22,9.23478737732,-74.422715418,Lecythidaceae,Lecythis,tuyrana,olla de mono; coquillo
+2014.0475.1,22,9.23482146317,-74.4227610156,Araucariaceae,Araucaria,araucana,Pinus de Chili
+2014.0614.1,22,9.23475560798,-74.4224689901,Moraceae,Artocarpus,altilis,Árbol del pan
+2014.0614.2,22,9.23473442842,-74.4224170223,Moraceae,Artocarpus,altilis,Árbol del pan
+2014.0617.1,22,9.23477612568,-74.4224468619,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0617.2,22,9.23475957915,-74.4224277511,Arecaceae,Cocos,nucifera,Palma de coco
+2014.0629.1,22,9.23485157785,-74.4225078821,Sterculiaceae,Sterculia,apetala,Pié de danta
+2014.0640.1,22,9.23479002477,-74.4224180281,Lecythidaceae,Lecythis,tuyrana,olla de mono; coquillo
+2014.0662.1,22,9.23481782294,-74.4225129113,-,-,exaltata,Cola de pescado

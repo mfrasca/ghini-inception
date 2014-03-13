@@ -1,8 +1,59 @@
 doctype html
 head
     script(src='/socket.io/socket.io.js')
+    script(src='/lib/jquery-latest.min.js')
+    script(src='/lib/bootstrap.min.js')
+    script(src='/lib/leaflet.js')
+    script(src="/lib/leaflet.awesome-markers.js")
+    script(src='/js/cuchubo.js')
+    link(rel='stylesheet', href='/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/leaflet.css')
+    link(rel="stylesheet", href="/css/leaflet.awesome-markers.css")
+    link(rel='stylesheet', href='/css/cuchubo.css')
+    script.
+      $(init);
+
+
 body
   .navbar.navbar-inverse.navbar-fixed-top
     .navbar-inner 
       .container
         a.brand cuchubo virtual tour
+        .collapse.nav-collapse
+          ul.nav.navbar-nav
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                i.icon-question-sign.icon-white
+                | help
+                b.caret
+              ul#help-menu-list.dropdown-menu
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                i.icon-off.icon-white
+                | toggle
+                b.caret
+              ul#toggle-menu-list.dropdown-menu
+  #map
+  #accessions
+  #addPlantModal.modal.hide.fade
+    .modal-header
+      button.close(type='button', data-dismiss='modal') ×
+      h3 add a plant at the location
+    .modal-body
+      input(type='hidden')
+      table(width='100%')
+        tbody
+          tr
+            td(width='30%') accession#.plant#
+            td
+              input#addendum(name='keyword', type='text')
+    .modal-footer
+      a#doAddPlant.btn.btn-primary(href='#', onclick='$(\'#addPlantModal\').modal(\'hide\'); doAddPlant(); return false;') OK
+  #showPhotoModal.modal.hide.fade(tabindex='-1', role='dialog', style='width: 800px;')
+    .modal-header
+      button.close(type='button', data-dismiss='modal', aria-hidden='true') ×
+      h3
+    .modal-body
+      img(src='')
+    .modal-footer
+      button.btn(data-dismiss='modal') Close
