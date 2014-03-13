@@ -53,7 +53,7 @@ function openHighlightModal(e) {
 
 function fireHighlightModal() {
     resetHighlightOptions();
-    if(map._popup !== null) {
+    if(map._popup) {
         var accession = map._popup.options.marker.options.accession;
         $('#keyword').val(accession);
     }

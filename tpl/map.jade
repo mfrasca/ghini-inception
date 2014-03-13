@@ -24,17 +24,48 @@ body
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown')
                 i.icon-question-sign.icon-white
-                | help
+                |  help
                 b.caret
               ul#help-menu-list.dropdown-menu
             li.dropdown
               a.dropdown-toggle(href='#', data-toggle='dropdown')
                 i.icon-off.icon-white
-                | toggle
+                |  toggle
                 b.caret
               ul#toggle-menu-list.dropdown-menu
+            li.dropdown
+              a.dropdown-toggle(href='#', data-toggle='dropdown')
+                i.icon-flag.icon-white
+                |  highlight
+                b.caret
+              ul#highlight-menu-list.dropdown-menu
+                li
+                  a(onclick='fireHighlightModal(); return false;', href='#')
+                    i.icon-check.icon-black
+                    |  selection
+                li
+                  a(onclick='resetHighlightOptions(); return false;', href='#')
+                    i.icon-refresh.icon-black
+                    |  reset
   #map
   #accessions
+  #highlightModal.modal.hide.fade(aria-hidden='true', style='display: none;')
+    .modal-header
+      a.close(data-dismiss='modal') ✕
+      h3 highlight a selection
+    .modal-body
+      table(width='100%')
+        tbody
+          tr
+            td(width='30%') what to look for
+            td
+              input#keyword(name='keyword')
+          tr
+            td what to highlight
+            td
+              form#highlightOptions.well(enctype='multipart/form-data')
+    .modal-footer
+      a.btn.btn-primary(href='#', onclick='$(\'#highlightModal\').modal(\'hide\'); doHighlight(); return false;') HighLight!
   #addPlantModal.modal.hide.fade
     .modal-header
       button.close(type='button', data-dismiss='modal') ×
