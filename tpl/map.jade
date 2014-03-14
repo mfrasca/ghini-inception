@@ -13,8 +13,8 @@ head
     script.
       $(init);
 
-
 body
+
   .navbar.navbar-inverse.navbar-fixed-top
     .navbar-inner 
       .container
@@ -44,11 +44,21 @@ body
                     i.icon-check.icon-black
                     |  selection
                 li
+                  a(href='#')
+                    i.icon-tag.icon-black
+                    |  according to...
+                li
+                  a(href='#')
+                    i.icon-tag.icon-black
+                    |  tags 
+                li
                   a(onclick='resetHighlightOptions(); return false;', href='#')
                     i.icon-refresh.icon-black
                     |  reset
+
   #map
   #accessions
+
   #highlightModal.modal.hide.fade(aria-hidden='true', style='display: none;')
     .modal-header
       a.close(data-dismiss='modal') ✕
@@ -66,6 +76,7 @@ body
               form#highlightOptions.well(enctype='multipart/form-data')
     .modal-footer
       a.btn.btn-primary(href='#', onclick='$(\'#highlightModal\').modal(\'hide\'); doHighlight(); return false;') HighLight!
+
   #addPlantModal.modal.hide.fade
     .modal-header
       button.close(type='button', data-dismiss='modal') ×
@@ -80,6 +91,7 @@ body
               input#addendum(name='keyword', type='text')
     .modal-footer
       a#doAddPlant.btn.btn-primary(href='#', onclick='$(\'#addPlantModal\').modal(\'hide\'); doAddPlant(); return false;') OK
+
   #showPhotoModal.modal.hide.fade(tabindex='-1', role='dialog', style='width: 800px;')
     .modal-header
       button.close(type='button', data-dismiss='modal', aria-hidden='true') ×

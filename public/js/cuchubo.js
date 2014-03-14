@@ -20,6 +20,8 @@
 // GLOBAL VARIABLES
 var map = null;
 
+var socket;
+
 // properties of 'listOf' are accessions, species, genera, familiae, and
 // their values are the list of the matching markers.
 var listOf = {};
@@ -246,6 +248,9 @@ function init() {
     // ---------------------------
     // initialize global variables
 
+    // open the communication socket!!!
+    socket = io.connect(window.location.href);
+
     // create a map in the "map" div
     map = L.map('map');
 
@@ -324,91 +329,62 @@ function init() {
         return false;
     });
 
-    // read the elements that fall under the 'help' menu.
-    getFileFromServer("./res/elements-help.txt", function(text) {
-        if (text === null) {
-            alert("an error while reading data");
-        } else {
-            var i = 0;
-            var arrayOfLines = text.split(/[\r\n]/);
-            for(; i<arrayOfLines.length; i++) {
-                // header: 0:name, 1:anchor, 2:title, 3:icon
-                var header = arrayOfLines[i].split(',');
+    // REACT ON MESSAGES ON THE COMMUNICATION SOCKET
+    // initialize the help menu
+    socket.on('init-help', function (data) {
+        for(var i=0; i<data.length; i++){
+            var item = data[i];
+            var div = $("<div/>", { id: item.name + "Modal",
+                                    class: "modal hide fade",
+                                    style: "display: none;",
+                                  });
 
-                // add the dialog box to the document body
-                var div = $("<div/>", { id: header[0] + "Modal",
-                                        class: "modal hide fade",
-                                        style: "display: none;",
-                                      });
-                $(document.body).append(div);
-                var header_div = $('<div/>', { class: 'modal-header', });
-                var body_div = $('<div/>', { class: 'modal-body', });
-                div.append(header_div).append(body_div);
+            $(document.body).append(div);
+            var header_div = $('<div/>', { class: 'modal-header', });
+            var body_div = $('<div/>', { class: 'modal-body', });
+            div.append(header_div).append(body_div);
 
-                header_div.append($('<a/>', { class: 'close', 'data-dismiss': 'modal'}).text("×"));
-                header_div.append($('<h3/>').text(header[2]));
+            header_div.append($('<a/>', { class: 'close', 'data-dismiss': 'modal'}).text("×"));
+            header_div.append($('<h3/>').text(item.title));
 
-                // add the reference to the dialog box to the help menu.
-                var list_item = $('<li/>');
-                var anchor = $('<a/>', { onclick: "$('#" + header[0] + "Modal').modal('show'); return false;", href: "#", });
-                var icon = $('<i/>', { class: "icon-" + header[3] + " icon-black" });
-                $("#help-menu-list").append(list_item);
-                list_item.append(anchor);
-                anchor.append(icon);
-                anchor.append(" ");
-                anchor.append(header[1]);
-
-                // read the content of the dialog box from the file.
-                var content = [];
-                for(i++; i<arrayOfLines.length; i++) {
-                    content.push(arrayOfLines[i]);
-                    if (arrayOfLines[i] === "")
-                        break;
-                }
-    
-                body_div.html(content.join(""));
-            }
+            // add the reference to the dialog box to the help menu.
+            var list_item = $('<li/>');
+            var anchor = $('<a/>', { onclick: "$('#" + item.name + "Modal').modal('show'); return false;", href: "#", });
+            var icon = $('<i/>', { class: "icon-" + item.icon + " icon-black" });
+            $("#help-menu-list").append(list_item);
+            list_item.append(anchor);
+            anchor.append(icon);
+            anchor.append(" ");
+            anchor.append(item.anchor);
+            body_div.html(item.content);            
         }
     });
 
-    // read the elements that can be toggled and that are to be presented
-    // under the 'toggle' menu
-    getFileFromServer("./res/elements-toggle.txt", function(text) {
-        if (text === null) {
-            alert("an error while reading data");
-        } else {
-            var arrayOfLines = text.split(/[\r\n]/);
-            var i = 0;
-            while(i < arrayOfLines.length) {
-                var parts = arrayOfLines[i++].split(",");
-                var layerName = parts[0];
-                toggleLayer[layerName] = L.layerGroup();
-                var layer = toggleLayer[layerName];
 
-                var list_item = $('<li/>');
-                $('#toggle-menu-list').append(list_item);
-                var anchor = $('<a/>',
-                               { href: '#',
-                                 onclick: 'toggleLayerCheck(this, "' + layerName + '"); return false;',
-                               });
-                list_item.append(anchor);
-                var icon_element = $('<i/>', { class: 'icon-remove icon-black' });
-                anchor.append(icon_element);
-                anchor.append(" " + layerName);
+    // initialize the toggle menu
+    socket.on('init-toggle', function(data) {
+        for(var i=0; i<data.length; i++){
+            var group = data[i];
+            var layer = toggleLayer[group.layerName] = L.layerGroup();
+            var list_item = $('<li/>');
+            $('#toggle-menu-list').append(list_item);
+            var anchor = $('<a/>',
+                           { href: '#',
+                             onclick: 'toggleLayerCheck(this, "' + group.layerName + '"); return false;',
+                           });
+            list_item.append(anchor);
+            var icon_element = $('<i/>', { class: 'icon-remove icon-black' });
+            anchor.append(icon_element);
+            anchor.append(" " + group.layerName);
 
-                var icon = L.AwesomeMarkers.icon({ color: parts[1], icon: parts[2] });
-                var format = parts[3];
+            var icon = L.AwesomeMarkers.icon({ color: group.color, 
+                                               icon: group.icon });
 
-                for (i; i < arrayOfLines.length; i++) {
-                    parts = arrayOfLines[i].split(",");
-                    if (parts.length == 1)
-                        break;
-                    // image_name, title, lat, lon
-                    var marker = L.marker([parseFloat(parts[0]), parseFloat(parts[1])],
-                                          { icon: icon });
-                    marker.addTo(layer).bindPopup(format.formatU(parts));
-                }
-                i++;
+            for (var j=0; j < group.items.length; j++) {
+                var item = group.items[j];
+                var marker = L.marker([item.lat, item.lng],
+                                      { icon: icon });
+                marker.addTo(layer).bindPopup(item.content);
             }
         }
     });
