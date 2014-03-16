@@ -6,7 +6,7 @@ about,about the map,Welcome to the Cuchubo Virtual Tour!,info-sign
           box, zooming further in will display more plants.</p>
         <h4>disclaimer</h4>
         <p>this site is an experimental product, <br/>me (Mario Frasca), I am
-          <ul><li>learning leaflet, bootstrap, jQuery, javascript, </li>
+          <ul><li>learning leaflet, bootstrap, jQuery, javascript, NodeJS,</li>
             <li>thinking of expanding bauble in the direction shown by this site, </li>
             <li>helping my friend Saskia describing a garden, </li>
             <li>probably contributing to the conservation of the garden described here</li></ul>.

@@ -125,24 +125,53 @@ function doAddPlant() {
     if ($('#addendum').val() === "")
         return;
 
-    var plant = $('#addendum').val();
-    var location = [lastEvent.latlng.lat, lastEvent.latlng.lng];
-    var accession = "{0}.{1}".formatU(plant.split("."));
+    var item= {};
+    item.title = $('#addendum').val();
+    var plantParts = item.title.split(".");
+    plantParts.push("1");
+    item.plant = "{0}.{1}.{2}".formatU(plantParts);
+    item.accession = "{0}.{1}".formatU(item.plant.split("."));
+    item.latlng = [lastEvent.latlng.lat, lastEvent.latlng.lng];
+    item.zoom = threshold;
+    item.family = item.genus = item.species = item.vernacular = "";
 
-    // create a marker in the given location and add it to the map
-    var marker = L.marker(location, { icon: icon.gray,
-                                      draggable: 'true',
-                                      accession: accession,
-                                      plant: plant,
-                                      title: plant,
-                                      zoom: threshold,
-                                    });
-    marker.addTo(layer).bindPopup(plant, {marker: marker});
-    marker.on('dragend', onDragend);
-    markers.push(marker);
+    finalAddPlant(item);
+    socket.emit("add-plant", item);
 
-    addToDom(plant, threshold, location);
+    addToDom(item.plant, threshold, item.latlng);
 }
+
+function finalAddPlant(item) {
+    var marker = L.marker(item.latlng,
+                          { icon: icon.gray,
+                            draggable: 'true',
+                            accession: item.accession,
+                            plant: item.plant,
+                            title: item.title,
+                            zoom: item.zoom,
+                          });
+    markers.push(marker);
+    marker.addTo(plant_layer[item.zoom]).bindPopup('<b>{0}</b><br/>{1}<br/><a target="wikipedia" href="http://en.wikipedia.org/wiki/{2}_{3}">{2}_{3} ({4})</a>'.formatU([item.plant, item.vernacular, item.genus, item.species, item.family]), {marker: marker});
+    marker.on('dragend', onDragend);
+    marker.on('contextmenu', openHighlightModal);
+    
+    // associate marker with its unique plant accession.plant #
+    listOf[item.plant] = marker;
+    ranks = [item.accession, item.genus + " " + item.species, item.genus, item.family];
+    
+    if(!(item.accession in taxonOf) )
+        taxonOf[item.accession] = {};
+    taxonOf[item.accession].family = item.family;
+    taxonOf[item.accession].genus = item.genus;
+    taxonOf[item.accession].species = item.species;
+    for (var i = 0; i < ranks.length; i++) {
+        if (!(ranks[i] in listOf)) {
+            listOf[ranks[i]] = [];
+        }
+        listOf[ranks[i]].push(marker);
+    }
+}
+
 
 // add info about named plant to DOM (so we can easily copy it)
 function addToDom(name, threshold, location) {
@@ -157,7 +186,9 @@ function addToDom(name, threshold, location) {
 
 function onDragend(event) {
     var marker = event.target;
-    addToDom(marker.options.plant, marker.options.zoom, [marker.getLatLng().lat, marker.getLatLng().lng]);
+    socket.emit('move', { plant: marker.options.plant, 
+                          latlng: [marker.getLatLng().lat, marker.getLatLng().lng],
+                        });
 }
 
 function toggleLayerCheck(anchor, layerName) {
@@ -330,6 +361,10 @@ function init() {
     });
 
     // REACT ON MESSAGES ON THE COMMUNICATION SOCKET
+    socket.on('move', function(data) {
+        listOf[data.plant].setLatLng(data.latlng);
+    });
+
     // initialize the help menu
     socket.on('init-help', function (data) {
         for(var i=0; i<data.length; i++){
@@ -389,53 +424,6 @@ function init() {
         }
     });
 
-    // read the data and create the markers
-    getFileFromServer("./res/some_trees.txt", function(text) {
-        if (text === null) {
-            alert("An error occurred");
-        }
-        else {
-            // `text` is the file text
-            var arrayOfLines = text.match(/[^\r\n]+/g);
-            for (var i = 0; i < arrayOfLines.length; i++) {
-                var parts = arrayOfLines[i].split(",");
-                var plant = parts[0];
-                var accession = "{0}.{1}".formatU(plant.split("."));
-                var zoom = parseInt(parts[1]);
-                var marker = L.marker([parseFloat(parts[2]), parseFloat(parts[3])],
-                                      { icon: icon.gray,
-                                        draggable: 'true',
-                                        accession: accession,
-                                        plant: plant,
-                                        title: plant,
-                                        zoom: zoom,
-                                      });
-                markers.push(marker);
-                var family = parts[4];
-                var genus = parts[5];
-                var species = parts[6];
-                var vernacular = parts[7];
-                marker.addTo(plant_layer[zoom]).bindPopup('<b>{0}</b><br/>{1}<br/><a target="wikipedia" href="http://en.wikipedia.org/wiki/{2}_{3}">{2}_{3} ({4})</a>'.formatU([plant, vernacular, genus, species, family]), {marker: marker});
-                marker.on('dragend', onDragend);
-                // marker.on('mouseover', function(e){e.target.openPopup();});
-                marker.on('contextmenu', openHighlightModal);
-
-                parts[0] = accession;
-                if(!(accession in taxonOf) )
-                    taxonOf[accession] = {};
-                taxonOf[accession].family = family;
-                taxonOf[accession].genus = genus;
-                taxonOf[accession].species = species;
-                parts[6] = parts[5] + " " + parts[6];
-                for (var j = 0; j < 8; j++) {
-                    if (!(parts[j] in listOf)) {
-                        listOf[parts[j]] = [];
-                    }
-                    listOf[parts[j]].push(marker);
-                    if (j === 0) j += 3;
-                }
-            }
-        }
-    });
+    socket.on('add-plant', finalAddPlant);
 
 }

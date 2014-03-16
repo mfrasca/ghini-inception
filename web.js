@@ -40,7 +40,7 @@ var io = require('socket.io').listen(app.listen(port, function() {
 io.sockets.on('connection', function (socket) {
 
     // initialize client's help menu
-    fs.readFile("public/res/elements-help.txt", "binary", function(err, file) {
+    fs.readFile("private/res/elements-help.txt", "binary", function(err, file) {
         if(err) {
             return;
         }
@@ -72,7 +72,7 @@ io.sockets.on('connection', function (socket) {
     });
 
     // initialize client's toggle menu
-    fs.readFile("public/res/elements-toggle.txt", "binary", function(err, file) {
+    fs.readFile("private/res/elements-toggle.txt", "binary", function(err, file) {
         if(err) {
             return;
         }
@@ -102,10 +102,41 @@ io.sockets.on('connection', function (socket) {
         socket.emit('init-toggle', result);
     });
 
-    socket.emit('init-collection', { message: '' });
+    fs.readFile("private/res/some_trees.txt", "binary", function(err, file) {
+        if(err) {
+            return;
+        }
+        var collection = [];
+        var arrayOfLines = file.match(/[^\r\n]+/g);
+        for (var i = 0; i < arrayOfLines.length; i++) {
+            var item = {};
+            var parts = arrayOfLines[i].split(",");
+
+            // title could be either accession or accession.plant,
+            // depending on whether or not there are more than one plant
+            // in that accesion.
+            item.title = parts[0];
+            var plantParts = item.title.split(".");
+            plantParts.push("1");
+            item.plant = "{0}.{1}.{2}".formatU(plantParts)
+            item.accession = "{0}.{1}".formatU(plantParts);
+            item.latlng = [parseFloat(parts[2]), parseFloat(parts[3])];
+            item.zoom = parseInt(parts[1]);
+            item.family = parts[4];
+            item.genus = parts[5];
+            item.species = parts[6];
+            item.vernacular = parts[7];
+            socket.emit('add-plant', item);
+        }
+    });
+
+    socket.on('add-plant', function(data) {
+        socket.broadcast.emit('add-plant', data);
+    });
 
     socket.on('move', function (data) {
-        io.sockets.emit('move', data);
+        // inform all other clients of the move.
+        socket.broadcast.emit('move', data);
     });
     socket.on('insert', function (data) {
         io.sockets.emit('insert', data);
