@@ -2254,6 +2254,10 @@ table th[class*="span"],
   background-position: -456px 0;
 }
 
+.icon-faucet {
+  background-position: -480px 0;
+}
+
 .icon-home {
   background-position: 0 -24px;
 }
