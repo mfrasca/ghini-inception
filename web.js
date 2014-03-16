@@ -24,6 +24,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req, res){
     res.render("map");
+    console.log(process.env.HEROKU_POSTGRESQL_WHITE_URL)
 });
 
 // make the application listen to the port 
