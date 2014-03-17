@@ -128,8 +128,9 @@ function doAddPlant() {
     var item= {};
     var plantParts = $('#addendum').val().split(".");
     plantParts.push("1");
+    item.plant_short = "{2}".formatU(plantParts);
     item.plant = "{0}.{1}.{2}".formatU(plantParts);
-    item.accession = "{0}.{1}".formatU(item.plant.split("."));
+    item.accession = "{0}.{1}".formatU(plantParts);
     item.lat = lastEvent.latlng.lat;
     item.lng = lastEvent.latlng.lng;
     item.zoom = threshold;
@@ -366,7 +367,7 @@ function init() {
 
     // REACT ON MESSAGES ON THE COMMUNICATION SOCKET
     socket.on('move', function(data) {
-        listOf[data.plant].setLatLng(data.latlng);
+        listOf[data.plant].setLatLng([data.lat, data.lng]);
     });
 
     // initialize the help menu
