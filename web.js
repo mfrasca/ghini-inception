@@ -123,6 +123,14 @@ io.sockets.on('connection', function (socket) {
 
     socket.on('move', function (data) {
         // inform all other clients of the move.
+        pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+            client.query("UPDATE plant SET position_lat={0}, position_lon={1} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short]),
+                         function(err, result) {
+                             done();
+                             if(err)
+                                 return console.error(err);
+                         });
+        });
         socket.broadcast.emit('move', data);
     });
     socket.on('insert', function (data) {

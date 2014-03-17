@@ -186,9 +186,13 @@ function addToDom(name, threshold, location) {
 
 function onDragend(event) {
     var marker = event.target;
-    socket.emit('move', { plant: marker.options.plant, 
-                          latlng: [marker.getLatLng().lat, marker.getLatLng().lng],
-                        });
+    var data = { accession: marker.options.accession, 
+                 plant: marker.options.plant, 
+                 lat: marker.getLatLng().lat,
+                 lng: marker.getLatLng().lng,
+               };
+    data.plant_short = data.plant.split(".")[2];
+    socket.emit('move', data);
 }
 
 function toggleLayerCheck(anchor, layerName) {
