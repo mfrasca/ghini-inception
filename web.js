@@ -6,6 +6,8 @@ var port = Number(process.env.PORT || 5000);
 
 var fs = require('fs');
 
+var pg = require('pg');
+
 String.prototype.formatU = function() {
     var str = this.toString();
     if (!arguments.length)
@@ -24,7 +26,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req, res){
     res.render("map");
-    console.log(process.env.HEROKU_POSTGRESQL_WHITE_URL)
+    console.log(process.env.DATABASE_URL);
 });
 
 // make the application listen to the port 
@@ -103,32 +105,16 @@ io.sockets.on('connection', function (socket) {
         socket.emit('init-toggle', result);
     });
 
-    fs.readFile("private/res/some_trees.txt", "binary", function(err, file) {
-        if(err) {
-            return;
-        }
-        var collection = [];
-        var arrayOfLines = file.match(/[^\r\n]+/g);
-        for (var i = 0; i < arrayOfLines.length; i++) {
-            var item = {};
-            var parts = arrayOfLines[i].split(",");
 
-            // title could be either accession or accession.plant,
-            // depending on whether or not there are more than one plant
-            // in that accesion.
-            item.title = parts[0];
-            var plantParts = item.title.split(".");
-            plantParts.push("1");
-            item.plant = "{0}.{1}.{2}".formatU(plantParts)
-            item.accession = "{0}.{1}".formatU(plantParts);
-            item.latlng = [parseFloat(parts[2]), parseFloat(parts[3])];
-            item.zoom = parseInt(parts[1]);
-            item.family = parts[4];
-            item.genus = parts[5];
-            item.species = parts[6];
-            item.vernacular = parts[7];
-            socket.emit('add-plant', item);
-        }
+    pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+        client.query("SELECT a.code||'.'||p.code as plant,a.code AS accession, genus.genus, species.sp AS species, family.family, p.position_lon AS lng, p.position_lat AS lat, p.zoom FROM plant AS p, accession AS a, species, genus, family WHERE species.genus_id=genus.id AND genus.family_id=family.id AND p.accession_id=a.id AND a.species_id=species.id AND p.zoom IS NOT NULL ORDER BY a.code, p.code", 
+                     function(err, result) {
+                         done();
+                         if(err)
+                             return console.error(err);
+                         for(var i=0; i<result.rows.length; i++)
+                             socket.emit('add-plant', result.rows[i]);
+                     });
     });
 
     socket.on('add-plant', function(data) {

@@ -126,28 +126,28 @@ function doAddPlant() {
         return;
 
     var item= {};
-    item.title = $('#addendum').val();
-    var plantParts = item.title.split(".");
+    var plantParts = $('#addendum').val().split(".");
     plantParts.push("1");
     item.plant = "{0}.{1}.{2}".formatU(plantParts);
     item.accession = "{0}.{1}".formatU(item.plant.split("."));
-    item.latlng = [lastEvent.latlng.lat, lastEvent.latlng.lng];
+    item.lat = lastEvent.latlng.lat;
+    item.lng = lastEvent.latlng.lng;
     item.zoom = threshold;
     item.family = item.genus = item.species = item.vernacular = "";
 
     finalAddPlant(item);
     socket.emit("add-plant", item);
 
-    addToDom(item.plant, threshold, item.latlng);
+    addToDom(item.plant, threshold, [item.lat, item.lng]);
 }
 
 function finalAddPlant(item) {
-    var marker = L.marker(item.latlng,
+    var marker = L.marker([item.lat, item.lng],
                           { icon: icon.gray,
                             draggable: 'true',
                             accession: item.accession,
                             plant: item.plant,
-                            title: item.title,
+                            title: item.plant,
                             zoom: item.zoom,
                           });
     markers.push(marker);
@@ -157,7 +157,7 @@ function finalAddPlant(item) {
     
     // associate marker with its unique plant accession.plant #
     listOf[item.plant] = marker;
-    ranks = [item.accession, item.genus + " " + item.species, item.genus, item.family];
+    var ranks = [item.accession, item.genus + " " + item.species, item.genus, item.family];
     
     if(!(item.accession in taxonOf) )
         taxonOf[item.accession] = {};
