@@ -1,12 +1,12 @@
 {
-  "name": "cuchubo",
+  "name": "ghini",
   "version": "0.0.0",
-  "description": "graphical interface to bauble database",
+  "description": "web interface to bauble.classic database",
   "main": "web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": "",
+  "repository": "http://github.com/mfrasca/ghini/",
   "author": "Mario Frasca",
   "license": "GPL",
   "dependencies": {
