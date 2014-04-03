@@ -1,0 +1,544 @@
+<genera>
+  <HEADER version="Conversie3.0.00" owner="Botanische Tuinen Universiteit Utrecht" user="Systeembeheerder" creation_date="17-01-2002" creation_time="12:46:46" />
+  
+  <Settings last_taxon_id="1" >
+  </Settings>
+  
+  <Users>
+    <User UserId="1" Login="ADMIN" UserName="Systeembeheerder" >
+    </User>
+  </Users>
+  
+  <BTDatabase OID="99999" m_user_id="0" m_last_change_date="20020117" m_last_change_time="12:45" >
+    
+    <dict_accsta code="C" description="Current accession in the living collection" />
+    <dict_accsta code="D" description="Non-current accession of the living collection due to death" />
+    <dict_accsta code="T" description="Non-current accession due to transfer to another record system, normally of another garden" />
+    <dict_accsta code="S" description="Stored in a dormant state" />
+    <dict_accsta code="O" description="Other accession status  - different from those above." />
+    
+    <dict_acct code="P" description="Whole plant"/>
+    <dict_acct code="S" description="Seed or Spore"/>
+    <dict_acct code="V" description="Vegetative part"/>
+    <dict_acct code="T" description="Tissue culture"/>
+    <dict_acct code="O" description="Other"/>
+    
+    <dict_brs code="M" description="Male"/>
+    <dict_brs code="F" description="Female"/>
+    <dict_brs code="B" description="includes both &quot;male&quot; and &quot;female&quot; indivcodeuals"/>
+    <dict_brs code="Q" description="Dioecious plant of unknown sex"/>
+    <dict_brs code="H" description="hermaphrodite or is monoecious"/>
+    <dict_brs code="H1" description="hermaphrodite or is monoecious, but self-incompatible."/>
+    <dict_brs code="A" description="reproduces by agamospermy"/>
+    <dict_brs code="U" description="Insufficient information to dedescriptionine breeding system."/>
+    
+    <dict_dont code="E" description="Expedition"/>
+    <dict_dont code="G" description="Gene bank"/>
+    <dict_dont code="B" description="Botanic Garden or Arboretum"/>
+    <dict_dont code="R" description="Other research, field or experimental station"/>
+    <dict_dont code="S" description="Staff of the botanic garden to which record system applies"/>
+    <dict_dont code="U" description="University Department"/>
+    <dict_dont code="H" description="Horticultural Association or Garden Club"/>
+    <dict_dont code="M" description="Municipal department"/>
+    <dict_dont code="N" description="Nursery or other commercial establishment"/>
+    <dict_dont code="I" description="Indivcodeual"/>
+    <dict_dont code="O" description="Other"/>
+    <dict_dont code="U2" description="Unknown"/>
+    
+    <dict_hybrcode code="H" description="A hybrcode formula"/>
+    <dict_hybrcode code="x" description="A hybrcode"/>
+    <dict_hybrcode code="+" description="A graft hybrcode or graft chimaera"/>
+    
+    <ditc_codeql code="aff." description="Akin to or bordering"/>
+    <ditc_codeql code="cf." description="Compare with"/>
+    <ditc_codeql code="Incorrect" description="Incorrect"/>
+    <ditc_codeql code="forsan" description="Perhaps"/>
+    <ditc_codeql code="near" description="Close to"/>
+    <ditc_codeql code="?" description="Questionable"/>
+    
+    <dict_per code="M" description="Monocarpic plants"/>
+    <dict_per code="MA" description="Annuals"/>
+    <dict_per code="MB" description="Biennials and short-lived perennials"/>
+    <dict_per code="ML" description="Long-lived monocarpic plants"/>
+    <dict_per code="P" description="Polycarpic plants"/>
+    <dict_per code="PD" description="Deccodeuous polycarpic plants"/>
+    <dict_per code="PE" description="Evergreen polycarpic plants"/>
+    <dict_per code="U" description="Uncertain which of the above applies."/>
+    
+    <dict_prohis code="I" description="Indivcodeual wild plant(s)"/>
+    <dict_prohis code="S" description="Seeds from sexual reproduction (excluding apomixis)"/>
+    <dict_prohis code="SA" description="Seeds from open breeding"/>
+    <dict_prohis code="SB" description="Seeds from controlled breeding"/>
+    <dict_prohis code="SC" description="Seeds from self-pollinated isolated plants"/>
+    <dict_prohis code="V" description="Plant material derived asexually"/>
+    <dict_prohis code="VA" description="Vegetative reproduction"/>
+    <dict_prohis code="VB" description="Vegetative from apomictic cloning (agamospermy)"/>
+    <dict_prohis code="U" description="Uncertain, or no information."/>
+    
+    <dict_prot code="W" description="Accession of wild source"/>
+    <dict_prot code="Z" description="From a wild source plant in cultivation"/>
+    <dict_prot code="G" description="Not of wild source"/>
+    
+    <dict_rkql code="B" description="Below Family"/>
+    <dict_rkql code="F" description="Family"/>
+    <dict_rkql code="G" description="Genus"/>
+    <dict_rkql code="S" description="Species"/>
+    <dict_rkql code="I" description="first Infraspecific Epithet"/>
+    <dict_rkql code="J" description="second Infraspecific Epithet (new for ITF2)"/>
+    <dict_rkql code="C" description="Cultivar"/>
+    
+    <dicty_spql code="agg." description="An aggregate species"/>
+    <dicty_spql code="s.lat." description="aggregrate species (sensu lato)"/>
+    <dicty_spql code="s.str." description="segregate species (sensu stricto)"/>
+    
+    <dict_vlev code="U" description="unknown if the name has been checked"/>
+    <dict_vlev code="0" description="not been described by any authority"/>
+    <dict_vlev code="1" description="described by comparison with other named plants"/>
+    <dict_vlev code="2" description="described by a taxonomist or other competent person"/>
+    <dict_vlev code="3" description="described by a specialist (taxonomist)"/>
+    <dict_vlev code="4" description="plant represents all or part of the type material (wrong position in ITF)"/>
+    
+    <dict_wpst code="Wild native" description="Endemic found within its indigenous range"/>
+    <dict_wpst code="Wild non-native" description="Plant found outscodee its indigenous range"/>
+    <dict_wpst code="Cultivated native" description="Endemic known to have been cultivated and reintroduced or translocated within its indigenous range."/>
+    <dict_wpst code="Cultivated non-native" description="Plant known to be cultivated and found outscodee its indigenous range."/>
+    
+    <dict_taxon_use code="01" description="fruit trees and their wild relatives"/>
+    <dict_taxon_use code="02" description="crop plants from several regions of the world, such as cereals"/>
+    <dict_taxon_use code="03" description="species of value for amenity horticulture or as ornamentals"/>
+    <dict_taxon_use code="04" description="textile plants"/>
+    <dict_taxon_use code="05" description="oil plants"/>
+    <dict_taxon_use code="06" description="timbers"/>
+    <dict_taxon_use code="07" description="cork"/>
+    <dict_taxon_use code="08" description="resin yielding plants"/>
+    <dict_taxon_use code="09" description="plants used for industrial production"/>
+    <dict_taxon_use code="10" description="grasses, and forage plants"/>
+    <dict_taxon_use code="11" description="wild relatives of crops"/>
+    <dict_taxon_use code="12" description="underutilized or neglected crops"/>
+    <dict_taxon_use code="13" description="local and traditional economic plant varieties and land races"/>
+    <dict_taxon_use code="14" description="medicinal plants"/>
+    <dict_taxon_use code="15" description="plants that are important for local uses (e.g. for basket making, for tools used in cooking, fishing and agriculture)"/>
+    <dict_taxon_use code="16" description="perfume, essential oil and cosmetic plants"/>
+    <dict_taxon_use code="17" description="spice and flavouring plants"/>
+    <dict_taxon_use code="18" description="melifluous species"/>
+    <dict_taxon_use code="19" description="dyeing and tanning"/>
+    <dict_taxon_use code="20" description="plants for bonsai"/>
+    <dict_taxon_use code="21" description="systematic collections of important eceonomic plant groups such as conifers or legumes"/>
+    <dict_taxon_use code="22" description="temperate and tropical timber trees"/>
+    <dict_taxon_use code="23" description="ornamental trees"/>
+    
+    <m_itf_hybrid>
+      <BTITF_hybrid OID="HYB_0" m_code="X"/>
+      <BTITF_hybrid OID="HYB_1" m_code="+"/>
+    </m_itf_hybrid>
+    
+    
+    <m_taxonauthorcombination>
+      <BTTaxonAuthorCombination OID="AUT3_2000" m_combination="Bory ex Willd."/>
+      <BTTaxonAuthorCombination OID="AUT3_2001" m_combination="Chatin"/>
+      <BTTaxonAuthorCombination OID="AUT3_2002" m_combination="Lozano"/>
+      <BTTaxonAuthorCombination OID="AUT3_2003" m_combination="Tutcher"/>
+      <BTTaxonAuthorCombination OID="AUT3_2004" m_combination="Dayton"/>
+    </m_taxonauthorcombination>
+    
+    <m_rank OID="reg" m_code="regnum"/>
+    <m_rank OID="rg2" m_code="subregnum"/>
+    <m_rank OID="RNK_D0" m_code="division"/>
+    <m_rank OID="RNK_D2" m_code="subdivision"/>
+    <m_rank OID="RNK_C0" m_code="class"/>
+    <m_rank OID="cl2" m_code="subclass"/>
+    <m_rank OID="RNK_O0" m_code="order"/>
+    <m_rank OID="RNK_F0" m_code="family"/>
+    <m_rank OID="fm2" m_code="subfamily"/>
+    <m_rank OID="tri" m_code="tribe"/>
+    <m_rank OID="tr2" m_code="subtribe"/>
+    <m_rank OID="RNK_G0" m_code="genus"/>
+    <m_rank OID="gn2" m_code="subgenus"/>
+    <m_rank OID="sec" m_code="section"/>
+    <m_rank OID="sc2" m_code="subsection"/>
+    <m_rank OID="ser" m_code="series"/>
+    <m_rank OID="sr2" m_code="subseries"/>
+    <m_rank OID="RNK_S0" m_code="species"/>
+    <m_rank OID="nss" m_code="nothosubspecies"/>
+    <m_rank OID="RNK_S2" m_code="subspecies"/>
+    <m_rank OID="cvr" m_code="convariety"/>
+    <m_rank OID="RNK_V0" m_code="variety"/>
+    <m_rank OID="nva" m_code="nothovariety"/>
+    <m_rank OID="vr2" m_code="subvariety"/>
+    <m_rank OID="RNK_F1" m_code="form"/>
+    <m_rank OID="fr2" m_code="subform"/>
+    <m_rank OID="nfo" m_code="nothoform"/>
+    <m_rank OID="sxss" m_code="hybrcode between subsp."/>
+    <m_rank OID="ssxva" m_code="hybrcode subsp. x var."/>
+    <m_rank OID="ssxfo" m_code="hybrcode subsp. x f."/>
+    <m_rank OID="vaxsf" m_code="hybrcode var. x subf."/>
+    <m_rank OID="RNK_CG" m_code="cultivar group"/>
+    <m_rank OID="RNK_CU" m_code="cultivar"/>
+    
+    <m_taxon>
+      <BTTaxon OID="DIV_0" m_epithet="Angiospermae">
+        <m_rank OID="RNK_D0"/>
+      </BTTaxon>
+      <BTTaxon OID="DIV_1" m_epithet="Gymnospermae">
+        <m_rank OID="RNK_D0"/>
+      </BTTaxon>
+      <BTTaxon OID="DIV_2" m_epithet="Pteridophyta">
+        <m_rank OID="RNK_D0"/>
+      </BTTaxon>
+      <BTTaxon OID="DIV_3" m_epithet="Bryophyta">
+        <m_rank OID="RNK_D0"/>
+      </BTTaxon>
+    </m_taxon>
+    
+    <m_taxon>
+      <BTTaxon OID="FAM_0" m_epithet="Orchidaceae">
+        <m_rank OID="RNK_F0"/>
+	<m_parent OID="DIV_0"/>
+      </BTTaxon>
+      <BTTaxon OID="FAM_1" m_epithet="Euphorbiaceae">
+        <m_rank OID="RNK_F0"/>
+	<m_parent OID="DIV_0"/>
+      </BTTaxon>
+      <BTTaxon OID="FAM_2" m_epithet="Asteraceae">
+        <m_rank OID="RNK_F0"/>
+	<m_parent OID="DIV_0"/>
+      </BTTaxon>
+      <BTTaxon OID="FAM_166" m_epithet="Equisetaceae">
+	<m_parent OID="DIV_2"/>
+	<m_rank OID="RNK_F0"/>
+      </BTTaxon>
+      <BTTaxon OID="FAM_229" m_epithet="Oleandraceae">
+	<m_parent OID="DIV_2"/>
+	<m_rank OID="RNK_F0"/>
+      </BTTaxon>
+      <BTTaxon OID="FAM_17" m_epithet="Pinaceae">
+	<m_parent OID="DIV_1"/>
+        <m_rank OID="RNK_F0"/>
+      </BTTaxon>
+    </m_taxon>
+    
+    <m_taxon>
+      <BTTaxon OID="gen10722" m_epithet="Aa">
+	<m_parent OID="FAM_0"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_0"/>
+      </BTTaxon>
+      <BTTaxon OID="gen5569" m_epithet="Aaronsohnia">
+	<m_parent OID="FAM_2"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_2"/>
+      </BTTaxon>
+      <BTTaxon OID="gen10723" m_epithet="Abdominea">
+	<m_parent OID="FAM_0"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_9"/>
+      </BTTaxon>
+      <BTTaxon OID="gen5570" m_epithet="Abrotanella">
+	<m_parent OID="FAM_2"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_33"/>
+      </BTTaxon>
+      <BTTaxon OID="gen5571" m_epithet="Acamptopappus">
+	<m_parent OID="FAM_2"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_43"/>
+      </BTTaxon>
+      <BTTaxon OID="gen5572" m_epithet="Acanthocephalus">
+	<m_parent OID="FAM_2"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_52"/>
+      </BTTaxon>
+      <BTTaxon OID="gen16793" m_epithet="Acanthocladium">
+	<m_parent OID="FAM_2"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_8"/>
+      </BTTaxon>
+      <BTTaxon OID="gen10185" m_epithet="Acidocroton">
+	<m_parent OID="FAM_1"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_63"/>
+      </BTTaxon>
+      <BTTaxon OID="gen10186" m_epithet="Acidoton">
+	<m_parent OID="FAM_1"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_137"/>
+      </BTTaxon>
+      <BTTaxon OID="gen13396" m_epithet="Larix">
+	<m_parent OID="FAM_17"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_19"/>
+      </BTTaxon>
+      <BTTaxon OID="gen13398" m_epithet="Pinus">
+	<m_parent OID="FAM_17"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_39"/>
+      </BTTaxon>
+      <BTTaxon OID="gen13626" m_epithet="Oleandra">
+	<m_parent OID="FAM_229"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_263"/>
+      </BTTaxon>
+      <BTTaxon OID="gen13461" m_epithet="Equisetum">
+	<m_parent OID="FAM_166"/>
+	<m_rank OID="RNK_G0"/>
+	<m_taxon_author OID="AUT3_39"/>
+      </BTTaxon>
+    </m_taxon>
+    
+    <m_taxon>
+      <BTTaxon OID="sp10722.1" m_epithet="achalensis"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.2" m_epithet="argyrolepis"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.3" m_epithet="calceata"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.4" m_epithet="colombiana"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.5" m_epithet="denticulata"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.6" m_epithet="erosa"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.7" m_epithet="fiebrigii"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.8" m_epithet="gymnandra"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.9" m_epithet="hartwegii"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.10" m_epithet="hieronymi"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.11" m_epithet="inaequalis"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.12" m_epithet="leucantha"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.13" m_epithet="lorentzii"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.14" m_epithet="macra"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.15" m_epithet="maderoi"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.16" m_epithet="mandonii"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.17" m_epithet="mathewsii"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.18" m_epithet="matthewsii"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.19" m_epithet="microtidis"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.20" m_epithet="nervosa"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.21" m_epithet="paleacea"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.22" m_epithet="riobambae"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.23" m_epithet="rosei"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.24" m_epithet="schickendanzii"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.25" m_epithet="sphaeroglossa"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.26" m_epithet="trilobulata"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10722.27" m_epithet="weddelliana"><m_parent OID="gen10722"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5569.1" m_epithet="factorovskyi"><m_parent OID="gen5569"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5569.2" m_epithet="pubescens"><m_parent OID="gen5569"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10723.1" m_epithet="minimiflora"><m_parent OID="gen10723"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.1" m_epithet="caespitosa"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.2" m_epithet="diemii"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.3" m_epithet="emarginata"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.4" m_epithet="fertilis"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.5" m_epithet="forsterioides"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.6" m_epithet="inconspicua"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.7" m_epithet="linearifolia"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.8" m_epithet="linearis"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.9" m_epithet="muscosa"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.10" m_epithet="nivigena"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.11" m_epithet="patearoa"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.12" m_epithet="purpurea"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.13" m_epithet="pusilla"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.14" m_epithet="rostrata"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.15" m_epithet="rosulata"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.16" m_epithet="scapigera"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.17" m_epithet="spathulata"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.18" m_epithet="submarginata"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.19" m_epithet="trichoachaenia"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5570.20" m_epithet="trilobata"><m_parent OID="gen5570"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5571.1" m_epithet="shockleyi"><m_parent OID="gen5571"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5571.2" m_epithet="sphaerocephalus"><m_parent OID="gen5571"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5572.1" m_epithet="amplexifolius"><m_parent OID="gen5572"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp5572.2" m_epithet="benthamianus"><m_parent OID="gen5572"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp16793.1" m_epithet="albialare"><m_parent OID="gen16793"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp16793.2" m_epithet="dockeri"><m_parent OID="gen16793"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp16793.3" m_epithet="extenuatum"><m_parent OID="gen16793"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp16793.4" m_epithet="hornschuchii"><m_parent OID="gen16793"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.1" m_epithet="acunae"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.2" m_epithet="adelioides"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.3" m_epithet="ekmanii"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.4" m_epithet="gentryi"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.5" m_epithet="horridus"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.6" m_epithet="litoralis"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.7" m_epithet="lobulatus"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.8" m_epithet="montanus"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.9" m_epithet="oligostemon"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.10" m_epithet="trichophyllus"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10185.11" m_epithet="verrucosus"><m_parent OID="gen10185"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10186.1" m_epithet="haitiensis"><m_parent OID="gen10186"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10186.2" m_epithet="lanceolatus"><m_parent OID="gen10186"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10186.3" m_epithet="microphyllus"><m_parent OID="gen10186"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10186.4" m_epithet="nicaraguensis"><m_parent OID="gen10186"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10186.5" m_epithet="urens"><m_parent OID="gen10186"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp10186.6" m_epithet="variifolius"><m_parent OID="gen10186"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.1" m_epithet="czekanowskii"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.2" m_epithet="decidua"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.3" m_epithet="gmelinii"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.4" m_epithet="griffithii"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.5" m_epithet="kaempferi"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.6" m_epithet="laricina"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.7" m_epithet="lubarskii"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.8" m_epithet="lyallii"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.9" m_epithet="maritima"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.10" m_epithet="mastersiana"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.11" m_epithet="occidentalis"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.12" m_epithet="polonica"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.13" m_epithet="potaninii"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13396.14" m_epithet="sibirica"><m_parent OID="gen13396"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.1" m_epithet="albicaulis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.2" m_epithet="amamiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.3" m_epithet="aristata"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.4" m_epithet="arizonica"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.5" m_epithet="armandii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.6" m_epithet="attenuata"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.7" m_epithet="attenuradiata"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.8" m_epithet="ayacahuite"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.9" m_epithet="balfouriana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.10" m_epithet="banksiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.11" m_epithet="bhutanica"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.12" m_epithet="brutia"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.13" m_epithet="bungeana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.14" m_epithet="canariensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.15" m_epithet="caribaea"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.16" m_epithet="cembra"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.17" m_epithet="cembroides"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.18" m_epithet="cerambycifera"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.19" m_epithet="clausa"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.20" m_epithet="contorta"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.21" m_epithet="coulteri"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.22" m_epithet="cubensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.23" m_epithet="culminicola"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.24" m_epithet="dahurica"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.25" m_epithet="dalatensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.26" m_epithet="densata"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.27" m_epithet="densiflora"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.28" m_epithet="densithunbergii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.29" m_epithet="devoniana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.30" m_epithet="douglasiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.31" m_epithet="durangensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.32" m_epithet="echinata"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.33" m_epithet="edulis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.34" m_epithet="elliottii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.35" m_epithet="engelmannii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.36" m_epithet="eremitana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.37" m_epithet="fenzeliana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.38" m_epithet="flexilis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.39" m_epithet="fragilissima"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.40" m_epithet="gerardiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.41" m_epithet="glabra"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.42" m_epithet="greggii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.43" m_epithet="hakkodensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.44" m_epithet="halepensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.45" m_epithet="hartwegii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.46" m_epithet="heldreichii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.47" m_epithet="henryi"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.48" m_epithet="herrerae"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.49" m_epithet="hwangshanensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.50" m_epithet="jaliscana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.51" m_epithet="jeffreyi"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.52" m_epithet="kesiya"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.53" m_epithet="koraiensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.54" m_epithet="krempfii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.55" m_epithet="lambertiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.56" m_epithet="latteri"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.57" m_epithet="lawsonii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.58" m_epithet="leiophylla"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.59" m_epithet="litvinovii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.60" m_epithet="longaeva"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.61" m_epithet="luchuensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.62" m_epithet="lumholtzii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.63" m_epithet="luzmariae"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.64" m_epithet="massoniana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.65" m_epithet="maximartinezii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.66" m_epithet="maximinoi"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.67" m_epithet="merkusii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.68" m_epithet="monophylla"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.69" m_epithet="montezumae"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.70" m_epithet="monticola"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.71" m_epithet="morrisonicola"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.72" m_epithet="mugo"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.73" m_epithet="muricata"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.74" m_epithet="murraybanksiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.75" m_epithet="neilreichiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.76" m_epithet="nelsonii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.77" m_epithet="nigra"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.78" m_epithet="occidentalis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.79" m_epithet="oocarpa"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.80" m_epithet="orthophylla"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.81" m_epithet="pallasiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.82" m_epithet="palustris"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.83" m_epithet="parviflora"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.84" m_epithet="patula"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.85" m_epithet="peuce"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.86" m_epithet="pinaster"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.87" m_epithet="pinceana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.88" m_epithet="pinea"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.89" m_epithet="ponderosa"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.90" m_epithet="praetermissa"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.91" m_epithet="pringlei"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.92" m_epithet="pseudostrobus"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.93" m_epithet="pumila"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.94" m_epithet="pungens"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.95" m_epithet="quadrifolia"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.96" m_epithet="radiata"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.97" m_epithet="remota"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.98" m_epithet="resinosa"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.99" m_epithet="rhaetica"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.100" m_epithet="rigida"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.101" m_epithet="roxburghii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.102" m_epithet="rzedowskii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.103" m_epithet="sabiniana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.104" m_epithet="serotina"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.105" m_epithet="sibirica"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.106" m_epithet="squamata"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.107" m_epithet="strobiformis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.108" m_epithet="strobus"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.109" m_epithet="stylesii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.110" m_epithet="sylvestris"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.111" m_epithet="tabuliformis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.112" m_epithet="taeda"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.113" m_epithet="taiwanensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.114" m_epithet="tecunumanii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.115" m_epithet="teocote"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.116" m_epithet="thunbergii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.117" m_epithet="torreyana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.118" m_epithet="tropicalis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.119" m_epithet="virginiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.120" m_epithet="wallichiana"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.121" m_epithet="wangii"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13398.122" m_epithet="yunnanensis"><m_parent OID="gen13398"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.1" m_epithet="articulata"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.2" m_epithet="bradei"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.3" m_epithet="cantonensis"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.4" m_epithet="distenta"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.5" m_epithet="guangxiensis"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.6" m_epithet="hainanensis"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.7" m_epithet="intermedia"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.8" m_epithet="lehmannii"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.9" m_epithet="musifolia"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.10" m_epithet="pilosa"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.11" m_epithet="pistillaris"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.12" m_epithet="undulata"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.13" m_epithet="wallichii"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13626.14" m_epithet="yunnanensis"><m_parent OID="gen13626"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.1" m_epithet="arvense"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.2" m_epithet="bogotense"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.3" m_epithet="boreale"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.4" m_epithet="californicum"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.5" m_epithet="diffusum"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.6" m_epithet="fluviatile"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.7" m_epithet="giganteum"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.8" m_epithet="haukeanum"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.9" m_epithet="hyemale"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.10" m_epithet="laevigatum"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.11" m_epithet="litorale"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.12" m_epithet="mackaii"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.13" m_epithet="moorei"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.14" m_epithet="myriochaetum"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.15" m_epithet="nelsonii"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.16" m_epithet="palustre"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.17" m_epithet="pratense"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.18" m_epithet="schaffneri"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.19" m_epithet="scirpoides"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.20" m_epithet="sylvaticum"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.21" m_epithet="telmateia"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.22" m_epithet="trachyodon"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+      <BTTaxon OID="sp13461.23" m_epithet="variegatum"><m_parent OID="gen13461"/><m_rank OID="RNK_S0"/></BTTaxon>
+    </m_taxon>
+    
+    
+  </BTDatabase>
+  <TRAILER />
+  
+  
+</genera>

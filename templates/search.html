@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+{% block body %}
+not implemented yet.
+<ul>
+<li>list of matching plants.</li>
+<li>every item of the list of matching plants has two expandable sections</li>
+<li>taxon (can expand to complete taxon information) </li>
+<li>accessions (can expand to detailed list of accessions)</li>
+<li>in the detailed accession list, each accession has an expandable section for its locations.</li>
+</ul>
+
+<ul class=entries>
+  {% set last = "" %}
+  {% for entry in objects %}
+  {% if last != entry.family %}
+  <li><h2>{{ entry.family }}</h2></li>
+  {% set last = entry.family %}
+  {% endif %}
+  <h3>{{ entry.binomial }}</h3>
+  <p>{% for child in entry.children %}{{ child.rank.name }}: {{ child.epithet }}, {% endfor %}</p>
+  {% for accession in entry.accesions %}
+  <li>{{ accession.accid }}</li>
+  {% endfor %}
+  {% endfor %}
+</ul>
+
+{% endblock %}

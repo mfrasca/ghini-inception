@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block body %}
+<ul class="index">
+  <li><a href="{{ url_for('the_garden') }}">introduction</a></li>
+  <li><a href="{{ url_for('the_map') }}">virtual visit</a></li>
+  {% if session.logged_in and session.logged_in.profile == "admin" %}
+  <li><a href="/admin">technical stuff</a></li>
+  {% endif %}
+  <li>
+    <form action="{{ url_for('plant_search') }}" method="post" class="add-entry">
+      <dl>
+        <dt>plant name:
+          <dd><input type="text" size="30" name="name"></dd>
+          <dd><input type="submit" name="action" value="search">
+          {% if session.logged_in and session.logged_in.profile != "guest" %}
+          <input type="submit" name="action" value="insert">
+          {% endif %}
+          </dd> 
+      </dl>
+    </form>
+  </li>
+  
+  <li>
+    <form action="{{ url_for('country_search') }}" method="post" class="add-entry">
+      <dl>
+        <dt>country or region name:
+          <dd><input type="text" size="30" name="name"></dd>
+          <dd><input type="submit" name="action" value="search"></dd> 
+      </dl>
+    </form>
+  </li>
+  
+</ul>
+{% endblock %}
