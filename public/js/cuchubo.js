@@ -1,5 +1,6 @@
-// this javascript element is part of bauble.classic
-// http://github.com/mfrasca/bauble.classic
+// This file is part of ghini and ghini is part of bauble.
+// http://github.com/mfrasca/ghini
+// http://github.com/Bauble/bauble.classic
 
 // bauble.classic is free software: you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -155,11 +156,11 @@ function finalAddPlant(item) {
     marker.addTo(plant_layer[item.zoom]).bindPopup('<b>{0}</b><br/>{1}<br/><a target="wikipedia" href="http://en.wikipedia.org/wiki/{2}_{3}">{2}_{3} ({4})</a>'.formatU([item.plant, item.vernacular, item.genus, item.species, item.family]), {marker: marker});
     marker.on('dragend', onDragend);
     marker.on('contextmenu', openHighlightModal);
-    
+
     // associate marker with its unique plant accession.plant #
     listOf[item.plant] = marker;
     var ranks = [item.accession, item.genus + " " + item.species, item.genus, item.family];
-    
+
     if(!(item.accession in taxonOf) )
         taxonOf[item.accession] = {};
     taxonOf[item.accession].family = item.family;
@@ -187,8 +188,8 @@ function addToDom(name, threshold, location) {
 
 function onDragend(event) {
     var marker = event.target;
-    var data = { accession: marker.options.accession, 
-                 plant: marker.options.plant, 
+    var data = { accession: marker.options.accession,
+                 plant: marker.options.plant,
                  lat: marker.getLatLng().lat,
                  lng: marker.getLatLng().lng,
                };
@@ -313,8 +314,8 @@ function init() {
     // add the scale control
     L.control.scale().addTo(map);
 
-    // go to cuchubo garden
-    map.setView([9.2348, -74.42276], 20);
+    //map.setView([9.2348, -74.42276], 20); // go to cuchubo garden
+    map.setView([6.27071, -75.56353], 18); // JBdM
     for (i=1; i<=map.getZoom(); i++)
         map.addLayer(plant_layer[i]);
 
@@ -324,10 +325,11 @@ function init() {
         // 'http://a.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', // black & white
         // 'http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', // mapquest
         // 'http://cuchubo.wdfiles.com/local--files/tiles-{z}/{z}.{y}.{x}.png', // our tiles on wikidot
-        'tiles-{z}/{z}.{y}.{x}.png', // local tiles on rune
-        { attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors, Mario Frasca',
+        //'tiles-{z}/{z}.{y}.{x}.png', // local tiles on rune
+        'http://tilecache.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
+        { attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
           minZoom: 19,
-          maxZoom: 22,
+          maxZoom: 20,
         }).addTo(map);
 
     L.tileLayer(
@@ -335,7 +337,6 @@ function init() {
         // 'http://a.www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', // black & white
         // 'http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', // mapquest
         // 'http://cuchubo.wdfiles.com/local--files/tiles-{z}/{z}.{y}.{x}.png', // our tiles on wikidot
-        'tiles-{z}/{z}.{y}.{x}.png', // local tiles on rune
         { attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
           minZoom: 12,
           maxZoom: 18,
@@ -396,7 +397,7 @@ function init() {
             anchor.append(icon);
             anchor.append(" ");
             anchor.append(item.anchor);
-            body_div.html(item.content);            
+            body_div.html(item.content);
         }
     });
 
@@ -417,7 +418,7 @@ function init() {
             anchor.append(icon_element);
             anchor.append(" " + group.layerName);
 
-            var icon = L.AwesomeMarkers.icon({ color: group.color, 
+            var icon = L.AwesomeMarkers.icon({ color: group.color,
                                                icon: group.icon });
 
             for (var j=0; j < group.items.length; j++) {

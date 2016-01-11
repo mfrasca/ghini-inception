@@ -1,8 +1,27 @@
+// This file is part of ghini and ghini is part of bauble.
+// http://github.com/mfrasca/ghini
+// http://github.com/Bauble/bauble.classic
+//
+// bauble is free software: you can redistribute it and/or modify it under
+// the terms of the GNU General Public License as published by the Free
+// Software Foundation, either version 3 of the License, or (at your option)
+// any later version.
+//
+// bauble is distributed in the hope that it will be useful, but WITHOUT ANY
+// WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+// FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+// details.
+//
+// You should have received a copy of the GNU General Public License along
+// with bauble.  If not, see <http://www.gnu.org/licenses/>.
+//
 // this is the remote server
 
+var config = require('./config')
 var express = require("express");
 var app = express();
-var port = Number(process.env.PORT || 5000);
+var port = Number(process.env.PORT || config.port);
+var dburl = process.env.DATABASE_URL || config.database_url
 
 var fs = require('fs');
 
@@ -26,7 +45,7 @@ app.use(express.static(__dirname + '/public'));
 
 app.get("/", function(req, res){
     res.render("map");
-    console.log(process.env.DATABASE_URL);
+    console.log(dburl);
 });
 
 // make the application listen to the port 
@@ -106,7 +125,7 @@ io.sockets.on('connection', function (socket) {
     });
 
 
-    pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+    pg.connect(dburl, function(err, client, done) {
         client.query("SELECT a.code||'.'||p.code as plant,a.code AS accession, genus.genus, species.sp AS species, family.family, p.position_lon AS lng, p.position_lat AS lat, p.zoom FROM plant AS p, accession AS a, species, genus, family WHERE species.genus_id=genus.id AND genus.family_id=family.id AND p.accession_id=a.id AND a.species_id=species.id AND p.zoom IS NOT NULL ORDER BY a.code, p.code", 
                      function(err, result) {
                          done();
@@ -118,7 +137,7 @@ io.sockets.on('connection', function (socket) {
     });
 
     socket.on('add-plant', function(data) {
-        pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+        pg.connect(dburl, function(err, client, done) {
             client.query("UPDATE plant SET position_lat={0}, position_lon={1}, zoom={4} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short, data.zoom]),
                          function(err, result) {
                              done();
@@ -131,7 +150,7 @@ io.sockets.on('connection', function (socket) {
 
     socket.on('move', function (data) {
         // inform all other clients of the move.
-        pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+        pg.connect(dburl, function(err, client, done) {
             client.query("UPDATE plant SET position_lat={0}, position_lon={1} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short]),
                          function(err, result) {
                              done();
