@@ -17,15 +17,16 @@
 //
 // this is the remote server
 
-var config = require('./config')
+var config = require('./config');
 var express = require("express");
 var app = express();
 var port = Number(process.env.PORT || config.port);
-var dburl = process.env.DATABASE_URL || config.database_url
+var dburl = process.env.DATABASE_URL || config.database_url;
 
 var fs = require('fs');
 
-var pg = require('pg');
+var pgp = require('pg-promise')(/*options*/);
+var db = pgp(dburl);
 
 String.prototype.formatU = function() {
     var str = this.toString();
@@ -115,7 +116,7 @@ io.sockets.on('connection', function (socket) {
                     break;
                 group.items.push({ lat: parseFloat(parts[0]), 
                                   lng: parseFloat(parts[1]),
-                                  content: format.formatU(parts),
+                                  content: format.formatU(parts)
                                 });
             }
 
@@ -125,38 +126,28 @@ io.sockets.on('connection', function (socket) {
     });
 
 
-    pg.connect(dburl, function(err, client, done) {
-        client.query("SELECT a.code||'.'||p.code as plant,a.code AS accession, genus.genus, species.sp AS species, family.family, p.position_lon AS lng, p.position_lat AS lat, p.zoom FROM plant AS p, accession AS a, species, genus, family WHERE species.genus_id=genus.id AND genus.family_id=family.id AND p.accession_id=a.id AND a.species_id=species.id AND p.zoom IS NOT NULL ORDER BY a.code, p.code", 
-                     function(err, result) {
-                         done();
-                         if(err)
-                             return console.error(err);
-                         for(var i=0; i<result.rows.length; i++)
-                             socket.emit('add-plant', result.rows[i]);
-                     });
-    });
+    db.query("SELECT a.code||'.'||p.code as plant,a.code AS accession, genus.genus, species.sp AS species, family.family, p.position_lon AS lng, p.position_lat AS lat, p.zoom FROM plant AS p, accession AS a, species, genus, family WHERE species.genus_id=genus.id AND genus.family_id=family.id AND p.accession_id=a.id AND a.species_id=species.id AND p.zoom IS NOT NULL ORDER BY a.code, p.code")
+        .then(function(data) {
+            for(var i=0; i<data.length; i++)
+                socket.emit('add-plant', data[i]);
+        })
+        .catch(function(error) {
+            return console.error(error);
+        });
 
     socket.on('add-plant', function(data) {
-        pg.connect(dburl, function(err, client, done) {
-            client.query("UPDATE plant SET position_lat={0}, position_lon={1}, zoom={4} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short, data.zoom]),
-                         function(err, result) {
-                             done();
-                             if(err)
-                                 return console.error(err);
-                         });
+        db.query("UPDATE plant SET position_lat={0}, position_lon={1}, zoom={4} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short, data.zoom]))
+        .catch(function(error) {
+            return console.error(error);
         });
         socket.broadcast.emit('add-plant', data);
     });
 
     socket.on('move', function (data) {
         // inform all other clients of the move.
-        pg.connect(dburl, function(err, client, done) {
-            client.query("UPDATE plant SET position_lat={0}, position_lon={1} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short]),
-                         function(err, result) {
-                             done();
-                             if(err)
-                                 return console.error(err);
-                         });
+        db.query("UPDATE plant SET position_lat={0}, position_lon={1} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short]))
+        .catch(function(error) {
+            return console.error(error);
         });
         socket.broadcast.emit('move', data);
     });

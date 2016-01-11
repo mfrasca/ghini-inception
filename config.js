@@ -15,7 +15,7 @@
 // You should have received a copy of the GNU General Public License along
 // with bauble.  If not, see <http://www.gnu.org/licenses/>.
 
-var config = {}
+var config = {};
 
 config.port = 5000;
 config.database_url = 'postgresql://bscratch:btest52@localhost/bscratch';
