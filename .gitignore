@@ -52,3 +52,4 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 dump.sql
+tmp-*.txt
