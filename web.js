@@ -28,6 +28,15 @@ var fs = require('fs');
 var pgp = require('pg-promise')(/*options*/);
 var db = pgp(dburl);
 
+var pg = require('pg');
+
+var client = new pg.Client(dburl);
+client.connect();
+client.query('LISTEN "watchers"');
+client.on('notification', function(data) {
+    console.log(data.payload);
+});
+
 String.prototype.formatU = function() {
     var str = this.toString();
     if (!arguments.length)
