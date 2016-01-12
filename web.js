@@ -151,7 +151,11 @@ io.sockets.on('connection', function (socket) {
         });
 
     socket.on('add-plant', function(data) {
-        db.query("UPDATE plant SET position_lat={0}, position_lon={1}, zoom={4} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short, data.zoom]))
+        db.query("UPDATE plant "+
+                 "SET position_lat=${lat}, position_lon=${lng}, zoom=${zoom} "+
+                 "WHERE code=${plant_short} AND accession_id="+
+                 "(SELECT id FROM accession WHERE code=${accession})",
+                 data)
         .catch(function(error) {
             return console.error(error);
         });
@@ -160,7 +164,7 @@ io.sockets.on('connection', function (socket) {
 
     socket.on('move', function (data) {
         // inform all other clients of the move.
-        db.query("UPDATE plant SET position_lat={0}, position_lon={1} WHERE code='{3}' AND accession_id=(SELECT id FROM accession WHERE code='{2}')".formatU([data.lat, data.lng, data.accession, data.plant_short]))
+        db.query("UPDATE plant SET position_lat=${lat}, position_lon=${lng} WHERE code=${plant_short} AND accession_id=(SELECT id FROM accession WHERE code=${accession})", data)
         .catch(function(error) {
             return console.error(error);
         });
