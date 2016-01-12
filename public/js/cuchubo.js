@@ -85,7 +85,7 @@ function computeHighlightOptions(name) {
         var elem = $('<input/>',
                      { type: 'radio',
                        name: 'taxon',
-                       value: taxon,
+                       value: taxon
                      });
         label.append(elem);
         label.append(" " + text);
@@ -150,7 +150,7 @@ function finalAddPlant(item) {
                             accession: item.accession,
                             plant: item.plant,
                             title: item.plant,
-                            zoom: item.zoom,
+                            zoom: item.zoom
                           });
     markers.push(marker);
     marker.addTo(plant_layer[item.zoom]).bindPopup('<b>{0}</b><br/>{1}<br/><a target="wikipedia" href="http://en.wikipedia.org/wiki/{2}_{3}">{2}_{3} ({4})</a>'.formatU([item.plant, item.vernacular, item.genus, item.species, item.family]), {marker: marker});
@@ -191,7 +191,7 @@ function onDragend(event) {
     var data = { accession: marker.options.accession,
                  plant: marker.options.plant,
                  lat: marker.getLatLng().lat,
-                 lng: marker.getLatLng().lng,
+                 lng: marker.getLatLng().lng
                };
     data.plant_short = data.plant.split(".")[2];
     socket.emit('move', data);
@@ -308,7 +308,7 @@ function init() {
             iconSize:     [16, 16], // size of the icon
             iconAnchor:   [8, 8], // point of the icon which will correspond to marker's location
             popupAnchor:  [0, -4] // point from which the popup should open relative to the iconAnchor
-        }),
+        })
     };
 
     // add the scale control
@@ -329,7 +329,7 @@ function init() {
         'http://tilecache.openstreetmap.fr/osmfr/{z}/{x}/{y}.png',
         { attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
           minZoom: 19,
-          maxZoom: 20,
+          maxZoom: 20
         }).addTo(map);
 
     L.tileLayer(
@@ -339,12 +339,12 @@ function init() {
         // 'http://cuchubo.wdfiles.com/local--files/tiles-{z}/{z}.{y}.{x}.png', // our tiles on wikidot
         { attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
           minZoom: 12,
-          maxZoom: 18,
+          maxZoom: 18
         }).addTo(map);
 
 
     // associate callbacks to events
-    map.on('contextmenu', fireAddPlant);
+    //map.on('contextmenu', fireAddPlant);
     map.on('zoomend', onZoomend);
     map.on('zoomstart', onZoomstart);
     $("#keyword").val("");
@@ -377,12 +377,12 @@ function init() {
             var item = data[i];
             var div = $("<div/>", { id: item.name + "Modal",
                                     class: "modal hide fade",
-                                    style: "display: none;",
+                                    style: "display: none;"
                                   });
 
             $(document.body).append(div);
-            var header_div = $('<div/>', { class: 'modal-header', });
-            var body_div = $('<div/>', { class: 'modal-body', });
+            var header_div = $('<div/>', { class: 'modal-header' });
+            var body_div = $('<div/>', { class: 'modal-body' });
             div.append(header_div).append(body_div);
 
             header_div.append($('<a/>', { class: 'close', 'data-dismiss': 'modal'}).text("×"));
@@ -390,7 +390,7 @@ function init() {
 
             // add the reference to the dialog box to the help menu.
             var list_item = $('<li/>');
-            var anchor = $('<a/>', { onclick: "$('#" + item.name + "Modal').modal('show'); return false;", href: "#", });
+            var anchor = $('<a/>', { onclick: "$('#" + item.name + "Modal').modal('show'); return false;", href: "#" });
             var icon = $('<i/>', { class: "icon-" + item.icon + " icon-black" });
             $("#help-menu-list").append(list_item);
             list_item.append(anchor);
@@ -411,7 +411,7 @@ function init() {
             $('#toggle-menu-list').append(list_item);
             var anchor = $('<a/>',
                            { href: '#',
-                             onclick: 'toggleLayerCheck(this, "' + group.layerName + '"); return false;',
+                             onclick: 'toggleLayerCheck(this, "' + group.layerName + '"); return false;'
                            });
             list_item.append(anchor);
             var icon_element = $('<i/>', { class: 'icon-remove icon-black' });
