@@ -28,9 +28,7 @@ var fs = require('fs');
 var pgp = require('pg-promise')(/*options*/);
 var db = pgp(dburl);
 
-var pg = require('pg');
-
-var client = new pg.Client(dburl);
+var client = new pgp.pg.Client(dburl);
 client.connect();
 client.query('LISTEN "watchers"');
 client.on('notification', function(data) {
@@ -133,7 +131,6 @@ io.sockets.on('connection', function (socket) {
         }
         socket.emit('init-toggle', result);
     });
-
 
     db.query("SELECT a.code||'.'||p.code as plant, a.code AS accession, g.genus, s.sp AS species, f.family, "+
              "p.position_lon AS lng, p.position_lat AS lat, p.zoom, coalesce(vn.name, '') as vernacular "+
